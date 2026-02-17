@@ -95,20 +95,6 @@ export default function TripPage() {
         </div>
 
       </div>
-
-      {/* Mobile Sticky Booking Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 p-4 flex items-center justify-between z-50 lg:hidden shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
-        <div>
-          <span className="text-gray-400 text-xs block font-bold uppercase tracking-wider">Prices from</span>
-          <div className="flex items-baseline gap-1">
-            <span className="text-2xl font-bold text-gray-900">₹{tripData.price.toLocaleString()}</span>
-            <span className="text-gray-400 text-xs text-nowrap">/ person</span>
-          </div>
-        </div>
-        <button className="bg-[#2755b0] text-white font-bold px-8 py-3 rounded-xl shadow-lg active:scale-95 transition-transform hover:bg-[#1e4491]">
-          Book Now
-        </button>
-      </div>
     </main>
   );
 }
