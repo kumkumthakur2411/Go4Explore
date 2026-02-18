@@ -79,7 +79,7 @@ export default function Reviews() {
                         </div>
 
                         <div className="body-pam">
-                            <p className="text-[14px] md:text-[15px] lg:text-[16px] leading-[26px] text-[#6c757d] font-normal mb-0">
+                            <p className="text-[12px] leading-[19px] md:text-[15px] md:leading-[26px] lg:text-[16px] text-[#6c757d] font-normal mb-0">
                                 {review.comment}
                             </p>
                         </div>

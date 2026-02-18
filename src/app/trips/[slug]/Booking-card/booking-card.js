@@ -23,12 +23,12 @@ export default function BookingCard() {
                 </h5>
 
                 {/* Price Row */}
-                <div className="flex items-end gap-2 mb-0">
-                    <h4 className="text-[28px] md:text-[32px] lg:text-[38px] leading-[1.2] font-semibold text-black mb-[2px]">
+                <div className="flex items-end">
+                    <h4 className="text-[20px] md:text-[23px] lg:text-[38px] font-semibold text-[#200f0d] mb-0 mr-2 leading-[1.2]">
                         ₹{pricing.Quad.current}
                     </h4>
 
-                    <h5 className="text-[18px] md:text-[20px] lg:text-[23px] leading-[1.2] font-bold text-black m-0">
+                    <h5 className="text-[23px] leading-[37px] font-bold text-black m-0">
                         <del>₹{pricing.Quad.original}</del>
                     </h5>
                 </div>

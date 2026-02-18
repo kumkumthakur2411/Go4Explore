@@ -7,59 +7,62 @@ export default function Batches() {
     const months = ["February", "March", "April"];
 
     return (
-        <section className="w-full bg-white p-5 lg:p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24 border border-[#eee]">
-            <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-medium text-[#200f0d] mb-4 tracking-tight">Batches Available</h4>
-            <hr className="my-3 border-t border-black opacity-30" />
+        <section className="w-full bg-white shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] rounded-[15px] p-[30px] mb-[30px] font-poppins">
+            <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-medium text-[#200f0d] mb-2 leading-[1.2]">
+                Batches Available
+            </h4>
+            <hr className="my-4 border-t border-current opacity-25" />
 
-            {/* Month Tabs */}
-            <div className="flex justify-start lg:justify-end mb-6 overflow-x-auto no-scrollbar pb-2">
-                <ul className="flex list-none p-0 m-0 gap-4">
+            {/* Tabs Navigation */}
+            <div className="flex justify-end p-3">
+                <ul className="flex flex-wrap list-none p-0 m-0 gap-2">
                     {months.map((month) => (
-                        <li key={month}>
+                        <li key={month} className="border-none!">
                             <button
                                 onClick={() => setActiveMonth(month)}
-                                className={`px-0 py-1 text-[14px] lg:text-[15px] font-semibold transition-all relative whitespace-nowrap ${activeMonth === month
-                                    ? "text-[#2755b0]"
-                                    : "text-gray-400 hover:text-[#2755b0]"
+                                className={`block px-2 py-[2px] transition-all duration-150 cursor-pointer text-[16px] ${activeMonth === month
+                                    ? "text-[#2755b0] border-b-[3px] border-[#2755b0] font-medium"
+                                    : "text-[#222] font-normal hover:text-[#0a58ca]"
                                     }`}
                                 type="button"
                             >
                                 {month}
-                                {activeMonth === month && (
-                                    <div className="absolute -bottom-[2px] left-0 right-0 h-[2px] bg-[#2755b0] rounded-full" />
-                                )}
                             </button>
                         </li>
                     ))}
                 </ul>
             </div>
 
-            {/* Batch Cards Grid */}
-            <div className="w-full">
-                <ul className="flex flex-wrap list-none p-0 m-0 gap-3 lg:justify-between">
-                    {tripData.batches.slice(0, 2).map((batch, idx) => (
-                        <li key={idx} className="w-full lg:w-[48%]">
-                            <div className="flex items-center justify-between border border-[#eee] p-3.5 rounded-xl transition-all duration-300 hover:bg-[#f4f6fc] hover:border-[#2755b0] group">
-                                <div className="flex flex-col">
-                                    <h5 className="text-[13px] lg:text-[14px] leading-tight text-black font-bold m-0 group-hover:text-[#2755b0]">
-                                        {idx === 0 ? "20 Feb 2026 - 24 Feb 2026" : "27 Feb 2026 - 03 Mar 2026"}
+            {/* Tab Content */}
+            <div className="mt-2">
+                <ul className="flex flex-wrap justify-between list-none p-0 m-0 w-full">
+                    {tripData.batches
+                        .filter(batch => batch.date.toLowerCase().includes(activeMonth.substring(0, 3).toLowerCase()))
+                        .map((batch, idx) => (
+                            <li key={idx} className="w-full md:w-[48%] my-[6px]">
+                                <div className="flex items-center justify-between border border-[#ddd] p-3 rounded-[10px] transition-all hover:border-[#2755b0] hover:bg-[#85a4e334]/20 group">
+                                    <h5 className="text-[12px] leading-4 text-black font-medium m-0 transition-colors group-hover:text-[#2755b0]">
+                                        {batch.date}
                                     </h5>
-                                    <span className="text-[10px] text-gray-500 font-medium mt-1">Ex-Delhi</span>
+                                    <div className="flex items-center">
+                                        <button
+                                            type="button"
+                                            className="bg-[#127c42] text-white px-2 py-[3px] rounded-[80px] text-[10px] leading-4 border-none font-medium tracking-tight"
+                                        >
+                                            Seats Available
+                                        </button>
+                                    </div>
                                 </div>
-
-                                <div className="shrink-0">
-                                    <button
-                                        type="button"
-                                        className="bg-[#127c42] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
-                                    >
-                                        Available
-                                    </button>
-                                </div>
-                            </div>
-                        </li>
-                    ))}
+                            </li>
+                        ))}
+                    {tripData.batches.filter(batch => batch.date.toLowerCase().includes(activeMonth.substring(0, 3).toLowerCase())).length === 0 && (
+                        <div className="w-full text-center py-10">
+                            <p className="text-gray-400 text-[14px]">No batches available for {activeMonth}</p>
+                        </div>
+                    )}
                 </ul>
             </div>
         </section>
     );
 }
+

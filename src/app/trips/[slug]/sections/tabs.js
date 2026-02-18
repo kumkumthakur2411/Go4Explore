@@ -91,7 +91,7 @@ export default function Tabs() {
                         onClick={() => scrollToSection(tab.id)}
                     >
                         <button
-                            className={`text-[13px] md:text-[15px] lg:text-[16px] leading-[26px] transition-colors bg-transparent border-0 cursor-pointer p-0 focus:outline-none ${activeTab === tab.id ? `text-[#1d4ed8] ${!isMobileView ? "font-bold" : "font-semibold"}` : "text-[#222] font-medium hover:text-[#1d4ed8]"
+                            className={`text-[13px] md:text-[15px] lg:text-[16px] leading-[26px] transition-colors bg-transparent border-0 cursor-pointer p-0 focus:outline-none ${activeTab === tab.id ? "text-[#1d4ed8] font-medium" : "text-[#222] font-medium hover:text-[#1d4ed8]"
                                 }`}
                         >
                             {tab.label}

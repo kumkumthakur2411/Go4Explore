@@ -43,7 +43,7 @@ export default function ThingsToPack() {
 
             <ul className="list-none p-0 m-0">
                 {packingItems.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-5 py-[12px] text-[#35211f] text-[16px] font-normal leading-[24px] tracking-normal">
+                    <li key={idx} className="flex items-center gap-5 pb-3 md:py-[12px] text-[#35211f] !text-[12px] md:!text-[16px] font-normal leading-[19px] md:leading-[24px] tracking-normal">
                         <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
                             <img src={item.icon} alt="pack icon" className="w-full h-auto object-contain" />
                         </div>

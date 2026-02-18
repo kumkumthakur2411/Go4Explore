@@ -12,7 +12,7 @@ export default function Hero() {
       if (!isOpen) {
         setCurrentIndex((prev) => (prev + 1) % images.length);
       }
-    }, 1000); // 1-second interval as requested
+    }, 3000); // 3-second interval
     return () => clearInterval(interval);
   }, [isOpen, images.length]);
 

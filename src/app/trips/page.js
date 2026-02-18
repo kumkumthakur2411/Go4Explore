@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function TripPage() {
   return (
-    <main className="pt-[75px] lg:pt-[95px] min-h-screen pb-24 lg:pb-24 font-poppins bg-[#f9f9f9]">
+    <main className="pt-[75px] lg:pt-[95px] min-h-screen pb-5 lg:pb-5 font-poppins bg-[#f9f9f9]">
       <div className="max-w-[1320px] mx-auto px-5 md:px-8 lg:px-6">
 
         {/* Hero Section */}
@@ -96,13 +96,10 @@ export default function TripPage() {
         </div>
 
         {/* Full width section */}
-        <div className="w-full mt-10 lg:mt-12 px-[calc(1.5rem*0.5)]">
+        <div className="w-full mt-3 lg:mt-3">
           <RelatedTrips />
         </div>
-
       </div>
-
-
     </main>
   );
 }

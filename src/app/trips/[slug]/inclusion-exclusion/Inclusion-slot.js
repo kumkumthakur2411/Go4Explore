@@ -13,7 +13,7 @@ export default function Inclusion() {
         {tripData.inclusions.map((item, index) => (
           <li
             key={index}
-            className="relative pl-[33px] py-[6px] text-gray-900 text-[14px] md:text-[15px] lg:text-[16px] font-normal leading-relaxed tracking-normal"
+            className="relative pl-[33px] py-[6px] text-gray-900 !text-[12px] leading-[19px] md:!text-[15px] lg:!text-[16px] md:leading-relaxed font-normal tracking-normal"
           >
             {/* Custom Icon Bullet */}
             <span
