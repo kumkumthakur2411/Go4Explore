@@ -41,7 +41,7 @@ export default function Hero() {
 
       {/* Center Content */}
       <div className="absolute inset-0 flex justify-center items-end z-10">
-        <div className="relative w-[84vw] h-[93%]  rounded-xl shadow-xl overflow-hidden">
+        <div className="relative w-[88vw] h-[90%]  rounded-xl shadow-xl overflow-hidden">
 
           {/* Banner Image (always present as fallback) */}
           <Image
