@@ -7,9 +7,9 @@ export default function Batches() {
     const months = ["February", "March", "April"];
 
     return (
-        <section id="batches" className="w-full bg-white p-5 lg:p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24 border border-[#eee]">
-            <h4 className="text-[20px] lg:text-[24px] font-bold text-[#200f0d] mb-4 tracking-tight">Batches Available</h4>
-            <hr className="border-[#dee2e6] mb-6 opacity-50" />
+        <section className="w-full bg-white p-5 lg:p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24 border border-[#eee]">
+            <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-medium text-[#200f0d] mb-4 tracking-tight">Batches Available</h4>
+            <hr className="my-3 border-t border-black opacity-30" />
 
             {/* Month Tabs */}
             <div className="flex justify-start lg:justify-end mb-6 overflow-x-auto no-scrollbar pb-2">

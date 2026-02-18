@@ -35,12 +35,11 @@ export default function ThingsToPack() {
 
     return (
         <section
-            id="info-pack"
             className="w-full bg-white p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24"
         >
             <h4 className="text-[24px] font-semibold text-[#200f0d] mb-4 tracking-normal">Things To Pack</h4>
 
-            <hr className="border-[#dee2e6] mb-8 opacity-50" />
+            <hr className="my-3 border-t border-black opacity-30" />
 
             <ul className="list-none p-0 m-0">
                 {packingItems.map((item, idx) => (

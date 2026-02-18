@@ -5,28 +5,20 @@ import { tripData } from "../../data";
 /* ================= DAY ACCORDION ================= */
 
 const DayAccordion = ({ day, title, points = [], meals = [], isOpen, onClick }) => (
-  <div className="border border-[#b3b3b3] p-[10px] rounded-[8px] mb-[15px] bg-white">
+  <div className="border border-[#b3b3b3] p-[25px] rounded-[8px] mb-[15px] bg-white overflow-hidden">
     {/* HEADER */}
     <div className="flex items-center">
-      <div className="w-[10%] min-w-[60px] h-[35px] rounded-[50px] text-[12px] font-semibold transition-all duration-300 bg-[#2755b0] border-2 border-[#2755b0] text-white flex justify-center items-center mr-[15px] shrink-0">
+      <div className="px-4 py-1.5 rounded-full text-[11px] md:text-[12px] lg:text-[13px] font-bold bg-[#2755b0] text-white flex justify-center items-center mr-[15px] shrink-0 min-w-[70px] md:min-w-[75px]">
         Day {day}
       </div>
       <button
         onClick={onClick}
-        className="flex-1 flex items-center justify-between text-left bg-transparent border-0 p-0 focus:outline-none"
+        className="flex-1 flex items-center justify-between text-left bg-transparent border-0 p-0 focus:outline-none cursor-pointer group"
       >
-        <div className="text-[16px] font-medium text-black leading-normal">
+        <div className="text-[14px] md:text-[15px] lg:text-[16px] font-medium text-black leading-normal font-poppins">
           {title}
         </div>
-        <svg
-          className={`w-[14px] h-[14px] text-black transition-transform duration-200 shrink-0 ml-4 ${isOpen ? "rotate-180" : ""}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          style={{ strokeWidth: "3px" }}
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
+        <i className={`bi bi-chevron-down text-black text-[14px] font-semibold transition-transform duration-300 ml-auto antialiased ${isOpen ? "rotate-180" : ""}`} style={{ WebkitTextStroke: '1.5px' }}></i>
       </button>
     </div>
 
@@ -39,7 +31,7 @@ const DayAccordion = ({ day, title, points = [], meals = [], isOpen, onClick }) 
         {points.length > 0 && (
           <ul className="list-disc pl-[2rem] m-0 mb-4 space-y-1">
             {points.map((point, idx) => (
-              <li key={idx} className="text-gray-900 text-[15px] font-normal leading-relaxed">
+              <li key={idx} className="text-gray-900 text-[14px] md:text-[15px] font-normal leading-relaxed">
                 {point}
               </li>
             ))}
@@ -49,7 +41,7 @@ const DayAccordion = ({ day, title, points = [], meals = [], isOpen, onClick }) 
         {/* MEALS info-box style */}
         {meals.length > 0 && (
           <div className="bg-[#f5f7fa] rounded-[12px] p-[15px_25px] w-full flex flex-col md:flex-row items-start md:items-center mt-4">
-            <h5 className="text-[15px] font-semibold text-black m-0 mr-[35px] mb-[10px] md:mb-0 shrink-0">
+            <h5 className="text-[13px] md:text-[14px] lg:text-[15px] font-semibold text-black m-0 mr-[35px] mb-[10px] md:mb-0 shrink-0">
               Meals:
             </h5>
             <div className="flex flex-wrap gap-x-6 gap-y-3">
@@ -96,8 +88,8 @@ export default function Itinerary() {
     >
 
 
-      <h4 className="text-[24px] font-semibold text-[#200f0d] mb-4 tracking-normal">Itinerary</h4>
-      <hr className="border-[#dee2e6] mb-8 opacity-50" />
+      <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-medium text-[#200f0d] mb-4 tracking-normal">Itinerary</h4>
+      <hr className="my-3 border-t border-black opacity-30" />
 
       {/* Accordions Container */}
       <div className="w-full">

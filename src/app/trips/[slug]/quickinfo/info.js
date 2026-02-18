@@ -51,7 +51,7 @@ export default function QuickInfo() {
       {/* Bottom Features */}
       <div className="flex flex-wrap items-center justify-start">
         {tripData.tripFeatures.map((feature, idx) => (
-          <div key={idx} className="px-[15px] py-2 flex items-center gap-[10px]">
+          <div key={idx} className="px-[12px] py-1 flex items-center gap-[10px]">
             {/* Icon */}
             <div className="w-[26px] flex justify-center items-center shrink-0">
               <img
@@ -62,7 +62,7 @@ export default function QuickInfo() {
             </div>
 
             {/* Label */}
-            <h4 className="text-[17px] leading-[28px] font-bold m-0 text-[#35211F] font-poppins">
+            <h4 className="text-[15px] leading-[25px] font-semibold m-0 text-[#35211F] font-poppins">
               {feature.label}
             </h4>
           </div>

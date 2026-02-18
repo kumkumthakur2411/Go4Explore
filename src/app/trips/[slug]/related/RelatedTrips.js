@@ -24,7 +24,7 @@ export default function RelatedTrips() {
             <div className="max-w-[1320px] mx-auto px-4 lg:px-0">
                 {/* Header with Title and Scroll Buttons */}
                 <div className="flex flex-col lg:flex-row items-center justify-between mb-8 lg:mb-12 gap-4">
-                    <h4 className="text-[24px] lg:text-[30px] font-extrabold text-[#200f0d] tracking-normal mb-0 text-center lg:text-left">
+                    <h4 className="text-[20px] md:text-[23px] lg:text-[25px] font-extrabold text-[#200f0d] tracking-normal mb-0 text-center lg:text-left">
                         Related Trips For You
                     </h4>
 
@@ -74,7 +74,7 @@ export default function RelatedTrips() {
 
                             {/* Trip Info */}
                             <div className="p-3">
-                                <h5 className="text-[16px] font-semibold text-black mb-3 pb-3 border-b border-[#a9a9a985] h-[50px] flex items-center">
+                                <h5 className="text-[14.5px] lg:text-[16px] font-semibold text-black mb-3 pb-3 border-b border-[#a9a9a985] h-[50px] flex items-center">
                                     {trip.title}
                                 </h5>
 

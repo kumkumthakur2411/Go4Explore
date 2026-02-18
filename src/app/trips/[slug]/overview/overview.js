@@ -6,15 +6,13 @@ export default function Overview() {
 
   return (
     <section
-      id="overview"
-
-      className="w-full bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-10 text-[16px] leading-[24px] font-normal tracking-normal text-gray-700 scroll-mt-24 border border-gray-100 cursor-default"
+      className="w-full bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-10 text-[14px] md:text-[15px] lg:text-[16px] leading-[24px] font-normal tracking-normal text-gray-700 scroll-mt-24 border border-gray-100 cursor-default"
     >
 
       {/* Main Title */}
       <div className="mb-4">
-        <h4 className="text-[24px] font-semibold text-[#200f0d] mb-4 tracking-normal">Overview</h4>
-        <hr className="border-[#dee2e6] opacity-50" />
+        <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-medium text-[#200f0d] mb-4 tracking-normal">Overview</h4>
+        <hr className="my-3 border-t border-black opacity-30" />
       </div>
 
       <div className={`relative transition-all duration-700 ease-in-out overflow-hidden ${expanded ? "max-h-[5000px]" : "max-h-[110px]"}`}>
@@ -195,7 +193,7 @@ export default function Overview() {
       <div className="mt-4 flex justify-start">
         <button
           onClick={() => setExpanded(!expanded)}
-          className="flex items-center gap-1.5 text-gray-600 font-normal text-[15px] hover:text-black transition-all"
+          className="flex items-center gap-1.5 text-gray-600 font-normal text-[13px] md:text-[14px] lg:text-[15px] hover:text-black transition-all"
         >
           {expanded ? "View Less" : "View More"}
           <svg
@@ -217,7 +215,7 @@ export default function Overview() {
 
 function SectionTitle({ children }) {
   return (
-    <h3 className="text-[19px] font-semibold text-gray-900 mt-10 mb-4 tracking-normal">
+    <h3 className="text-[17px] md:text-[18px] lg:text-[19px] font-semibold text-gray-900 mt-10 mb-4 tracking-normal">
       {children}
     </h3>
   );
@@ -226,8 +224,8 @@ function SectionTitle({ children }) {
 function Faq({ q, a }) {
   return (
     <div className="border-b border-gray-50 pb-5 last:border-0 last:pb-0">
-      <p className="font-semibold text-gray-900 mb-2 leading-[24px] tracking-normal">Q. {q}</p>
-      <p className="text-gray-600 pl-4 border-l-2 border-blue-100/50 leading-[24px] tracking-normal">{a}</p>
+      <p className="font-semibold text-gray-900 mb-2 text-[14px] md:text-[15px] lg:text-[16px] leading-[24px] tracking-normal">Q. {q}</p>
+      <p className="text-gray-600 pl-4 border-l-2 border-blue-100/50 text-[14px] md:text-[15px] lg:text-[16px] leading-[24px] tracking-normal">{a}</p>
     </div>
   );
 }

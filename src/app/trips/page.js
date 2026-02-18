@@ -10,6 +10,7 @@ import Batches from "./[slug]/batch-available/Batches";
 import RelatedTrips from "./[slug]/related/RelatedTrips";
 import ThingsToPack from "./[slug]/things-to-pack/ThingsToPack";
 import Reviews from "./[slug]/Review/Reviews";
+import PriceSummary from "./[slug]/PriceSummary/PriceSummary";
 import { tripData } from "./data";
 
 export const metadata = {
@@ -20,16 +21,16 @@ export const metadata = {
 export default function TripPage() {
   return (
     <main className="pt-[75px] lg:pt-[95px] min-h-screen pb-24 lg:pb-24 font-poppins bg-[#f9f9f9]">
-      <div className="max-w-[1320px] mx-auto px-4 lg:px-[calc(1.5rem*0.5)]">
+      <div className="max-w-[1320px] mx-auto px-5 md:px-8 lg:px-6">
 
         {/* Hero Section */}
         <Hero />
 
         {/* Combined Container Structure from Snippet */}
-        <div className="flex flex-wrap mt-8 lg:mt-[70px] mx-[-15px] lg:mx-[calc(-0.5*1.5rem)]">
+        <div className="flex flex-wrap mt-8 lg:mt-[70px] -mx-[calc(1.5rem*0.5)]">
 
           {/* Left Column (col-zzj / 66.6%) */}
-          <div className="w-full lg:w-[66.6667%] px-[15px] lg:px-[calc(1.5rem*0.5)] space-y-6 lg:space-y-[30px]">
+          <div className="w-full lg:w-[66.6667%] px-[calc(1.5rem*0.5)] space-y-6 lg:space-y-[30px]">
 
             <QuickInfo />
 
@@ -58,15 +59,21 @@ export default function TripPage() {
               <Itinerary />
             </div>
 
-            <div id="inclusions" className="scroll-mt-[130px] lg:scroll-mt-[100px] space-y-[30px]">
+            <div id="inclusions" className="scroll-mt-[130px] lg:scroll-mt-[100px]">
               <Inclusion />
-              <div id="exclusions" className="scroll-mt-[130px] lg:scroll-mt-[100px]">
-                <Exclusion />
-              </div>
+            </div>
+
+            <div id="exclusions" className="scroll-mt-[130px] lg:scroll-mt-[100px]">
+              <Exclusion />
             </div>
 
             <div id="batches" className="scroll-mt-[130px] lg:scroll-mt-[100px]">
               <Batches />
+            </div>
+
+            {/* Price Summary for Mobile (Visible between Batches and Things To Pack) */}
+            <div className="lg:hidden">
+              <PriceSummary />
             </div>
 
             <div id="info-pack" className="scroll-mt-[130px] lg:scroll-mt-[100px]">
@@ -89,25 +96,13 @@ export default function TripPage() {
         </div>
 
         {/* Full width section */}
-        <div className="w-full mt-10 lg:mt-12 px-[15px] lg:px-[calc(1.5rem*0.5)]">
+        <div className="w-full mt-10 lg:mt-12 px-[calc(1.5rem*0.5)]">
           <RelatedTrips />
         </div>
 
       </div>
 
-      {/* Sticky Bottom Bar for Mobile */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-[#eee] p-4 z-[50] shadow-[0_-4px_10px_rgba(0,0,0,0.05)] flex items-center justify-between">
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2">
-            <span className="text-[18px] font-bold text-black">₹5,999</span>
-            <span className="text-[14px] font-medium text-black/40 line-through">₹6,499</span>
-          </div>
-          <span className="text-[10px] text-gray-500 font-medium">Per Person</span>
-        </div>
-        <button className="bg-[#2755b0] text-white px-8 py-3 rounded-full font-bold text-[14px] shadow-lg active:scale-95 transition-transform">
-          SEND QUERY
-        </button>
-      </div>
+
     </main>
   );
 }

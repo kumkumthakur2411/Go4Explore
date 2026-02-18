@@ -15,42 +15,54 @@ export default function BookingCard() {
 
 
             {/* ========== STARTING PRICE CARD ========== */}
-            <div className="w-full bg-white shadow-[0_2px_8px_rgba(99,99,99,0.2)] rounded-[15px] p-[30px] mb-[30px] flex flex-col items-start translate-z-0">
-                <h5 className="text-[20px] font-medium text-[#200f0d] mb-2 leading-[1.2]">Starting Price</h5>
+            <div className="w-full font-poppins bg-white shadow-[0_2px_8px_rgba(99,99,99,0.2)] rounded-[15px] p-[30px] mb-[30px]">
 
-                <div className="flex items-end mb-4">
-                    <h4 className="text-[38px] leading-[45px] font-semibold text-black m-0 mr-2">₹{pricing.Quad.current}</h4>
-                    <h5 className="text-[23px] leading-[37px] font-bold text-black m-0 opacity-40 line-through">
-                        ₹{pricing.Quad.original}
+                {/* Title */}
+                <h5 className="text-[1.1rem] md:text-[1.2rem] lg:text-[1.25rem] font-medium text-[#200f0d] mb-1 font-poppins">
+                    Starting Price
+                </h5>
+
+                {/* Price Row */}
+                <div className="flex items-end gap-2 mb-0">
+                    <h4 className="text-[28px] md:text-[32px] lg:text-[38px] leading-[1.2] font-semibold text-black mb-[2px]">
+                        ₹{pricing.Quad.current}
+                    </h4>
+
+                    <h5 className="text-[18px] md:text-[20px] lg:text-[23px] leading-[1.2] font-bold text-black m-0">
+                        <del>₹{pricing.Quad.original}</del>
                     </h5>
                 </div>
 
-                <p className="text-[16px] leading-[23px] font-medium text-black m-0 mb-[25px]">
+                {/* Subtitle */}
+                <p className="text-[14px] md:text-[16px] lg:text-[16px] leading-[1.4] font-medium text-black mb-[25px]">
                     Per Person on Quad Sharing Occupancy
                 </p>
 
+                {/* Button */}
                 <button
                     type="button"
-                    className="w-full py-[8px] px-[14px] rounded-[50px] text-[16px] font-semibold transition-all duration-300 bg-[#2755b0] border-2 border-[#2755b0] text-white hover:bg-white hover:text-[#2755b0]"
+                    className="w-full py-2 px-4 rounded-full text-[16px] font-semibold border-2 border-[#2755b0] bg-[#2755b0] text-white transition-all duration-300 hover:bg-white hover:text-[#2755b0]"
                 >
                     Send Query Here
                 </button>
+
             </div>
+
 
             {/* ========== PRICE SUMMARY CARD ========== */}
             <div className="w-full bg-white shadow-[0_2px_8px_rgba(99,99,99,0.2)] rounded-[15px] p-[30px]">
-                <h5 className="text-[20px] font-medium text-[#200f0d] mb-2 leading-[1.2]">Price Summary</h5>
-                <hr className="my-4 border-t border-[#dee2e6] opacity-25" />
+                <h5 className="text-[18px] md:text-[19px] lg:text-[20px] font-medium text-[#200f0d] mb-2 leading-[1.2]">Price Summary</h5>
+                <hr className="my-3 border-t border-black opacity-30" />
 
                 <div className="w-full mb-6">
-                    <div className="flex justify-between items-center mb-4">
-                        <h5 className="text-[16px] leading-[26px] font-medium text-black m-0">Occupancy</h5>
+                    <div className="flex justify-between items-center mb-3">
+                        <h5 className="text-[14px] md:text-[15px] lg:text-[16px] leading-[26px] font-medium text-black mt-1">Occupancy</h5>
                         <ul className="flex list-none p-0 m-0">
                             {["Quad", "Triple", "Dual"].map((type) => (
                                 <li key={type} className="ml-2">
                                     <button
                                         onClick={() => setOccupancy(type)}
-                                        className={`px-2 py-0.5 text-[14px] font-normal transition-all relative ${occupancy === type
+                                        className={`px-1 py-[2px] mb-5 text-[14px] md:text-[15px] lg:text-[16px] font-normal transition-all relative ${occupancy === type
                                             ? "text-[#2755b0] border-b-[3px] border-[#2755b0]"
                                             : "text-[#222]"
                                             }`}
@@ -63,13 +75,13 @@ export default function BookingCard() {
                         </ul>
                     </div>
 
-                    {/* Price Block Item - Matched to Image */}
-                    <div className="w-full shadow-[0_2px_8px_rgba(99,99,99,0.2)] rounded-[6px] p-[12px_20px] flex justify-between items-center mt-[10px] mb-[20px]">
-                        <h5 className="text-[18px] font-medium text-black m-0">{occupancy} Occupancy</h5>
-                        <div className="flex flex-col items-end">
-                            <strike className="text-[12px] font-normal text-black opacity-40">₹{pricing[occupancy].original}</strike>
-                            <h4 className="text-[22px] font-extrabold text-black m-0 leading-tight">₹{pricing[occupancy].current}</h4>
-                            <span className="text-[10px] font-normal text-black opacity-40">Per Person</span>
+                    {/* Price Block Item - Refined Styling */}
+                    <div className="w-full shadow-[0_2px_8px_rgba(99,99,99,0.2)] rounded-[6px] p-[4px_12px] flex justify-between items-center mt-[10px] mb-[20px]">
+                        <h5 className="text-[13px] md:text-[14px] lg:text-[15px] leading-[25px] font-medium text-black mb-[4px]">{occupancy} Occupancy</h5>
+                        <div className="flex flex-col items-end ml-[15px]">
+                            <strike className="text-[11px] md:text-[12px] lg:text-[13px] leading-[17px] font-semibold text-black opacity-40 mb-1 mt-1">₹{pricing[occupancy].original}</strike>
+                            <h4 className="text-[16px] md:text-[17px] lg:text-[18px] leading-[17px] font-semibold text-black mb-2">₹{pricing[occupancy].current}</h4>
+                            <span className="text-[9px] md:text-[10px] lg:text-[11px] leading-[11px] font-normal text-black opacity-80">Per Person</span>
                         </div>
                     </div>
                 </div>
@@ -77,7 +89,7 @@ export default function BookingCard() {
                 <div className="mb-4">
                     <a
                         href="/booking-details/chopta-tungnath-deoriatal"
-                        className="block w-full py-[10px] px-[14px] rounded-[50px] text-[16px] font-semibold text-center transition-all duration-300 bg-[#2755b0] border-2 border-[#2755b0] text-white hover:bg-white hover:text-[#2755b0]"
+                        className="block w-full py-2 px-4 rounded-[50px] text-[16px] font-semibold text-center transition-all duration-300 bg-[#2755b0] border-2 border-[#2755b0] text-white hover:bg-white hover:text-[#2755b0]"
                     >
                         Book Now
                     </a>

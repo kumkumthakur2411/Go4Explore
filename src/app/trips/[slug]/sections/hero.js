@@ -108,22 +108,13 @@ export default function Hero() {
                 <img src={images[4]} className="w-full h-full object-cover" alt="Sub 4" />
 
                 <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center transition-all duration-300 group-hover:bg-black/60">
-                  <div className="w-[50px] h-[50px] rounded-full border-2 border-white flex items-center justify-center mb-1">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="white"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-white text-[18px] font-bold tracking-tight">See All</span>
+                  <i
+                    className="bi bi-arrow-right-circle text-white text-[35px] font-small leading-none inline-block antialiased align-[-0.125em] mb-2"
+                    style={{ fontVariant: 'normal', textTransform: 'none' }}
+                  ></i>
+                  <span className="text-white text-[10px] md:text-[12px] lg:text-[14px] font-normal tracking-wide drop-shadow-lg ">
+                    See All
+                  </span>
                 </div>
               </div>
             </div>
