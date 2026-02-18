@@ -71,24 +71,23 @@ export default function Tabs() {
 
     return (
         <nav
-            className="sticky top-[115px] z-[9] hidden lg:block w-full bg-[#f4f6fc] p-[10px_5px] rounded-[10px] font-poppins"
-
+            className=" sticky top-[115px] z-[9] w-full bg-[#f4f6fc] p-[16px_12px] rounded-[10px] mb-[30px] font-poppins overflow-x-auto no-scrollbar scroll-smooth"
         >
-            <ul className="flex items-center justify-between list-none p-0 m-0 w-full px-4">
+            <ul className="flex items-center justify-between list-none p-0 m-0 w-full lg:min-w-full overflow-x-auto no-scrollbar">
                 {tabs.map((tab) => (
                     <li
                         key={tab.id}
-                        className={`relative py-3 transition-colors cursor-pointer group`}
+                        className={`relative py-[6px] px-[22px] transition-colors cursor-pointer group shrink-0`}
                         onClick={() => scrollToSection(tab.id)}
                     >
                         <button
-                            className={`text-[16px] leading-[26px] font-medium bg-transparent border-0 cursor-pointer p-0 focus:outline-none transition-colors ${activeTab === tab.id ? "text-[#2755b0]" : "text-black hover:text-[#2755b0]"
+                            className={`text-[16px] leading-[26px] font-medium bg-transparent border-0 cursor-pointer p-0 focus:outline-none transition-colors ${activeTab === tab.id ? "text-[#1d4ed8]" : "text-[#222] hover:text-[#1d4ed8]"
                                 }`}
                         >
                             {tab.label}
                         </button>
                         {activeTab === tab.id && (
-                            <div className="absolute -bottom-[10px] left-0 right-0 h-[3px] bg-[#2755b0] rounded-t-full" />
+                            <div className="absolute bottom-0 left-[22px] right-[22px] h-[2px] bg-[#1d4ed8]" />
                         )}
                     </li>
                 ))}

@@ -7,24 +7,27 @@ export default function Batches() {
     const months = ["February", "March", "April"];
 
     return (
-        <section id="batches" className="w-full bg-white p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24">
-            <h4 className="text-[24px] font-semibold text-[#200f0d] mb-4 tracking-normal">Batches Available</h4>
-            <hr className="border-[#dee2e6] mb-8 opacity-50" />
+        <section id="batches" className="w-full bg-white p-5 lg:p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24 border border-[#eee]">
+            <h4 className="text-[20px] lg:text-[24px] font-bold text-[#200f0d] mb-4 tracking-tight">Batches Available</h4>
+            <hr className="border-[#dee2e6] mb-6 opacity-50" />
 
             {/* Month Tabs */}
-            <div className="flex justify-end p-[12px] mb-8">
-                <ul className="flex list-none p-0 m-0">
+            <div className="flex justify-start lg:justify-end mb-6 overflow-x-auto no-scrollbar pb-2">
+                <ul className="flex list-none p-0 m-0 gap-4">
                     {months.map((month) => (
-                        <li key={month} className="ml-2">
+                        <li key={month}>
                             <button
                                 onClick={() => setActiveMonth(month)}
-                                className={`px-2 py-0.5 text-[14px] font-normal transition-all relative ${activeMonth === month
-                                    ? "text-[#2755b0] border-b-[3px] border-[#2755b0]"
-                                    : "text-[#222] hover:text-[#2755b0]"
+                                className={`px-0 py-1 text-[14px] lg:text-[15px] font-semibold transition-all relative whitespace-nowrap ${activeMonth === month
+                                    ? "text-[#2755b0]"
+                                    : "text-gray-400 hover:text-[#2755b0]"
                                     }`}
                                 type="button"
                             >
                                 {month}
+                                {activeMonth === month && (
+                                    <div className="absolute -bottom-[2px] left-0 right-0 h-[2px] bg-[#2755b0] rounded-full" />
+                                )}
                             </button>
                         </li>
                     ))}
@@ -33,20 +36,23 @@ export default function Batches() {
 
             {/* Batch Cards Grid */}
             <div className="w-full">
-                <ul className="flex flex-wrap list-none p-0 m-0 justify-between">
+                <ul className="flex flex-wrap list-none p-0 m-0 gap-3 lg:justify-between">
                     {tripData.batches.slice(0, 2).map((batch, idx) => (
-                        <li key={idx} className="inline-block w-full md:w-[47%] m-[6px]">
-                            <div className="flex items-center justify-between border border-[#dddddd] p-[12px] rounded-[10px] transition-all duration-300 hover:bg-[#85a4e334] hover:border-[#2755b0] group">
-                                <h5 className="text-[12px] leading-[16px] text-black font-medium m-0 group-hover:text-[#2755b0]">
-                                    {idx === 0 ? "20 Feb 2026 - 24 Feb 2026" : "27 Feb 2026 - 03 Mar 2026"}
-                                </h5>
+                        <li key={idx} className="w-full lg:w-[48%]">
+                            <div className="flex items-center justify-between border border-[#eee] p-3.5 rounded-xl transition-all duration-300 hover:bg-[#f4f6fc] hover:border-[#2755b0] group">
+                                <div className="flex flex-col">
+                                    <h5 className="text-[13px] lg:text-[14px] leading-tight text-black font-bold m-0 group-hover:text-[#2755b0]">
+                                        {idx === 0 ? "20 Feb 2026 - 24 Feb 2026" : "27 Feb 2026 - 03 Mar 2026"}
+                                    </h5>
+                                    <span className="text-[10px] text-gray-500 font-medium mt-1">Ex-Delhi</span>
+                                </div>
 
-                                <div className="btn-fe9 seats-fsz">
+                                <div className="shrink-0">
                                     <button
                                         type="button"
-                                        className="bg-[#127c42] text-white px-2 py-0.5 rounded-[80px] text-[10px] pointer-events-none"
+                                        className="bg-[#127c42] text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
                                     >
-                                        Seats Available
+                                        Available
                                     </button>
                                 </div>
                             </div>

@@ -1,11 +1,20 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { tripData } from "../../data";
 
 export default function Hero() {
   const images = tripData.heroImages;
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isOpen) {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+      }
+    }, 1000); // 1-second interval as requested
+    return () => clearInterval(interval);
+  }, [isOpen, images.length]);
 
   const openLightbox = (index) => {
     setCurrentIndex(index);
@@ -34,7 +43,7 @@ export default function Hero() {
 
       {/* Mobile Slider View (Visible only on small screens) */}
       <div className="lg:hidden w-full relative group px-0">
-        <div className="w-full h-[280px] rounded-[30px] overflow-hidden bg-gray-100">
+        <div className="w-full h-[250px] rounded-[30px] overflow-hidden bg-gray-100">
           <img
             src={images[currentIndex] || tripData.mainImage}
             alt="Trip Mobile"
@@ -42,13 +51,13 @@ export default function Hero() {
           />
         </div>
 
-        {/* Navigation Dots */}
-        <div className="flex justify-center gap-2 mt-4">
+        {/* Navigation Dots - Matching the design in the image */}
+        <div className="flex justify-center gap-1.5 mt-4">
           {images.slice(0, 10).map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrentIndex(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all ${currentIndex === i ? "bg-blue-600 w-5" : "bg-gray-300"
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === i ? "bg-[#007bff]" : "bg-[#d9d9d9]"
                 }`}
             />
           ))}
