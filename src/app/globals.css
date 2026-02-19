@@ -4,7 +4,9 @@
 
 
 @custom-variant dark (&:is(.dark *));
-
+@theme {
+  --font-weight-extrablack: 1000; 
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -162,7 +164,7 @@
 @keyframes redPinkCycle {
   0% {
     background-color: #ef4444; /* red-500 (light red) */
-    box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 8px rgba(238, 58, 58, 0.6);
   }
   50% {
     background-color: #dc2626; /* red-600 */
@@ -170,7 +172,7 @@
   }
   100% {
     background-color: #ef4444;
-    box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+    box-shadow: 0 0 8px rgba(235, 57, 57, 0.6);
   }
 }
 

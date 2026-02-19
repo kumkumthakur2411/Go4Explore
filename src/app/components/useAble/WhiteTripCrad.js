@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { BsTelephone } from "react-icons/bs";
 
+
 export default function WhiteTripCard({ trip }) {
   return (
     <div className="relative rounded-2xl overflow-hidden shadow-md bg-white
      border border-gray-100 group transition-all duration-300">
       
       {/* Top Image Section */}
-      <div className="relative h-[250px] overflow-hidden">
+      <div className="relative h-[290px] overflow-hidden">
         <Image
           src={trip.img}
           alt={trip.title}
@@ -17,7 +18,7 @@ export default function WhiteTripCard({ trip }) {
 
         {/* Discount Badge */}
         {trip.discount && (
-          <div className="absolute top-3 left-0 bg-gradient-to-r from-red-500 to-orange-400 text-white 
+          <div className="absolute top-3 left-0 bg-gradient-to-r from-red-500 to-orange-500 text-white 
           text-[11px] font-extrabold px-3 py-1 rounded-r-lg shadow-md uppercase">
             Discount: {trip.discount}
           </div>
@@ -32,25 +33,25 @@ export default function WhiteTripCard({ trip }) {
 
       {/* Content Section (White Background) */}
       <div className="p-4">
-        <h3 className="font-bold text-gray-800 text-[16px] mb-4 min-h-[40px] leading-tight">
+        <h3 className="font-medium text-black text-sm mb-2 min-h-[40px] leading-tight">
           {trip.title}
         </h3>
         
-        <hr className="mb-4 border-gray-100" />
+        <hr className="mb-4 border-gray-300" />
 
         {/* Action/Price Div with specialized hover logic */}
         <div className="flex items-center justify-between group/action">
           
           <div className="flex flex-col">
-            <p className="text-[18px] font-extrabold text-black leading-none">
+            <p className="text-sm font-extrabold text-black leading-none">
               {trip.price}
             </p>
             {trip.oldPrice && (
               <div className="mt-1">
-                <p className="text-[12px] line-through text-gray-400 font-medium">
+                <p className="text-[10px] line-through text-gray-600 font-medium">
                   {trip.oldPrice}
                 </p>
-                <p className="text-[10px] text-gray-500 font-semibold uppercase">
+                <p className="text-[9px] text-gray-600 font-semibold uppercase">
                   Per Person
                 </p>
               </div>
@@ -62,17 +63,19 @@ export default function WhiteTripCard({ trip }) {
                Default: White bg, Blue border/text 
                On Action Div Hover: Blue bg, White text
             */}
-            <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#2755B0] text-[#2755B0]
+            <div className="w-8 h-8 flex items-center justify-center rounded-full border-1 
+            border-[#2755B0] text-[#2755B0]
               transition-colors duration-300 cursor-pointer bg-white
               group-hover/action:bg-[#2755B0] group-hover/action:text-white">
-              <BsTelephone size={18} />
+              <BsTelephone size={16} />
             </div>
 
             {/* Trip Details Button: 
                Default: Blue bg, White text
                On Action Div Hover: White bg, Blue text
             */}
-            <button className="h-10 px-4 bg-[#2755B0] text-white font-bold text-[12px] rounded-lg border-2 border-[#2755B0]
+            <button className="h-8 px-1 bg-[#2755B0] text-white font-semibold 
+            text-xs rounded-sm border-2 border-[#2755B0]
               transition-colors duration-300 hover:opacity-90
               group-hover/action:bg-white group-hover/action:text-[#2755B0]">
               Trip Details
@@ -81,6 +84,7 @@ export default function WhiteTripCard({ trip }) {
 
         </div>
       </div>
+      
     </div>
   );
 }

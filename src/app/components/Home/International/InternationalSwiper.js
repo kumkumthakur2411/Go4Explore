@@ -28,14 +28,29 @@ export default function InternationalSwiper() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={2}
-      slidesPerView={3}
+      spaceBetween={1}
+      
       navigation={{
         nextEl: ".international-swiper-next",
         prevEl: ".international-swiper-prev",
       }}
 
       loop={true}
+      breakpoints={
+        {
+        // Mobile (Portrait)
+        0: {
+          slidesPerView: 2.5,
+          
+        },
+        // Tablet (iPad)
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 2,
+        }
+        }
+      }
+      className="w-full"
     >
       {International_destinations_row1.map((item1, index) => {
         const item2 = International_destinations_row2[index];

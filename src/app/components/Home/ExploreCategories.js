@@ -29,27 +29,29 @@ export default function ExploreCategories() {
   ];
 
   return (
-      <div className="w-[90%] mx-auto flex flex-col lg:flex-row gap-3 items-center">
+      <div className="w-[85%] mx-auto flex flex-col lg:flex-row gap-3 items-center">
         
         {/* Left Content */}
         <div className="lg:w-[25%] text-center lg:text-left">
-          <h2 className="w-[50%] text-2xl font-extrabold text-[#2755B0] mb-3">
+          <h2 className="w-full md:w-[50%] text-2xl 
+          font-extrabold text-[#2755B0] mb-3">
             Explore Categories
           </h2>
-          <p className="text-[#222229] font-semibold text-m">
+          <p className="text-[#222229] font-medium text-m">
             Discover destinations that match your vibe, Trips tailored to your
             preferences.
           </p>
         </div>
 
         {/* Right Cards */}
-        <div className="lg:w-[75%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-5">
+        <div className="lg:w-[75%] h-full grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {categories.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition duration-300"
+              className="bg-white rounded-xl shadow-md py-5 px-2
+              text-center hover:shadow-lg transition duration-300"
             >
-              <div className="flex justify-center mb-3">
+              <div className="flex justify-center mb-5">
                 <Image
                   src={item.icon}
                   alt={item.title}
@@ -58,7 +60,7 @@ export default function ExploreCategories() {
                   className="object-contain hover:scale-150 transition duration-300 "
                 />
               </div>
-              <p className="text-sm font-medium">{item.title}</p>
+              <p className="text-[10px] md:text-sm font-semibold text-zinc-900">{item.title}</p>
             </div>
           ))}
         </div>

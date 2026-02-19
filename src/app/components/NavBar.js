@@ -17,12 +17,12 @@ const topMenu = [
 ];
 
 const bottomMenu = [
-  { name: "Upcoming Group Trips", icon: "https://go4explore.com/assets/img/head-bottom/1.png" },
-  { name: "International Trips", icon: "https://go4explore.com/assets/img/head-bottom/2.png" },
-  { name: "Domestic Trips", icon: "https://go4explore.com/assets/img/head-bottom/3.png" },
-  { name: "Weekend Trips", icon: "https://go4explore.com/assets/img/head-bottom/4.png" },
-  { name: "Backpacking Trips", icon: "https://go4explore.com/assets/img/head-bottom/5.png" },
-  { name: "Corporate Tours", icon: "https://go4explore.com/assets/img/head-bottom/6.png" },
+  { name: "Upcoming Group Trips", icon: "https://go4explore.com/assets/img/head-bottom/1.png" ,href:"/upcoming-trips" },
+  { name: "International Trips", icon: "https://go4explore.com/assets/img/head-bottom/2.png" ,href:"/International-trips"},
+  { name: "Domestic Trips", icon: "https://go4explore.com/assets/img/head-bottom/3.png",href:"/Domestic-trips" },
+  { name: "Weekend Trips", icon: "https://go4explore.com/assets/img/head-bottom/4.png" ,href:"/Weekend-trips" },
+  { name: "Backpacking Trips", icon: "https://go4explore.com/assets/img/head-bottom/5.png",href:"/upcoming-trips" },
+  { name: "Corporate Tours", icon: "https://go4explore.com/assets/img/head-bottom/6.png",href:"/upcoming-trips" },
 ];
 
 export default function NavBar() {
@@ -47,12 +47,15 @@ export default function NavBar() {
 
     {/* 2. Desktop Center Menu */}
     <div className="hidden md:flex items-center gap-5">
-      <button className="btn-cycle px-4 py-2 rounded-full text-sm font-bold text-white flex items-center gap-2 hover:bg-white hover:text-red-600 hover:border-red-600 transition-all">
+    <div className="hidden md:flex items-center gap-5">
+      <button className="btn-cycle px-4 py-1 rounded-full
+       text-sm font-bold text-white flex items-center gap-2 hover:bg-white 
+      hover:text-red-600 hover:border-red-600 transition-all">
         <Image src="https://go4explore.com/assets/img/sale-page/sale-nav-bar-icon.png"
          alt="offer" width={20} height={20} />
         Early Bird offer 2026
       </button>
-      <div className="flex items-center gap-6 text-sm font-semibold text-gray-700">
+      <div className="flex items-center gap-6 text-base font-semibold text-[#000000]">
         {topMenu.map((item, index) => (
           <Link key={index} href={item.href} className="hover:text-blue-600">{item.name}</Link>
         ))}
@@ -69,6 +72,7 @@ export default function NavBar() {
       <div className="w-8 h-8 flex items-center justify-center rounded-full bg-[#2755B0] text-white">
         <IoPersonOutline size={18} />
       </div>
+    </div>
     </div>
 
     {/* 4. MOBILE-ONLY NAVIGATION (Independent Layout) */}
@@ -97,18 +101,23 @@ export default function NavBar() {
         <button onClick={() => setIsOpen(true)} className="text-gray-800">
           <HiOutlineMenuAlt3 size={28} />
         </button>
-      </div>
+    </div>
     </div>
   
 
   {/* ===== BOTTOM NAV (Desktop Only) ===== */}
   <div className="hidden md:flex h-[45%] bg-[#2755B0] text-white items-center justify-center">
-    <div className="w-[85%] flex items-center justify-between py-3 text-sm font-medium">
+    <div className="w-[77%] flex items-center justify-between py-3 text-sm font-medium">
       {bottomMenu.map((item, index) => (
-        <div key={index} className="flex items-center gap-2 hover:text-yellow-300 cursor-pointer">
+        <Link href={item.href} key={index}>
+        <div  className="flex items-center gap-2 hover:text-yellow-300 cursor-pointer">
+          
+
           <Image src={item.icon} alt={item.name} width={20} height={20} />
           <span>{item.name}</span>
+          
         </div>
+        </Link>
       ))}
     </div>
   </div>
@@ -187,8 +196,6 @@ export default function NavBar() {
               </div>
             ))}
           </div>
-
-
 </div>
 <div className="flex flex-row justify-center items-center  py-7">
         <a href="tel:+919266710039" className="flex items-center gap-1 border border-[#2755B0]
