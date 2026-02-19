@@ -21,7 +21,7 @@ export const metadata = {
 export default function TripPage() {
   return (
     <main className="pt-[75px] lg:pt-[95px] min-h-screen pb-5 lg:pb-5 font-poppins bg-[#f9f9f9]">
-      <div className="max-w-[1320px] mx-auto px-5 md:px-8 lg:px-6">
+      <div className="max-w-[1320px] mx-auto px-2 md:px-8 lg:px-6">
 
         {/* Hero Section */}
         <Hero />

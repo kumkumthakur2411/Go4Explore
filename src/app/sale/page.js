@@ -3,14 +3,13 @@ import Benefit from "./[slug]/benefit";
 import Bestseller from "./[slug]/bestseller";
 import Tours from "./[slug]/tours";
 import TestimonialSection from "../components/useAble/testimonials/TestimonialsSection";
-import VideoSwiper from "../components/useAble/VideoSwiper/VideoSwiper";
+import { BannerVideo } from "../components/useAble/BannerVideo";
 
 const videos = [
-    { name: "Video 1", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-1.mp4" },
-    { name: "Video 2", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-2.mp4" },
-    { name: "Video 3", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-3.mp4" },
-    { name: "Video 4", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-4.mp4" },
-    { name: "Video 5", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-5.mp4" },
+    "https://go4explore.com/assets/img/vietnam-hm-slider.mp4",
+    "https://go4explore.com/assets/img/georgia-hm-slider.mp4",
+    "https://go4explore.com/assets/img/bali-hm-slider.mp4",
+    "https://go4explore.com/assets/img/kazakhstan-hm-slider.mp4",
 ];
 export default function SalePage() {
     return (
@@ -20,8 +19,8 @@ export default function SalePage() {
                 <Benefit />
                 <Bestseller />
                 <Tours />
-                <VideoSwiper videos={videos} />
-                <TestimonialSection />
+                <BannerVideo videos={videos} />  {/* made by kumkum */}
+                <TestimonialSection />  {/* made by kumkum */}
             </div>
         </>
     );
