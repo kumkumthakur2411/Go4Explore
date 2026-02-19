@@ -18,7 +18,7 @@ export default function VideoSwiper({ prevEl, nextEl }) {
     <Swiper
       modules={[Navigation]}
       spaceBetween={20}
-      slidesPerView={3}
+      slidesPerView={8}      
       loop={true}
       navigation={{
         prevEl: `.${prevEl}`, // Matches the class passed from parent
