@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
 import { tripData } from "../../data";
+import { SlArrowDown } from "react-icons/sl";
+
 
 /* ================= DAY ACCORDION ================= */
 
 const DayAccordion = ({ day, title, points = [], meals = [], isOpen, onClick }) => (
-  <div className="border border-[#b3b3b3] p-[5px] md:p-[25px] rounded-[8px] mb-[15px] bg-white overflow-hidden">
+  <div className="border border-[#b3b3b3] p-[10px] md:p-[25px] rounded-[8px] mb-[15px] bg-white overflow-hidden">
     {/* HEADER */}
     <div className="flex items-center">
       <div className="px-4 py-1.5 rounded-full text-[11px] md:text-[12px] lg:text-[13px] font-bold bg-[#2755b0] text-white flex justify-center items-center mr-[15px] shrink-0 min-w-[70px] md:min-w-[75px]">
@@ -18,7 +20,7 @@ const DayAccordion = ({ day, title, points = [], meals = [], isOpen, onClick }) 
         <div className="text-[12px] leading-[18px] md:text-[16px] md:leading-normal font-medium text-black font-poppins">
           {title}
         </div>
-        <i className={`bi bi-chevron-down text-black text-[14px] font-semibold transition-transform duration-300 ml-auto antialiased ${isOpen ? "rotate-180" : ""}`} style={{ WebkitTextStroke: '1.5px' }}></i>
+        <SlArrowDown className={`text-black text-[14px] font-semibold transition-transform duration-300 ml-auto antialiased ${isOpen ? "rotate-180" : ""}`} style={{ WebkitTextStroke: '1.5px' }}></SlArrowDown>
       </button>
     </div>
 

@@ -1,6 +1,9 @@
 "use client";
 import { useRef } from "react";
 import { tripData } from "../../data";
+import { GoChevronLeft } from "react-icons/go";
+import { GoChevronRight } from "react-icons/go";
+import { SlPhone } from "react-icons/sl";
 
 export default function RelatedTrips() {
     const scrollRef = useRef(null);
@@ -28,27 +31,27 @@ export default function RelatedTrips() {
                 <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-3">
                     <div className="w-full md:w-3/4">
                         <div className="relative">
-                            <h4 className="text-[18px] leading-[28px] text-center mt-2 mb-1 md:mt-0 md:mb-0 md:text-left md:text-[30px] font-extrabold md:leading-[40px] text-black">
+                            <h4 className="text-[18px] leading-[28px] text-center mt-2 mb-1 md:mt-0 md:mb-3 md:text-left md:text-[30px] font-bold md:leading-[40px] text-black">
                                 Related Trips For You
                             </h4>
                         </div>
                     </div>
 
                     <div className="hidden md:flex md:w-1/4 justify-end">
-                        <div className="flex gap-1">
+                        <div className="flex gap-0">
                             <button
                                 onClick={() => scroll("left")}
                                 className="text-white rounded-full bg-[#2755b0] w-[30px] h-[30px] flex items-center justify-center m-[5px]"
                                 aria-label="Scroll Left"
                             >
-                                <i className="bi bi-chevron-left text-[14px] font-bold"></i>
+                                <GoChevronLeft />
                             </button>
                             <button
                                 onClick={() => scroll("right")}
                                 className="text-white rounded-full bg-[#2755b0] w-[30px] h-[30px] flex items-center justify-center m-[5px]"
                                 aria-label="Scroll Right"
                             >
-                                <i className="bi bi-chevron-right text-[14px] font-bold"></i>
+                                <GoChevronRight />
                             </button>
                         </div>
                     </div>
@@ -64,7 +67,7 @@ export default function RelatedTrips() {
                         {tripData.relatedTrips.map((trip, idx) => (
                             <div
                                 key={idx}
-                                className="relative z-[1] flex-shrink-0 w-[250px] h-full md:w-[312px] lg:w-[calc((100%-45px)/4)] border border-[#ddd] rounded-[14px] overflow-hidden group transition-transform duration-500 ease-in-out bg-white hover:shadow-2xl hover:border-blue-100 flex flex-col box-content"
+                                className="relative z-[1] flex-shrink-0 w-[250px] h-full md:w-[calc((100%-33px)/3)] lg:w-[calc((100%-50px)/4)] border border-[#ddd] rounded-[14px] overflow-hidden group transition-transform duration-500 ease-in-out bg-white hover:shadow-2xl hover:border-blue-100 flex flex-col box-content"
                             >
                                 {/* Image Container */}
                                 <a href={`/trips/${trip.title.toLowerCase().replace(/\s+/g, '-')}`} className="block relative overflow-hidden h-[200px] md:h-[300px]">
@@ -78,7 +81,7 @@ export default function RelatedTrips() {
 
                                 {/* Card Body */}
                                 <div className="p-[12px] flex flex-col flex-grow">
-                                    <h5 className="text-[16px] font-bold text-black mb-3 pb-3 border-b border-[#a9a9a985] h-[54px] overflow-hidden leading-[21px] flex items-center group-hover:text-[#2755b0] transition-colors">
+                                    <h5 className="text-[16px] font-medium text-black mb-3 pb-3 border-b border-[#a9a9a985] h-[54px] overflow-hidden leading-[21px] flex items-center group-hover:text-[#2755b0] transition-colors">
                                         {trip.title}
                                     </h5>
 
@@ -91,7 +94,7 @@ export default function RelatedTrips() {
                                         <div className="flex items-center gap-2 justify-end">
                                             {/* Phone Icon/Action */}
                                             <div className="w-[32px] h-[32px] rounded-full border border-[#2755b0] flex items-center justify-center text-[#2755b0] transition-all duration-300 group-hover:bg-[#2755b0] group-hover:text-white cursor-pointer">
-                                                <i className="bi bi-telephone-outbound text-[14px]"></i>
+                                                <SlPhone className="text-[18px]" />
                                             </div>
 
                                             {/* Details Button */}

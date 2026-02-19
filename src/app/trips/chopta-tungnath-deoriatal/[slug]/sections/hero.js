@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { tripData } from "../../data";
+import { SlArrowRightCircle } from "react-icons/sl";
+
 
 export default function Hero() {
   const images = tripData.heroImages;
@@ -109,9 +111,11 @@ export default function Hero() {
 
                 <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center transition-all duration-300 group-hover:bg-black/60">
                   <i
-                    className="bi bi-arrow-right-circle text-white text-[35px] font-small leading-none inline-block antialiased align-[-0.125em] mb-2"
+                    className="text-white text-[35px] font-small leading-none inline-block antialiased align-[-0.125em] mb-2"
                     style={{ fontVariant: 'normal', textTransform: 'none' }}
-                  ></i>
+                  >
+                    <SlArrowRightCircle />
+                  </i>
                   <span className="text-white text-[10px] md:text-[12px] lg:text-[14px] font-normal tracking-wide drop-shadow-lg ">
                     See All
                   </span>
