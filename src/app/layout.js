@@ -19,14 +19,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.className}>
-<<<<<<< HEAD
-      <body className={`  overflow-x-hidden flex flex-col`}>
-=======
-      <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-      </head>
+
+
       <body className={`overflow-x-hidden flex flex-col`}>
->>>>>>> 44bc52f2b5fa6f53cb98147360f21b1b568226ed
+
         {/* Top navigation (fixed) */}
         <NavBar />
 
