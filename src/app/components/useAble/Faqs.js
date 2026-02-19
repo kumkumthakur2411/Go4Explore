@@ -8,7 +8,7 @@ import {
 export function FaqsSection({ faqArray }) {
   return (
     // Adjust width for responsiveness: full on mobile, 90% on larger screens
-    <div className="w-full md:w-[90%] mx-auto p-4 flex flex-col items-center">
+    <div className="w-full md:w-[90%] mx-auto p-2 md:p-4 flex flex-col items-center">
       <h1 className="w-full text-2xl md:text-3xl font-extrabold text-[#2755B0] text-center mb-8">
         FAQs: Have Any Doubts?
       </h1>

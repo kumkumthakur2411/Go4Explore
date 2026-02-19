@@ -10,14 +10,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export function BannerVideo() {
+export function BannerVideo({videos}) {
   // Video Array
-  const videos = [
-    "https://go4explore.com/assets/img/vietnam-hm-slider.mp4",
-    "https://go4explore.com/assets/img/georgia-hm-slider.mp4",
-    "https://go4explore.com/assets/img/bali-hm-slider.mp4",
-    "https://go4explore.com/assets/img/kazakhstan-hm-slider.mp4",
-  ];
+
 
   return (
 <div className="w-full flex justify-center mt-5">

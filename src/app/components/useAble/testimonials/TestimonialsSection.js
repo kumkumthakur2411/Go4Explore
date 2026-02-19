@@ -1,4 +1,120 @@
 export default function TestimonialSection() {
+   const testimonials = [
+  {
+    id: 1,
+    name: "Ujjawal Sharma",
+    location: "Andaman",
+    text: "Never have I chosen a group travel option before...",
+    image: "/images/andaman.jpg",
+  },
+  {
+    id: 2,
+    name: "Dhruv Bajpai",
+    location: "Kazakhstan",
+    text: "Hi! I went with Go4Explore on their weekend getaway...",
+    image: "/images/kazakhstan.jpg",
+  },
+  {
+    id: 3,
+    name: "Rohit Sharma",
+    location: "Kedarnath",
+    text: "Amazing trek and great leadership!",
+    image: "/images/kedarnath.jpg",
+  },
+  {
+    id: 4,
+    name: "Hemanth",
+    location: "Kerala",
+    text: "Our trip to Bhutan was great!",
+    image: "/images/kerala.jpg",
+  },
+
+    {
+    id: 5,
+    name: "Dhruv Bajpai",
+    location: "Kazakhstan",
+    text: "Hi! I went with Go4Explore on their weekend getaway...",
+    image: "/images/kazakhstan.jpg",
+  },
+  {
+    id: 6,
+    name: "Rohit Sharma",
+    location: "Kedarnath",
+    text: "Amazing trek and great leadership!",
+    image: "/images/kedarnath.jpg",
+  },
+  {
+    id: 7,
+    name: "Hemanth",
+    location: "Kerala",
+    text: "Our trip to Bhutan was great!",
+    image: "/images/kerala.jpg",
+  },
+    {
+    id: 8,
+    name: "Dhruv Bajpai",
+    location: "Kazakhstan",
+    text: "Hi! I went with Go4Explore on their weekend getaway...",
+    image: "/images/kazakhstan.jpg",
+  },
+  {
+    id: 9,
+    name: "Rohit Sharma",
+    location: "Kedarnath",
+    text: "Amazing trek and great leadership!",
+    image: "/images/kedarnath.jpg",
+  },
+  {
+    id: 10,
+    name: "Hemanth",
+    location: "Kerala",
+    text: "Our trip to Bhutan was great!",
+    image: "/images/kerala.jpg",
+  },
+    {
+    id: 11,
+    name: "Dhruv Bajpai",
+    location: "Kazakhstan",
+    text: "Hi! I went with Go4Explore on their weekend getaway...",
+    image: "/images/kazakhstan.jpg",
+  },
+  {
+    id: 12,
+    name: "Rohit Sharma",
+    location: "Kedarnath",
+    text: "Amazing trek and great leadership!",
+    image: "/images/kedarnath.jpg",
+  },
+  {
+    id: 13,
+    name: "Hemanth",
+    location: "Kerala",
+    text: "Our trip to Bhutan was great!",
+    image: "/images/kerala.jpg",
+  },
+    {
+    id: 14,
+    name: "Dhruv Bajpai",
+    location: "Kazakhstan",
+    text: "Hi! I went with Go4Explore on their weekend getaway...",
+    image: "/images/kazakhstan.jpg",
+  },
+  {
+    id: 15,
+    name: "Rohit Sharma",
+    location: "Kedarnath",
+    text: "Amazing trek and great leadership!",
+    image: "/images/kedarnath.jpg",
+  },
+  {
+    id: 16,
+    name: "Hemanth",
+    location: "Kerala",
+    text: "Our trip to Bhutan was great!",
+    image: "/images/kerala.jpg",
+  },
+];
+
   return (
     <div className="w-[90%] h-screen mx-auto  ">
       <h1 className="w-full flex justify-center items-center py-8 text-3xl font-extrabold text-black mb-8">
