@@ -35,16 +35,15 @@ export default function ThingsToPack() {
 
     return (
         <section
-            id="info-pack"
             className="w-full bg-white p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24"
         >
             <h4 className="text-[24px] font-semibold text-[#200f0d] mb-4 tracking-normal">Things To Pack</h4>
 
-            <hr className="border-[#dee2e6] mb-8 opacity-50" />
+            <hr className="my-3 border-t border-black opacity-30" />
 
             <ul className="list-none p-0 m-0">
                 {packingItems.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-5 py-[12px] text-[#35211f] text-[16px] font-normal leading-[24px] tracking-normal">
+                    <li key={idx} className="flex items-center gap-5 pb-3 md:py-[12px] text-[#35211f] !text-[12px] md:!text-[16px] font-normal leading-[19px] md:leading-[24px] tracking-normal">
                         <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
                             <img src={item.icon} alt="pack icon" className="w-full h-auto object-contain" />
                         </div>

@@ -5,67 +5,81 @@ export default function QuickInfo() {
   return (
     <section
       id="info"
-      className="w-full bg-white p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24"
+      className="w-full bg-white shadow-[0px_2px_8px_rgba(99,99,99,0.2)] rounded-[15px] p-[30px] mb-[30px]
+ font-poppins"
     >
-
-
       {/* Title */}
-      <div className="mb-6 text-left">
-        <h1 className="text-[30px] font-extrabold text-black leading-[40px] tracking-normal m-0" style={{ fontWeight: 800 }}>
+      <div className="mb-2 text-left">
+        <h1 className="text-[30px] leading-[40px] font-extrabold mb-2
+">
           {tripData.title}
         </h1>
       </div>
 
-      {/* ===== Top 3 Info Boxes ===== */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-3 mb-6">
+      {/* Top Info Boxes */}
+      <div className="flex flex-wrap -mx-[7.5px]">
         {tripData.quickInfo.map((info, idx) => (
-          <div key={idx} className="flex items-center bg-[#f4f6fc] p-[10px] rounded-[10px]">
-            {/* Icon */}
-            <div className="w-[40px] shrink-0 flex justify-center items-center">
-              <img
-                src={info.icon}
-                alt={info.label}
-                className="max-w-[30px] h-auto object-contain"
-              />
-            </div>
+          <div key={idx} className="w-full md:w-1/3 px-[7.5px] mb-[8px] md:mb-0">
+            <div className="flex items-center bg-[#f4f6fc] p-[10px] rounded-[10px]">
+              {/* Icon */}
+              <div className="w-[40px] flex justify-center items-center shrink-0">
+                <img
+                  src={info.icon}
+                  alt={info.label}
+                  className="max-w-[30px] object-contain"
+                />
+              </div>
 
-            {/* Text */}
-            <div className="ml-[5px] flex flex-col items-start">
-              <span className="text-[13px] text-gray-900 font-medium leading-[25px]">
-                {info.label}
-              </span>
-              <h4 className="text-[14px] font-semibold text-black leading-[28px] m-0">
-                {info.value}
-              </h4>
+              {/* Text */}
+              <div className="ml-[5px] text-left">
+                <span className="text-[13px] font-medium leading-[25px] block">
+                  {info.label}
+                </span>
+                <h4 className="text-[14px] font-semibold leading-[28px] m-0">
+                  {info.value}
+                </h4>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
       {/* Divider */}
-      <hr className="my-[1.5rem] border-t border-[#dee2e6] opacity-25" />
+      <hr className="!my-6
+ border-t border-black/25" />
 
-      {/* ===== Features Section ===== */}
-      <div className="flex flex-wrap items-center">
+      {/* Bottom Features */}
+      <div className="flex flex-wrap items-center justify-start">
         {tripData.tripFeatures.map((feature, idx) => (
-          <div
-            key={idx}
-            className="flex items-center gap-[10px] px-[15px] mb-4"
-          >
-            <div className="w-[30px] shrink-0 flex justify-center items-center">
+          <div key={idx} className="px-[12px] py-1 flex items-center gap-[10px]">
+            {/* Icon */}
+            <div className="w-[26px] flex justify-center items-center shrink-0">
               <img
                 src={feature.icon}
                 alt={feature.label}
-                className="max-w-[30px] h-auto object-contain"
+                className="max-w-[26px] object-contain"
               />
             </div>
 
-            <h4 className="text-[15px] font-semibold text-black leading-[25px] m-0">
+            {/* Label */}
+            <h4 className="text-[15px] leading-[25px] font-semibold m-0 text-[#35211F] font-poppins">
               {feature.label}
             </h4>
           </div>
         ))}
       </div>
     </section>
+  );
+}
+
+export function InfoItem({ icon, label, value }) {
+  return (
+    <div className="flex items-center gap-[10px]">
+      <div className="w-[40px] flex justify-center items-center shrink-0">{icon}</div>
+      <div>
+        <span className="text-[13px] font-medium leading-[25px] block">{label}</span>
+        <p className="text-[14px] font-semibold leading-[28px] m-0">{value}</p>
+      </div>
+    </div>
   );
 }

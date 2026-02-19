@@ -125,10 +125,13 @@ export const tripData = {
         },
     ],
     batches: [
-        { date: "24 Feb - 27 Feb", status: "Filling Fast", price: "₹6,999" },
-        { date: "02 Mar - 05 Mar", status: "Available", price: "₹6,999" },
-        { date: "09 Mar - 12 Mar", status: "Available", price: "₹6,999" },
-        { date: "16 Mar - 19 Mar", status: "Available", price: "₹6,999" },
+        { date: "24 Feb 2026 - 27 Feb 2026", status: "Filling Fast", price: "₹6,999" },
+        { date: "02 Mar 2026 - 05 Mar 2026", status: "Available", price: "₹6,999" },
+        { date: "09 Mar 2026 - 12 Mar 2026", status: "Available", price: "₹6,999" },
+        { date: "16 Mar 2026 - 19 Mar 2026", status: "Available", price: "₹6,999" },
+        { date: "23 Mar 2026 - 26 Mar 2026", status: "Available", price: "₹6,999" },
+        { date: "06 Apr 2026 - 09 Apr 2026", status: "Available", price: "₹6,999" },
+        { date: "20 Apr 2026 - 23 Apr 2026", status: "Available", price: "₹6,999" },
     ],
     relatedTrips: [
         { title: "Bhutan", price: "25,000", image: "https://d2qa7a8q0vuocm.cloudfront.net/escapes/bhutan.webp" },

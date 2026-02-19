@@ -46,12 +46,11 @@ export default function Reviews() {
 
     return (
         <section
-            id="reviews"
             className="w-full bg-white p-[30px] rounded-[15px] shadow-[0_2px_8px_rgba(99,99,99,0.2)] font-poppins scroll-mt-24"
         >
 
-            <h4 className="text-[24px] font-semibold text-[#200f0d] mb-4 tracking-normal">Reviews</h4>
-            <hr className="border-[#dee2e6] mb-8 opacity-50" />
+            <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-semibold text-[#200f0d] mb-4 tracking-normal">Reviews</h4>
+            <hr className="my-3 border-t border-black opacity-30" />
 
             <div className="space-y-0">
                 {visibleReviews.map((review, idx) => (
@@ -62,7 +61,7 @@ export default function Reviews() {
                                     <img src={review.image} alt={review.name} className="max-w-[45px] h-auto object-contain rounded-full" />
                                 </div>
                                 <div className="flex flex-col">
-                                    <h6 className="text-[18px] font-semibold text-[#200f0d] m-0 leading-tight">{review.name}</h6>
+                                    <h6 className="text-[16px] md:text-[17px] lg:text-[18px] font-semibold text-[#200f0d] m-0 leading-tight">{review.name}</h6>
                                     <span className="text-[12px] text-gray-500 m-0">
                                         Booked: <strong className="font-bold text-[#35211f]">{review.booked}</strong>
                                     </span>
@@ -70,9 +69,9 @@ export default function Reviews() {
                             </div>
 
                             {/* Star Rating */}
-                            <div className="flex items-center gap-0.5">
+                            <div className="flex items-center gap-0.5 ">
                                 {[...Array(5)].map((_, i) => (
-                                    <svg key={i} className="w-5 h-5 text-[#e5be37]" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg key={i} className="w-7 h-7 text-[#e5be37]" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                     </svg>
                                 ))}
@@ -80,7 +79,7 @@ export default function Reviews() {
                         </div>
 
                         <div className="body-pam">
-                            <p className="text-[16px] leading-[26px] text-[#6c757d] font-normal mb-0">
+                            <p className="text-[12px] leading-[19px] md:text-[15px] md:leading-[26px] lg:text-[16px] text-[#6c757d] font-normal mb-0">
                                 {review.comment}
                             </p>
                         </div>
