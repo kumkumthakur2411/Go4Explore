@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 
 import InternationalSection from "./components/Home/International/InternationalSection";
 import TrendingSection from "./components/Home/Trending/TrendingSection";
-
-import { BannerVideo } from "./components/Home/BannerVideo";
 import ExploreCategories from "./components/Home/ExploreCategories";
 import DomesticSection from "./components/Home/DomesticSection/DomesticSection";
 import UpcomingTrips from "./components/Home/UpcomingTrips";
@@ -14,19 +12,18 @@ import WhyChoose from "./components/useAble/WhyChoose";
 import TopBlogReads from "./components/Home/TopBlogReads";
 import { AboutUs } from "./components/Home/AboutUs";
 import Hero from "./components/Home/Hero";
-
+import { BannerVideo } from "./components/useAble/BannerVideo";
 import BrandsMarquee from "./components/Home/BrandMarquee";
-import VideoSwiperSection from "./components/useAble/VideoSwiper/VideoSwiperSection";
+import VideoSwiperSection from "./components/Home/VideoSwiper/VideoSwiperSection";
 import { FaqsSection } from "./components/useAble/Faqs";
 import TestimonialSection from "./components/useAble/testimonials/TestimonialsSection";
 
-const videos = [
-  { name: "Video 1", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-1.mp4" },
-  { name: "Video 2", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-2.mp4" },
-  { name: "Video 3", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-3.mp4" },
-  { name: "Video 4", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-4.mp4" },
-  { name: "Video 5", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-5.mp4" },
-];
+  const videos = [
+    "https://go4explore.com/assets/img/vietnam-hm-slider.mp4",
+    "https://go4explore.com/assets/img/georgia-hm-slider.mp4",
+    "https://go4explore.com/assets/img/bali-hm-slider.mp4",
+    "https://go4explore.com/assets/img/kazakhstan-hm-slider.mp4",
+  ];
 const faqArray = [
   {
     question: "I am a solo traveller, can I join the group trips?",
@@ -49,6 +46,13 @@ const faqArray = [
     content: "There are numerous factors due to which your trip booking gets cancelled or modified. In this case, we provide you the best possible resolution or a credit note valid for a year of the same amount. In case the traveller cancels the trip from his/her end, the booking amount is non refundable ever and will be treated as per the cancellation policy given here - https://phplaravel-961095-3395580.cloudwaysapps.com/Cancellation-and-Refund-Policy."
   }
 ];
+const reels = [
+  { name: "Video 1", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-1.mp4" },
+  { name: "Video 2", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-2.mp4" },
+  { name: "Video 3", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-3.mp4" },
+  { name: "Video 4", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-4.mp4" },
+  { name: "Video 5", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-5.mp4" },
+];
 
 export default function Home() {
   return (
@@ -62,14 +66,14 @@ export default function Home() {
         <DomesticSection />
         <UpcomingTrips />
         <FeaturedNews />
-        <BannerVideo />
+        <BannerVideo videos={videos}/>
       </div>
       {/* FULL WIDTH SECTION */}
       <PlanTripSection />
       {/* Back to Normal Sections */}
       <div className="w-full px-12 py-8 flex flex-col gap-10 items-center">
         <BrandsMarquee />
-        <VideoSwiperSection video={videos} />
+        <VideoSwiperSection videos={reels} />
         <TestimonialSection/>
         <WhyChoose />
         <TopBlogReads />
