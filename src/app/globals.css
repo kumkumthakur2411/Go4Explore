@@ -4,7 +4,9 @@
 
 
 @custom-variant dark (&:is(.dark *));
-
+@theme {
+  --font-weight-extrablack: 1000; 
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

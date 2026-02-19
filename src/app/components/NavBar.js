@@ -17,12 +17,12 @@ const topMenu = [
 ];
 
 const bottomMenu = [
-  { name: "Upcoming Group Trips", icon: "https://go4explore.com/assets/img/head-bottom/1.png" },
-  { name: "International Trips", icon: "https://go4explore.com/assets/img/head-bottom/2.png" },
-  { name: "Domestic Trips", icon: "https://go4explore.com/assets/img/head-bottom/3.png" },
-  { name: "Weekend Trips", icon: "https://go4explore.com/assets/img/head-bottom/4.png" },
-  { name: "Backpacking Trips", icon: "https://go4explore.com/assets/img/head-bottom/5.png" },
-  { name: "Corporate Tours", icon: "https://go4explore.com/assets/img/head-bottom/6.png" },
+  { name: "Upcoming Group Trips", icon: "https://go4explore.com/assets/img/head-bottom/1.png" ,href:"/upcoming-trips" },
+  { name: "International Trips", icon: "https://go4explore.com/assets/img/head-bottom/2.png" ,href:"/International-trips"},
+  { name: "Domestic Trips", icon: "https://go4explore.com/assets/img/head-bottom/3.png",href:"/Domestic-trips" },
+  { name: "Weekend Trips", icon: "https://go4explore.com/assets/img/head-bottom/4.png" ,href:"/Weekend-trips" },
+  { name: "Backpacking Trips", icon: "https://go4explore.com/assets/img/head-bottom/5.png",href:"/upcoming-trips" },
+  { name: "Corporate Tours", icon: "https://go4explore.com/assets/img/head-bottom/6.png",href:"/upcoming-trips" },
 ];
 
 export default function NavBar() {
@@ -109,10 +109,15 @@ export default function NavBar() {
   <div className="hidden md:flex h-[45%] bg-[#2755B0] text-white items-center justify-center">
     <div className="w-[77%] flex items-center justify-between py-3 text-sm font-medium">
       {bottomMenu.map((item, index) => (
-        <div key={index} className="flex items-center gap-2 hover:text-yellow-300 cursor-pointer">
+        <Link href={item.href} key={index}>
+        <div  className="flex items-center gap-2 hover:text-yellow-300 cursor-pointer">
+          
+
           <Image src={item.icon} alt={item.name} width={20} height={20} />
           <span>{item.name}</span>
+          
         </div>
+        </Link>
       ))}
     </div>
   </div>

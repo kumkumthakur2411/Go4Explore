@@ -1,7 +1,7 @@
 import Image from "next/image";
 import VideoSwiper from "./VideoSwiper";
 
-export default function VideoSwiperSection() {
+export default function VideoSwiperSection({video}) {
   return (
     <div className="w-[90%] h-auto bg-white/90 shadow-2xl rounded-xl p-5 mx-auto">
       
@@ -44,7 +44,7 @@ export default function VideoSwiperSection() {
 
         <div className="w-full md:w-[65%]">
           {/* Passing the class names to the Swiper component */}
-          <VideoSwiper prevEl="custom-prev" nextEl="custom-next" />
+          <VideoSwiper prevEl="custom-prev" nextEl="custom-next" videos={video}/>
         </div>
       </div>
       

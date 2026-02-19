@@ -1,4 +1,4 @@
-export default function CustomLayout() {
+export default function TestimonialSection() {
   return (
     <div className="w-[90%] h-screen mx-auto  ">
       <h1 className="w-full flex justify-center items-center py-8 text-3xl font-extrabold text-[#2755B0]">
