@@ -18,13 +18,13 @@ export default function FeaturedNewsSwiper() {
   ];
 
   return (
-    <div className="w-[80%] py-8">
+    <div className="w-full pt-2 md:py-4 md:py-8">
       <div className="max-w-7xl mx-auto">
         <Swiper
-          slidesPerView={5}
-          spaceBetween={20}
+          slidesPerView={4}
+          spaceBetween={15}
           loop={true}
-          speed={7000} // higher = slower marquee
+          speed={5000} // higher = slower marquee
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
@@ -33,7 +33,7 @@ export default function FeaturedNewsSwiper() {
           modules={[Autoplay]}
           className="[&_.swiper-wrapper]:!ease-linear"
           breakpoints={{
-            320: { slidesPerView: 2 },
+            320: { slidesPerView: 3 },
             640: { slidesPerView: 3 },
             1024: { slidesPerView: 5 },
           }}
@@ -48,8 +48,8 @@ export default function FeaturedNewsSwiper() {
                     src={item.src}
                     alt={item.title}
                     fill
-                    className="object-contain"
-                    sizes="200px"
+                    className="object-contain size:5 md:size-20"
+                  
                   />
                 </div>
               </div>

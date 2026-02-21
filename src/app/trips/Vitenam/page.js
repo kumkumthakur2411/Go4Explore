@@ -1,5 +1,5 @@
 import { Hand, Package } from "lucide-react";
-import TripCard from "../components/useAble/TripCard";
+
 import { Hero_Image } from "./Hero_Image";
 import Hand_Pick_by_Expert from "./Hand_Pick_by_Expert";
 import LeadForm from "./LeadForm";

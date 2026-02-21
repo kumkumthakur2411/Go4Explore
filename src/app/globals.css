@@ -8,6 +8,43 @@
   --font-weight-extrablack: 1000; 
 }
 
+
+
+/* Swiper Pagination Styling */
+.swiper-pagination-bullet {
+  background: #d9d9d9;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2556B0;
+}
+/* Ensure video covers background perfectly */
+.swiper-slide video {
+  pointer-events: none; /* Allows swiping over the video */
+}
+
+@layer utilities {
+  /* Define the movement logic */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Create the custom utility class */
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+
+  /* Optional: Add a class to pause on hover */
+  .pause-hover:hover {
+    animation-play-state: paused;
+  }
+}
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

@@ -1,5 +1,5 @@
-import TripCard from "../components/useAble/TripCard";
-import WhiteTripCard from "../components/useAble/WhiteTripCrad";
+import TripCard from "@/app/components/useAble/TripCard";
+import WhiteTripCard from "@/app/components/useAble/WhiteTripCrad";
 const tripCategories = [
   {
     categoryHeading: "Vietnam Leisure Trips – Relax & Explore!",
@@ -161,11 +161,12 @@ const tripCategories = [
 ];
 export default function Package_Swiper_div() {
   return (
-    <div className="space-y-12 p-8">
+  <section className="py-10 px-10 w-full">
+      <div className="max-w-7xl mx-auto bg-red-400">
       {tripCategories.map((section, idx) => (
         <div key={idx}>
           {/* Section Heading */}
-          <h2 className="text-2xl font-extrabold text-zinc-900 mb-12">
+          <h2 className="text-2xl font-extrabold text-zinc-900 my-12">
             {section.categoryHeading}
           </h2>
 
@@ -179,6 +180,7 @@ export default function Package_Swiper_div() {
         </div>
       ))}
     </div>
+    </section>
   );
 }
        

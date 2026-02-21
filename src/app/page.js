@@ -12,7 +12,7 @@ import WhyChoose from "./components/useAble/WhyChoose";
 import TopBlogReads from "./components/Home/TopBlogReads";
 import { AboutUs } from "./components/Home/AboutUs";
 import Hero from "./components/Home/Hero";
-import { BannerVideo } from "./components/useAble/BannerVideo";
+import BannerVideo  from "./components/useAble/BannerVideo";
 import BrandsMarquee from "./components/Home/BrandMarquee";
 import VideoSwiperSection from "./components/Home/VideoSwiper/VideoSwiperSection";
 import { FaqsSection } from "./components/useAble/Faqs";
@@ -53,25 +53,93 @@ const reels = [
   { name: "Video 4", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-4.mp4" },
   { name: "Video 5", src: "https://d2qa7a8q0vuocm.cloudfront.net/assets/images/img/wanderlust/v-5.mp4" },
 ];
+  const trips = [
+    {
+      title: "Jibhi & Tirthan Valley",
+      price: "₹6,499",
+      oldPrice: "₹6,999",
+      duration: "3 Days 2 Nights",
+      discount: "₹500 OFF",
+      img: "/image.png",
+    },
+    {
+      title: "Kasol Kheerganga Trek",
+      price: "₹6,499",
+      oldPrice: "₹6,999",
+      duration: "3 Days 2 Nights",
+      discount: "₹500 OFF",
+      img: "/image.png",
+    },
+    {
+      title: "Chopta-Tungnath-Deoriatal",
+      price: "₹5,999",
+      oldPrice: "₹6,499",
+      duration: "3 Days 2 Nights",
+      discount: "₹500 OFF",
+      img: "/image.png",
+    },
+    {
+      title: "Kanatal & Tehri Lake",
+      price: "₹5,299",
+      oldPrice: "₹5,999",
+      duration: "2 Days 1 Night",
+      discount: "",
+      img: "/image.png",
+    },
+        {
+      title: "Kanatal & Tehri Lake",
+      price: "₹5,299",
+      oldPrice: "₹5,999",
+      duration: "2 Days 1 Night",
+      discount: "",
+      img: "/image.png",
+    },
+        {
+      title: "Kanatal & Tehri Lake",
+      price: "₹5,299",
+      oldPrice: "₹5,999",
+      duration: "2 Days 1 Night",
+      discount: "",
+      img: "/image.png",
+    },
+        {
+      title: "Kanatal & Tehri Lake",
+      price: "₹5,299",
+      oldPrice: "₹5,999",
+      duration: "2 Days 1 Night",
+      discount: "",
+      img: "/image.png",
+    },
+        {
+      title: "Kanatal & Tehri Lake",
+      price: "₹5,299",
+      oldPrice: "₹5,999",
+      duration: "2 Days 1 Night",
+      discount: "",
+      img: "/image.png",
+    },
+  ];
+
 
 export default function Home() {
   return (
     <>
       {/* Normal Sections with Padding */}
-      <div className="w-full px-4 flex flex-col gap-10 items-center">
+      <div className="w-full px-4 flex flex-col gap-10 md:gap-15 items-center">
         <Hero />
         <TrendingSection />
         <ExploreCategories />
         <InternationalSection />
         <DomesticSection />
-        <UpcomingTrips />
+        
+       <UpcomingTrips trips={trips}/>
         <FeaturedNews />
         <BannerVideo videos={videos}/>
       </div>
       {/* FULL WIDTH SECTION */}
       <PlanTripSection />
       {/* Back to Normal Sections */}
-      <div className="w-full px-12 py-8 flex flex-col gap-10 items-center">
+      <div className="w-full px-4 flex flex-col gap-10 md:gap-15 items-center">
         <BrandsMarquee />
         <VideoSwiperSection videos={reels} />
         <TestimonialSection/>

@@ -52,16 +52,16 @@ const quick_links = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-slate-50 py-10 px-4">
-      <div className="max-w-7xl mx-auto  p-8  flex flex-col items-center justify-between">
+    <footer className="w-w-[90%] bg-slate-50 py-10 px-20 ">
+      <div className=" mx-auto  p-8  flex flex-col items-center justify-between">
 
         {/* ================= TOP GRID LINKS ================= */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-10">
 
           {/* Company */}
           <div>
-            <h3 className="text-blue-700 font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <h3 className="text-blue-800 font-semibold text-lg mb-4">Company</h3>
+            <ul className="space-y-2 text-xs text-gray-600 mb-8">
               {Company_items.map((item, index) => (
   <li key={index} className="hover:text-blue-700 cursor-pointer">
     <Link href={item.href}>{item.text}</Link>
@@ -73,8 +73,8 @@ export default function Footer() {
 
           {/* Weekend Trips */}
           <div>
-            <h3 className="text-blue-700 font-semibold text-lg mb-4">Weekend Trips</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <h3 className="text-blue-800 font-semibold text-lg mb-4">Weekend Trips</h3>
+            <ul className="space-y-2 text-xs text-gray-600 mb-8">
               {weekend_trips.map((item, index) => (
   <li key={index} className="hover:text-blue-7">
     <Link href={item.href}>{item.text}</Link>
@@ -82,12 +82,8 @@ export default function Footer() {
 ))}
 
             </ul>
-          </div>
-
-          {/* Backpacking */}
-          <div>
-            <h3 className="text-blue-700 font-semibold text-lg mb-4">Backpacking Trips</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+                        <h3 className="text-blue-800 font-semibold text-lg mb-4">Backpacking Trips</h3>
+            <ul className="space-y-2 text-xs text-gray-600 mb-8">
              {backpacking_trips.map((item, index) => (
   <li key={index} className="hover:text-blue-7">
     <Link href={item.href}>{item.text}</Link>
@@ -98,10 +94,13 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Backpacking */}
+
+
           {/* International + Domestic */}
           <div>
-            <h3 className="text-blue-700 font-semibold text-lg mb-4">International</h3>
-            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+            <h3 className="text-blue-800 font-semibold text-lg mb-4">International</h3>
+            <ul className="space-y-2 text-xs text-gray-600 mb-8">
              {international_trip.map((item, index) => (
   <li key={index} className="hover:text-blue-7">
     <Link href={item.href}>{item.text}</Link>
@@ -109,8 +108,8 @@ export default function Footer() {
 ))}
             </ul>
 
-            <h3 className="text-blue-700 font-semibold text-lg mb-4">Domestic</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <h3 className="text-blue-900 font-semibold text-lg mb-4">Domestic</h3>
+            <ul className="space-y-2 text-xs text-gray-600 mb-8">
              {domestic_trip.map((item, index) => (
   <li key={index} className="hover:text-blue-7">
     <Link href={item.href}>{item.text}</Link>
@@ -121,8 +120,8 @@ export default function Footer() {
 
           {/* Quick Links + Presence */}
           <div>
-            <h3 className="text-blue-700 font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+            <h3 className="text-blue-800 font-semibold text-lg mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-xs text-gray-600 mb-8">
              {quick_links.map((item, index) => (
   <li key={index} className="hover:text-blue-7">
     <Link href={item.href}>{item.text}</Link>
@@ -130,13 +129,13 @@ export default function Footer() {
 ))}
             </ul>
 
-            <h3 className="text-blue-700 font-semibold text-lg mb-3">Our Presence</h3>
-            <p className="text-sm text-gray-600 mb-2">
-              <span className="font-semibold">Registered Office - </span>
+            <h3 className="text-blue-800 font-semibold text-lg mb-3">Our Presence</h3>
+            <p className="text-xs text-gray-600 mb-2">
+              <span className="font-bold text-gray-900">Registered Office - </span>
               14/4, Girdhar Marg, Malviya Nagar, Jaipur (Rajasthan) - 302017
             </p>
             <p className="text-sm text-gray-600 mb-2">
-              <span className="font-semibold">Corporate Office - </span>
+              <span className="font-bold  text-gray-900">Corporate Office - </span>
               401, C-23, Sector 63, Noida (UP) - 201301
             </p>
             <p className="text-sm text-gray-600">+91-9266710039</p>
@@ -150,7 +149,7 @@ export default function Footer() {
 <div className="flex flex-col md:flex-row w-[90%] rounded-xl bg-white/90 shadow-2xl p-6 justify-between items-center gap-8 mb-6">
 
   {/* 1. LOGO (Start/Left) */}
-  <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+  <div className="w-full md:w-1/5 flex justify-center md:justify-start">
     <div className="relative w-[150px] h-[100px]">
       <Image
         src="https://go4explore.com/assets/img/footer-logo.webp"
@@ -163,8 +162,8 @@ export default function Footer() {
   </div>
 
   {/* 2. COPYRIGHT + PAYMENT (Center) */}
-  <div className="flex flex-col items-center gap-2 w-full md:w-1/3">
-    <div className="relative w-full max-w-[250px] h-[40px]">
+  <div className="flex flex-col items-center  w-full md:w-2/5">
+    <div className="relative w-full max-w-[350px] h-[60px]">
       <Image
         src="https://go4explore.com/assets/img/payment.webp"
         alt="Payment Methods"
@@ -173,25 +172,25 @@ export default function Footer() {
         priority
       />
     </div>
-    <hr className="border-gray-300 w-full" />
-    <p className="text-gray-600 text-xs lg:text-sm font-medium text-center">
-      © {new Date().getFullYear()} Go4Explore Community Private Limited.
+    <hr className="border-gray-300 w-full mb-3" />
+    <p className="text-gray-600 text-xs lg:text-xs font-medium text-center">
+      © 2017-2025 Go4Explore Community Private Limited. All Rights Reserved.
     </p>
   </div>
 
   {/* 3. SOCIALS (End/Right) */}
-  <div className="flex items-center justify-center md:justify-end w-full md:w-1/3 gap-3">
+  <div className="flex items-center justify-center md:justify-end w-full md:w-1/5 gap-1">
     <a href="#" className="p-2 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white rounded-full hover:scale-110 transition-transform">
-      <Instagram size={18} />
+      <Instagram size={12} />
     </a>
     <a href="#" className="p-2 bg-red-600 text-white rounded-full hover:scale-110 transition-transform">
-      <Youtube size={18} />
+      <Youtube size={10} />
     </a>
     <a href="#" className="p-2 bg-blue-700 text-white rounded-full hover:scale-110 transition-transform">
-      <Linkedin size={18} />
+      <Linkedin size={12} />
     </a>
     <a href="#" className="p-2 bg-green-500 text-white rounded-full hover:scale-110 transition-transform">
-      <MessageCircle size={18} />
+      <MessageCircle size={12} />
     </a>
   </div>
 

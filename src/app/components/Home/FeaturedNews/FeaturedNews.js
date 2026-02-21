@@ -11,15 +11,32 @@ const FeaturedNewsSwiper = dynamic(
 export default function FeaturedNews() {
   return(
     <>
-    <div className="w-[90%] bg-white/90 shadow-2xl rounded-xl h-[20%] px-4 flex flex-row items-center justify-start gap-5">
-      <div className="w-[20%] ">
-              <h1 className="text-2xl font-extrabold text-[#2755B0] mb-2">As Seen On       
-      </h1>
-       <span className="text-[#222229] font-semibold text-m">Featured in News</span>
-      </div>
+<div className="
+  w-full md:w-[85%]
+  md:bg-white/90
+  shadow-none md:shadow-2xl
+  rounded-xl
+  h-auto
+  p-0 md:px-4
+  flex flex-col md:flex-row
+  items-center
+  gap-3 md:gap-10
+">
+  {/* Text */}
+  <div className="w-full md:w-[20%] text-center md:text-left md:px-4">
+    <h1 className="text-xl md:text-2xl font-extrabold text-[#2755B0]">
+      As Seen On
+    </h1>
+    <span className="text-[#222229] font-semibold text-sm md:text-base block">
+      Featured in News
+    </span>
+  </div>
 
-      <FeaturedNewsSwiper />
-    </div>
+  {/* Swiper */}
+  <div className="w-[80%] md:flex-1">
+    <FeaturedNewsSwiper />
+  </div>
+</div>
     </>
   )
   

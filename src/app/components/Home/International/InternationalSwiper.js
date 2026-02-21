@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { MdArrowOutward } from "react-icons/md";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -28,104 +29,69 @@ export default function InternationalSwiper() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={1}
-      
       navigation={{
         nextEl: ".international-swiper-next",
         prevEl: ".international-swiper-prev",
       }}
-
       loop={true}
-      breakpoints={
-        {
-        // Mobile (Portrait)
-        0: {
-          slidesPerView: 2.5,
-          
-        },
-        // Tablet (iPad)
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 2,
-        }
-        }
-      }
-      className="w-full"
+      enabled={true}
+      breakpoints={{
+        0: { slidesPerView: 2.3, spaceBetween: 5 },
+        768: { slidesPerView: 3, spaceBetween: 10 },
+      }}
+      className="w-full h-full"
     >
       {International_destinations_row1.map((item1, index) => {
         const item2 = International_destinations_row2[index];
 
         return (
-<SwiperSlide key={index}>
-  <div className="flex flex-col items-center justify-between h-80 gap-4">
+          <SwiperSlide key={index}>
+            <div className="flex flex-col items-center justify-between h-auto gap-4">
+              {/* Row 1 - SYNCED CSS */}
+              <div className="group relative w-[95%] h-[200px] md:h-[185px] rounded-xl overflow-hidden cursor-pointer">
+                <Image
+                  src={item1.src}
+                  alt={item1.name}
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300"></div>
+                <div className="absolute bottom-3 left-3 z-10">
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-sm">{item1.name}</h4>
+                    <p className="text-white font-semibold text-[10px] md:text-xs">Starting From {item1.price || "N/A"}</p>
+                  </div>
+                </div>
+                <div className="absolute top-3 right-3 border border-white rounded-full w-5 h-5 flex items-center justify-center text-white z-10 hover:bg-white hover:text-red-700 transition">
+                  <MdArrowOutward size={10} />
+                </div>
+              </div>
 
-    {/* Row 1 */}
-    <div className="group relative w-[95%] h-1/2 rounded-xl overflow-hidden shadow-lg cursor-pointer">
-
-      {/* Image */}
-      <Image
-        src={item1.src}
-        alt={item1.name}
-        fill
-        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-      />
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300"></div>
-
-      {/* Top Text */}
-              <div className="absolute bottom-3 left-3  z-10">
-          <div className="flex flex-col ">
-         <h4 className="text-white font-semibold text-m">{item2.name}</h4> 
-          <p className="text-white font-semibold text-xs ">{item2.price}</p>
-          </div>
-          
-        </div>
-
-
-      {/* Arrow Icon Top Right */}
-      <div className="absolute top-3 right-3  border border-white 
-      rounded-full w-5 h-5 flex items-center justify-center text-white text-sm z-10 
-      hover:bg-white hover:text-red-700 transition">
-        ↗
-      </div>
-    </div>
-
-    {/* Row 2 */}
-    {item2 && (
-      <div className="group relative w-[95%] h-1/2 rounded-xl overflow-hidden shadow-lg cursor-pointer">
-
-        <Image
-          src={item2.src}
-          alt={item2.name}
-          fill
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-        />
-
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300"></div>
-
-        <div className="absolute bottom-3 left-3  z-10">
-          <div className="flex flex-col ">
-         <h4 className="text-white font-semibold text-m">{item2.name}</h4> 
-          <p className="text-white font-semibold text-xs ">{item2.price}</p>
-          </div>
-          
-        </div>
-
-              <div className="absolute top-3 right-3  border border-white 
-      rounded-full w-5 h-5 flex items-center justify-center text-white text-sm z-10 
-      hover:bg-white hover:text-red-700 transition">  ↗
-        </div>
-      </div>
-    )}
-
-  </div>
-</SwiperSlide>
-
-
+              {/* Row 2 - SYNCED CSS */}
+              {item2 && (
+                <div className="group relative w-[95%] h-[200px] md:h-[185px] rounded-xl overflow-hidden cursor-pointer">
+                  <Image
+                    src={item2.src}
+                    alt={item2.name}
+                    fill
+                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300"></div>
+                  <div className="absolute bottom-3 left-3 z-10">
+                    <div className="flex flex-col">
+                      <h4 className="text-white font-semibold text-sm">{item2.name}</h4>
+                      <p className="text-white font-semibold text-[10px] md:text-xs">Starting From {item2.price}</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-3 right-3 border border-white rounded-full w-5 h-5 flex items-center justify-center text-white z-10 hover:bg-white hover:text-red-700 transition">
+                    <MdArrowOutward size={10} />
+                  </div>
+                </div>
+              )}
+            </div>
+          </SwiperSlide>
         );
       })}
     </Swiper>
-
   );
 }

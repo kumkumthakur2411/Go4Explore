@@ -30,9 +30,9 @@ export default function NavBar() {
 
   return (
     <>
-<header className="fixed top-0 left-0 w-full md:h-[18vh] h-[10vh] z-50 bg-white shadow-sm">
+<header className="fixed top-0 left-0 w-full md:h-[18vh] h-[10vh] z-50 bg-white ">
   {/* ===== TOP NAV ===== */}
-  <div className="w-[92vw] md:w-[88vw] h-full md:h-[55%] mx-auto flex items-center justify-between px-2 md:px-5">
+  <div className="w-[95vw] md:w-[88vw] h-full md:h-[55%] mx-auto flex items-center justify-between px-2 md:px-5">
     
     {/* 1. Logo (Desktop) - Visible only on md and up */}
     <Link href="/" className="hidden md:block">
@@ -76,7 +76,7 @@ export default function NavBar() {
     </div>
 
     {/* 4. MOBILE-ONLY NAVIGATION (Independent Layout) */}
-    <div className="flex md:hidden w-full items-center justify-between">
+    <div className="flex md:hidden w-full items-center justify-between ">
       {/* Mobile Logo */}
       <Link href="/">
         <Image
@@ -102,7 +102,7 @@ export default function NavBar() {
           <HiOutlineMenuAlt3 size={28} />
         </button>
     </div>
-    </div>
+</div>
   
 
   {/* ===== BOTTOM NAV (Desktop Only) ===== */}

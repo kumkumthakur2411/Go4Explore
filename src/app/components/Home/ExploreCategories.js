@@ -33,11 +33,11 @@ export default function ExploreCategories() {
         
         {/* Left Content */}
         <div className="lg:w-[25%] text-center lg:text-left">
-          <h2 className="w-full md:w-[50%] text-2xl 
+          <h2 className="w-full md:w-[50%] text-xl md:text-2xl
           font-extrabold text-[#2755B0] mb-3">
             Explore Categories
           </h2>
-          <p className="text-[#222229] font-medium text-m">
+          <p className="text-black font-medium text-xs md:text-base mb-4">
             Discover destinations that match your vibe, Trips tailored to your
             preferences.
           </p>

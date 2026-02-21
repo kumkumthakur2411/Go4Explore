@@ -6,7 +6,7 @@ import {
   AccordionContent,
   AccordionItem,
 } from "@/components/ui/accordion";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown , IoIosArrowUp} from "react-icons/io";
 import {
   Card,
   CardContent,
@@ -81,16 +81,17 @@ export function AboutUs() {
             <AccordionItem value="about" className="border-none">
 
               {/* Show View More ONLY when closed */}
-              {!open && (
-                <button
-                  onClick={() => setOpen(true)}
-                  className="font-semibold text-gray-800 hover:text-[#2755B0]   transition"
-                >
-                  View More 
-                  <IoIosArrowDown size={16} />
-                </button>
-              )}
-
+{!open && (
+  <div className="flex justify-center mt-4">
+    <button
+      onClick={() => setOpen(true)}
+      className="font-semibold text-gray-800 hover:text-[#2755B0] flex items-center gap-2 transition"
+    >
+      View More
+      <IoIosArrowDown size={16} />
+    </button>
+  </div>
+)}
               <AccordionContent className="text-left mt-6 space-y-6 text-gray-700">
 
                 <p>
@@ -112,12 +113,13 @@ export function AboutUs() {
 
                 {/* Show Less Button at END */}
                 {open && (
-                  <div className="text-center pt-4">
+                  <div className="flex justify-center mt-4">
                     <button
                       onClick={() => setOpen(false)}
-                      className="font-semibold text-gray-800 hover:text-[#2755B0] transition"
+                      className="font-semibold text-gray-800 hover:text-[#2755B0] flex items-center gap-2 transition"
                     >
-                      Show Less ↑
+                      Show Less 
+                       <IoIosArrowUp size={16} />
                     </button>
                   </div>
                 )}

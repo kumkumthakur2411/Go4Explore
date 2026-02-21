@@ -20,19 +20,19 @@ const row2 = [
 
 export default function BrandsMarquee() {
   return (
-    <section className="w-[90%] mx-auto py-16 bg-white overflow-hidden">
-      <h1 className="w-full flex justify-center items-center py-8 text-3xl font-extrabold text-[#2755B0]">
+    <section className="w-[90%] md:w-[85%] mx-auto bg-white overflow-hidden">
+      <h1 className="w-full flex justify-center items-center py-8 text-lg md:text-2xl font-extrabold text-[#2755B0]">
 Recognitions & Collaborations
   </h1>
       <div className="space-y-10">
 
         {/* ROW 1 */}
         <div className="relative w-full overflow-hidden">
-          <div className="flex gap-16 animate-marquee w-max">
+          <div className="flex gap-5 md:gap-10 animate-marquee w-max">
             {[...row1, ...row1].map((logo, index) => (
               <div
                 key={index}
-                className="relative w-[140px] h-[80px] flex-shrink-0  "
+                className="relative   w-[60px] md:w-[140px] h-[80px] flex-shrink-0  "
               >
                 <Image
                   src={logo}
@@ -47,11 +47,11 @@ Recognitions & Collaborations
 
         {/* ROW 2 (Reverse Direction) */}
         <div className="relative w-full overflow-hidden">
-          <div className="flex gap-16 animate-marquee-reverse w-max">
+          <div className="flex gap-2 md:gap-5 animate-marquee-reverse w-max">
             {[...row2, ...row2].map((logo, index) => (
               <div
                 key={index}
-                className="relative w-[140px] h-[80px] flex-shrink-0 "
+                className="relative w-[80px] md:w-[180] h-[80px] flex-shrink-0 "
               >
                 <Image
                   src={logo}

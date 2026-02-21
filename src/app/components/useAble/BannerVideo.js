@@ -1,65 +1,94 @@
 "use client";
 
-import * as React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { useRef, useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules"; 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-export function BannerVideo({videos}) {
-  // Video Array
+export default function BannerVideo({ videos }) {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
-<div className="w-full flex justify-center mt-5">
-  <div className="w-[90%] h-[75vh] relative">
-
-    <Carousel className="w-full h-full">
-      
-      <CarouselContent className="h-full">
-        {videos.map((videoSrc, index) => (
-          <CarouselItem key={index} className="basis-full h-full">
-            
-            <div className="relative w-full h-full rounded-3xl overflow-hidden ">
-
-              {/* Video */}
+    <section className="w-full md:w-[85%] relative h-[20vh] 
+    md:h-[80vh] overflow-hidden mb-10">
+      {isLoaded && (
+        <Swiper
+          // 1. STRICTLY REMOVE 'Autoplay' from this array
+          modules={[Pagination, Navigation]} 
+          loop={true}
+          // 2. EXPLICITLY set autoplay to false
+          autoplay={false} 
+          // 3. Ensure user can swipe manually
+          allowTouchMove={true}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination",
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          className="w-full h-full 
+           overflow-hidden "
+        >
+          {videos.map((videoSrc, index) => (
+            <SwiperSlide key={index} 
+            className="relative w-full h-[20] md:h-95">
               <video
                 src={videoSrc}
-                className="w-full h-full object-cover"
-                autoPlay
+                autoPlay // This stays so the video plays, but swiper won't move
                 muted
                 loop
                 playsInline
+                className="absolute inset-0 w-full 
+                h-[110] md:h-[75%] object-cover rounded-3xl"
               />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
 
-              {/* Optional Dark Overlay */}
-              <div className="absolute inset-0 bg-black/20"></div>
+      {/* MOBILE PAGINATION */}
+     <div className="custom-pagination absolute bottom-2 
+     left-0 right-0 flex justify-center md:hidden z-20" />
 
-            </div>
+      {/* DESKTOP NAVIGATION */}
+      <div className="hidden absolute 
+bottom-20 right-0 lg:flex gap-3 z-30">
+        <button
+          ref={prevRef}
+          className="bg-[#2556B0]
+ w-9 h-9 rounded-full flex items-center
+  justify-center text-white cursor-pointer
+   hover:bg-blue-700 transition"  >
+          <IoIosArrowBack  />
+        </button>
 
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-
-      {/* Custom Positioned Arrows */}
-      <div className="absolute bottom-5 right-4 flex gap-3">
-        <CarouselPrevious className="relative static bg-blue-600 text-white hover:bg-blue-700" />
-        <CarouselNext className="relative static bg-blue-600 text-white hover:bg-blue-700" />
+        <button
+          ref={nextRef}
+          className="bg-[#2556B0] w-9 h-9 rounded-full 
+          flex items-center justify-center text-white 
+          cursor-pointer hover:bg-blue-700 transition"
+ >   
+          <IoIosArrowForward  />
+        </button>
       </div>
-
-    </Carousel>
-
-  </div>
-</div>
-
-
+    </section>
   );
 }
-
 
 
 

@@ -1,4 +1,4 @@
-import TripCard from "../components/useAble/TripCard";
+import TripCard from "@/app/components/useAble/TripCard";
 
 export default function Hand_Pick_by_Expert() {
 

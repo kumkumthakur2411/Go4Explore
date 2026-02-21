@@ -3,66 +3,100 @@ import { BsTelephone } from "react-icons/bs";
 
 export default function TripCard({ trip }) {
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-lg group">
-      {/* Image */}
-      {/* Change h-[420px] to your desired height, e.g., h-[300px] or h-[500px] */}
-<Image
-  src={trip.img}
-  alt={trip.title}
-  width={400}
-  height={500}
-  className="w-full h-[350px] object-cover group-hover:scale-105 transition duration-300"
-/>
+<div className="relative rounded-2xl overflow-hidden shadow-lg group">
 
-      {/* Discount Badge */}
-      {trip.discount && (
-        <div className="absolute top-3 left-0 bg-linear-to-r from-red-500 to-orange-300 text-white 
-        text-[11px] font-extrabold px-3 py-1 rounded">
-          DISCOUNT: {trip.discount}
+  {/* Image */}
+  <Image
+    src={trip.img}
+    alt={trip.title}
+    width={400}
+    height={500}
+    className="w-full h-[270px] md:h-[400px] 
+               object-cover 
+               transition duration-300 
+               group-hover:scale-105"
+  />
+
+  {/* Discount Badge */}
+  {trip.discount && (
+    <div className="absolute top-5 left-0 
+      bg-gradient-to-r from-red-600 to-orange-400 
+      text-white text-[9px] md:text-[11px] 
+      font-extrabold px-2 md:px-3 py-1 rounded">
+      DISCOUNT: {trip.discount}
+    </div>
+  )}
+
+  {/* Duration */}
+  <div className="absolute bottom-25 md:bottom-28 right-2 md:right-3 
+    bg-[#FFF500] text-[9px] md:text-[11px]  
+    font-bold px-2 py-1 md:px-2 md:py-3 rounded-sm">
+    {trip.duration}
+  </div>
+
+  {/* Bottom Overlay */}
+<div className="absolute bottom-0 left-0 w-full 
+  bg-gradient-to-t from-black/80 to-transparent 
+  p-2 md:p-4 text-white">
+
+  {/* Title */}
+  <h3 className="font-semibold 
+                 text-[11px] leading-tight 
+                 md:text-base">
+    {trip.title}
+  </h3>
+
+  <hr className="my-1 md:my-2 opacity-70" />
+
+  <div className="block md:flex items-center justify-between mt-1 md:mt-2">
+
+    {/* Price Section */}
+    <div>
+      <p className="text-[10px] md:text-[13px] font-bold">
+        {trip.price}
+      </p>
+
+      {trip.oldPrice && (
+        <div className="leading-tight">
+          <p className="text-[8px] md:text-[11px] line-through opacity-70">
+            {trip.oldPrice}
+          </p>
+          <p className="text-[7px] md:text-[9px] opacity-70">
+            {trip.per_person}
+          </p>
         </div>
       )}
-
-      {/* Duration */}
-      <div className="absolute bottom-30 right-3 bg-[#FFF500] text-[11px]  
-      font-bold px-2 py-3 rounded-lg">
-        {trip.duration}
-      </div>
-
-      {/* Bottom Overlay */}
-      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-        <h3 className="font-semibold text-medium">{trip.title}</h3>
-        <hr className="my-2" />
-        <div className="flex items-center justify-between mt-2">
-          <div>
-            <p className="text-[13px] font-bold">{trip.price}</p>
-            {trip.oldPrice && (
-              <div>
-              <p className="text-[11px] line-through opacity-70">
-                {trip.oldPrice}                 
-              </p>
-              <p className="text-[9px] opacity-70">
-                {trip.per_person}                 
-              </p>
-              </div>
-            )}
-          </div>
-<div className="flex flex-row">
- <BsTelephone 
-  size={3} 
-  className="w-7 h-7 rounded-full border border-white p-2 mr-2 
-             transition-colors duration-300 
-             group-hover:bg-white group-hover:text-black" 
-/>
-            <button className="bg-white text-black font-bold text-[10px]  rounded w-18 h-8 
-            hover:bg-[#2755B0]  hover:text-white transition duration-300">
-            
-
-            Trip Details
-          </button>
-</div>
-
-        </div>
-      </div>
     </div>
+
+    {/* Button Section */}
+<div className="flex items-center justify-between md:justify-end gap-1 md:gap-2 
+                whitespace-nowrap">
+
+  <BsTelephone
+    className="w-5 h-5 md:w-7 md:h-7 
+               rounded-full border border-white 
+               p-1 md:p-2
+               transition-colors duration-300 
+               group-hover:bg-white 
+               group-hover:text-black"
+  />
+
+  <button
+    className="bg-white text-black 
+               font-bold text-[8px] md:text-[10px]  
+               px-2 md:px-3
+               h-6 md:h-8
+               rounded
+               whitespace-nowrap
+               hover:bg-[#2755B0]  
+               hover:text-white 
+               transition duration-300">
+    Trip Details
+  </button>
+
+</div>
+  </div>
+</div>
+</div>
   );
 }

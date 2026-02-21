@@ -59,7 +59,8 @@ export default function Hero() {
             <button
               key={i}
               onClick={() => setCurrentIndex(i)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === i ? "bg-[#007bff]" : "bg-[#d9d9d9]"
+              className={`w-2 h-2 rounded-full transition-all 
+                duration-300 ${currentIndex === i ? "bg-[#007bff]" : "bg-[#d9d9d9]"
                 }`}
             />
           ))}

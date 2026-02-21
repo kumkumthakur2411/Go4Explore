@@ -16,7 +16,8 @@ export function Hero_Image  () {
       <div className="absolute inset-0 bg-gradient-to-r from-black/98 via-black/0 to-transparent" />
 {/* Content Container */}
 <div className="absolute inset-0 z-10 h-full max-w-7xl mx-auto px-6 md:px-18  
-  flex flex-col justify-start pt-10 md:pt-12 text-white">
+
+  flex flex-col justify-start pt-10 md:pt-15 text-white">
   
   {/* Title */}
   <h1 className="text-2xl md:text-4xl font-extrabold mb-8 tracking-tight">

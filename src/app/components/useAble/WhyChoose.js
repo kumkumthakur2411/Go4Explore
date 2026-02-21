@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 const features = [
   {
     icon: "https://go4explore.com/_next/image?url=%2Fassets%2Fimg%2Fwhy%2F1.png&w=96&q=75",
@@ -52,16 +55,16 @@ const features = [
 
 export default function WhyChoose() {
   return (
-<section className="w-full bg-white mt-10 pt-30 ">
-  <div className="w-[90%] max-w-7xl mx-auto px-4">
+<section className="w-full bg-white  p-6 ">
+  <div className="w-full md:w-[90%] max-w-7xl mx-auto md:px-4">
     
     {/* Title - Added mb-16 for better separation from the grid */}
-    <h2 className="text-center text-2xl font-extrabold text-[#2755B0] mb-16">
+    <h2 className="text-center text-lg md:text-2xl font-extrabold text-[#2755B0] mb-3 md:mb-16">
       Why Choose Go4Explore?
     </h2>
 
     {/* Grid - Increased gap for a cleaner look */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-7">
+    <div className="hidden lg:grid lg:grid-cols-3 gap-x-15 gap-y-7">
       {features.map((item, index) => (
         <div key={index} className="flex flex-col items-start group">
           
@@ -71,18 +74,18 @@ export default function WhyChoose() {
             <Image
               src={item.icon}
               alt={item.title}
-              width={50}
-              height={50}
-              className="object-contain transition-transform duration-300 group-hover:scale-110"
+              width={60}
+              height={60}
+              className="object-contain transition-transform duration-300 group-hover:scale-70"
             />
           </div>
 
           {/* Text Content */}
           <div className="space-y-2">
-            <h3 className="font-bold text-m text-gray-900 leading-none">
+            <h3 className="font-bold text-m text-gray-900 ">
               {item.title}
             </h3>
-            <p className="text-gray-700 text-sm leading-none">
+            <p className="text-gray-700 text-sm ">
               {item.desc}
             </p>
           </div>
@@ -90,6 +93,44 @@ export default function WhyChoose() {
         </div>
       ))}
     </div>
+      <div className="lg:hidden">
+          <Swiper
+            modules={[Pagination ]}
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            loop={true}
+            
+          >
+            {features.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex flex-col items-center text-center px-6 pb-10">
+                  
+                  <div className="w-16 h-16 mb-5 flex items-center justify-center">
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={60}
+                      height={60}
+                      className="object-contain"
+                    />
+                  </div>
+
+                  <h3 className="font-bold text-base text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-900 text-[11px] font-normal ">
+                    {item.desc}
+                  </p>
+
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+    
   </div>
 </section>
   );

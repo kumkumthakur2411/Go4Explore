@@ -24,7 +24,7 @@ export default function Hero() {
 
   return (
     // Height adjusted to fit mobile screens better (90vh on mobile, 80vh on desktop)
-    <div className="relative w-full md:w-[100vw] h-[90vh] md:h-[82vh]  md:mt-8">
+    <div className="relative w-full md:w-[100vw] h-[80vh] md:h-[82vh]  mt-3 md:mt-8">
 
       {/* Bottom Background - Hidden on mobile using 'hidden md:block' */}
       <div className="absolute bottom-0 left-0 w-full h-[30vh] hidden md:block">
@@ -68,17 +68,18 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black/30"></div>
 
           {/* Content Overlay - Centered for mobile */}
-          <div className="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-6">
+          <div className="absolute top-15 inset-0 z-20 flex flex-col 
+          justify-start items-center text-center px-2">
             
             {/* H1: Adjusted text size (3xl mobile, 4xl desktop) */}
-            <h1 className="text-white text-3xl md:text-4xl font-normal leading-tight">
-              Spreading <span className="text-[#FFF401]">Happiness</span> <br className="md:hidden" />
-              & Crafting <span className="text-[#FFF401]">Stories</span> 
+            <h1 className="text-white text-2xl md:text-4xl font-normal leading-tight">
+              Spreading <span className="text-[#FFF401]">Happiness <br className="md:hidden" /> & </span> 
+             Crafting <span className="text-[#FFF401]">Stories</span> 
             </h1>
 
             {/* H2: Adjusted text size (4xl mobile, 7xl desktop) */}
-            <h2 className="text-white text-4xl md:text-6xl font-black 
-            mt-8 mb-8 flex flex-row justify-center items-center gap-3">
+            <h2 className="text-white text-3xl md:text-6xl font-extrabold leading-tight
+            mt-5 mb-8 flex flex-row justify-center items-center gap-3">
               Across Globe
               <Image 
                 src="https://go4explore.com/_next/image?url=%2Fassets%2Fimg%2Fbanner%2F1.png&w=48&q=75"
@@ -90,11 +91,13 @@ export default function Hero() {
             </h2>
 
             {/* Search Bar: Full width on mobile, 50% on desktop */}
-            <form className="flex w-full md:w-[60%] lg:w-[50%] items-center px-4 py-2 md:py-3 rounded-full bg-white shadow-lg">
+            <form className="flex w-full md:w-[60%] lg:w-[50%] items-center 
+            px-4  py-2 md:py-3 rounded-full bg-white shadow-lg">
               <input
                 type="text"
                 placeholder="Pick Best Suitable Packages, Destinations & More For"
-                className="flex-1 text-xs md:text-sm font-medium focus:outline-none text-gray-700 placeholder:text-gray-400"
+                className="flex-1 text-[9px] md:text-sm font-sm focus:outline-none leading-tighter
+                text-gray-800 placeholder:text-gray-400"
               />
               <button type="submit" className="ml-2">
                 <Image
@@ -108,21 +111,39 @@ export default function Hero() {
             </form>
 
             {/* Trust Badges (The yellow checkmarks in your image) */}
-            <div className="mt-15 md:mt-10  flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] 
-            md:text-sm font-normal text-white uppercase tracking-wider">
-               <div className="flex items-center gap-1">
-                 <span className="text-[#FFF500] text-sm flex items-center gap-2">
-                  <IoMdCheckmarkCircleOutline></IoMdCheckmarkCircleOutline>500+</span>  Destinations
-               </div>
-               <div className="flex items-center gap-1 border-l border-white/30 pl-4">
-                 <span className="text-[#FFF500] text-sm flex items-center gap-2"><IoMdCheckmarkCircleOutline/>Seamless</span>  Booking |
-               </div>
-               <div className="w-full md:w-auto flex justify-center items-center gap-1 mt-2 md:mt-0">
-                 <span className="text-[#FFF500] text-sm flex items-center gap-2"><IoMdCheckmarkCircleOutline/>8+ Years</span>  Experience
-               </div>
-            </div>
+
 
           </div>
+          {/* Trust Badges (The yellow checkmarks in your image) */}
+        {/* Trust Badges (The yellow checkmarks) */}
+{/* Trust Badges Container */}
+<div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 
+                w-[90%]  flex flex-col items-center gap-2">
+  
+  {/* Top Row: Destinations and Booking */}
+  <div className="flex items-center justify-center  text-[9px] md:text-sm uppercase tracking-tight text-white">
+    <div className="flex items-center gap-1">
+      <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-lg" />
+      <span className="text-xs font-bold text-[#FFF500]">500+</span> 
+      <span className="font-medium">Destinations</span>
+    </div>
+
+    <div className="h-4 w-[2px] bg-white/40 mx-1"></div> {/* Vertical Divider */}
+
+    <div className="flex items-center gap-1">
+      <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-lg" />
+      <span className="text-xs font-bold text-[#FFF500]">Seamless</span> 
+      <span className="font-medium">Booking</span>
+    </div>
+  </div>
+
+  {/* Bottom Row: Experience */}
+  <div className="flex items-center justify-center gap-1 text-[11px] md:text-sm uppercase tracking-wide text-white">
+    <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-lg" />
+    <span className=" text-xs font-bold text-[#FFF500]">8+ Years</span> 
+    <span className="font-medium">Experience</span>
+  </div>
+</div>
         </div>
       </div>
     </div>

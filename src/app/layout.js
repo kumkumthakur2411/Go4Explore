@@ -2,6 +2,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import Footer from "@/app/components/Footer";
 import NavBar from "@/app/components/NavBar";
+import MobileFixFooter from "./components/MobileFixFooter";
 
 // Load Poppins font
 const poppins = Poppins({
@@ -19,9 +20,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.className}>
-      <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-      </head>
       <body className={`overflow-x-hidden flex flex-col`}>
 
         {/* Top navigation (fixed) */}
@@ -34,6 +32,7 @@ export default function RootLayout({ children }) {
 
         {/* Footer (stays at bottom) */}
         <Footer />
+       
       </body>
     </html>
   );
