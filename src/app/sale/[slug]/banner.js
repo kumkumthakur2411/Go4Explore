@@ -1,6 +1,6 @@
 export default function Banner() {
     return (
-        <section className="relative w-full h-[75vh] overflow-hidden">
+        <section className="relative w-full h-[78vh] overflow-hidden">
             {/* Background Image */}
             <img
                 src="https://go4explore.com/assets/img/sale-page/sale-header.jpg"
@@ -9,7 +9,7 @@ export default function Banner() {
             />
 
             {/* Overlay: .d-ybo .content-zo5 .overlay-8ca */}
-            <div className="absolute inset-0 w-full h-[76vh] bg-black/70 flex justify-center z-[4]">
+            <div className="absolute inset-0 w-full h-[78vh] bg-black/70 flex justify-center z-[4]">
                 {/* Logo Container: .sale-pg-ban-2vi */}
                 <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[430px] z-[2]">
                     <img

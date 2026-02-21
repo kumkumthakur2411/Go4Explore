@@ -79,8 +79,8 @@ export default function Tabs() {
     return (
         <nav
             className={isMobileView
-                ? "sticky top-[8vh] md:top-[90px] z-[40] w-full bg-[#f4f6fc] p-[16px_8px] rounded-[10px] mb-[8px] font-poppins overflow-x-auto no-scrollbar scroll-smooth shadow-sm border border-gray-200/50 sticky-tabs sticky-packag-right-tabs"
-                : "sticky top-[10vh] md:top-[120px] z-[40] w-full bg-[#f4f6fc] p-[16px_12px] rounded-[10px] mb-[30px] font-poppins overflow-x-auto no-scrollbar scroll-smooth shadow-sm border border-gray-200/50 sticky-tabs sticky-packag-right-tabs"
+                ? "sticky top-[8vh] md:top-[90px] z-[40] w-full bg-[#f4f6fc] p-[10px_8px] rounded-[10px] mb-[8px] font-poppins overflow-x-auto  scroll-smooth shadow-sm border border-gray-200/50 sticky-tabs sticky-packag-right-tabs "
+                : "sticky top-[10vh] md:top-[120px] z-[40] w-full bg-[#f4f6fc] p-[16px_12px] rounded-[10px] mb-[30px] font-poppins overflow-x-auto scroll-smooth shadow-sm border border-gray-200/50 sticky-tabs sticky-packag-right-tabs"
             }
         >
             <ul className="flex flex-nowrap items-center justify-start md:justify-between list-none p-0 m-0 w-max md:w-full">

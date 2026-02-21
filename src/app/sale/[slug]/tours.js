@@ -2,11 +2,16 @@
 import React, { useRef } from "react";
 import { GoChevronLeft } from "react-icons/go";
 import { GoChevronRight } from "react-icons/go";
+import { SlPhone } from "react-icons/sl";
 
 
 const TourCard = ({ tour }) => {
     return (
+<<<<<<< HEAD
         <div className="flex-shrink-0 w-[170.87px] md:w-[305px] h-[300px] md:h-[400px] relative rounded-[16px] overflow-hidden shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] transition-all duration-400 group">
+=======
+        <div className="flex-shrink-0 w-[170.87px] md:w-[305px] h-[300px] md:h-[400px] relative rounded-[10px] overflow-hidden shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] transition-all duration-400 group">
+>>>>>>> a69f63122113dea3d4b7027dc5595f7fefecba4d
             <a href={tour.link} className="block h-full relative border-none!">
                 {/* Image Overlay/Container */}
                 <div className="relative h-full rounded-[16px] overflow-hidden">
@@ -15,19 +20,26 @@ const TourCard = ({ tour }) => {
                         alt={tour.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-
                     {/* Badges Container */}
                     <div className="absolute top-[3%] left-0 w-full z-[2]">
+<<<<<<< HEAD
                         <span className="inline-block text-white px-[8px] py-[3px] md:px-[14px] md:py-[6px] rounded-r-[4px] text-[9px] md:text-[11px] font-extrabold md:font-bold uppercase tracking-[0.5px] md:tracking-[0.8px] shadow-[0_4px_12px_rgba(39,85,176,0.4)] bg-gradient-to-r from-[#ff3532] via-[#ff6640] to-[#ff8b4b]">
                             Discount: ₹{tour.discount} OFF
                         </span>
                         <span className="absolute bottom-[-100%] md:bottom-[-14%] right-[4%] bg-[#fff500] text-black px-[6px] py-[4px] md:px-[8px] md:py-[6px] rounded-[6px] md:rounded-[8px] text-[10px] md:text-[12px] font-bold md:font-semibold backdrop-blur-[10px] border border-white/30 translate-y-[140px] md:translate-y-[200px]">
+=======
+                        <span className="inline-block text-white px-[8px] py-[3px] md:px-[14px] md:py-[6px] rounded-r-[1px] text-[9px] md:text-[11px] font-extrabold md:font-bold uppercase tracking-[0.5px] md:tracking-[0.8px] shadow-[0_4px_12px_rgba(39,85,176,0.4)] bg-gradient-to-r from-[#ff3532] via-[#ff6640] to-[#ff8b4b]">
+                            Discount: ₹{tour.discount} OFF
+                        </span>
+                        <span className="absolute bottom-[-100%] md:bottom-[-110%] right-[4%] bg-[#fff500] text-black px-[6px] py-[4px] md:px-[10px] md:py-[8px] rounded-[6px] md:rounded-[8px] text-[10px] md:text-[12px] font-bold md:font-semibold backdrop-blur-[5px] border border-white/30 translate-y-[140px] md:translate-y-[200px]">
+>>>>>>> a69f63122113dea3d4b7027dc5595f7fefecba4d
                             {tour.duration}
                         </span>
                     </div>
                 </div>
 
                 {/* Content Section (Bottom Gradient) */}
+<<<<<<< HEAD
                 <div className="absolute bottom-0 left-0 w-full p-[40px_10px_15px] md:p-[80px_20px_20px] bg-gradient-to-t from-black via-black/80 to-transparent z-[3]">
                     <h5 className="text-[13px] md:text-[16px] font-bold md:font-medium text-white mb-2 leading-[1.2] transition-colors group-hover:text-[#fff500] line-clamp-1">
                         {tour.title}
@@ -45,8 +57,32 @@ const TourCard = ({ tour }) => {
                                 <i className="bi bi-telephone text-[12px] md:text-[14px]"></i>
                             </div>
                             <span className="bg-white text-black text-[10px] md:text-[12px] font-bold px-[10px] py-[6px] md:px-[6px] md:py-[5px] rounded-[4px] md:rounded-[6px] border border-white shrink-0">
+=======
+                <div className="absolute bottom-0 left-0 w-full p-[80px_20px_20px] bg-[linear-gradient(180deg,rgba(148,118,47,0)_0%,#000000_100%)] z-[3]">
+                    <div>
+                        <h5 className="text-[15px] leading-[20px] md:text-[18px] md:leading-[22px] text-white border-b border-white/50 pb-[10px] mb-2 font-medium font-poppins">
+                            {tour.title}
+                        </h5>
+                    </div>
+
+                    <div className="flex justify-between items-center">
+                        <div className="text-[14px] leading-[15px]">
+                            <span className="text-[13px] leading-[20px] font-bold text-white">₹{tour.currentPrice}</span>
+                            <span className="text-[11px] text-[#eee] line-through ml-1">₹{tour.originalPrice}</span>
+                            <em className="block text-[9px] leading-[10px] text-[#eee] font-medium not-italic whitespace-nowrap">per person</em>
+                        </div>
+
+                        <div className="flex items-center justify-end w-full">
+                            <div className="mx-[3px] w-8 h-8 rounded-full border border-white flex justify-center items-center transition-all duration-400 hover:bg-[#2755b0] hover:border-[#2755b0]">
+                                <SlPhone className="text-[17px] text-white" />
+                            </div>
+                            <a
+                                href={tour.link}
+                                className="text-[12px] font-semibold text-black rounded-[6px] px-[6px] py-[5px] border border-white bg-white no-underline transition-all duration-400 hover:bg-[#2755b0] hover:border-[#2755b0] hover:text-white shrink-0"
+                            >
+>>>>>>> a69f63122113dea3d4b7027dc5595f7fefecba4d
                                 Trip Details
-                            </span>
+                            </a>
                         </div>
                     </div>
                 </div>

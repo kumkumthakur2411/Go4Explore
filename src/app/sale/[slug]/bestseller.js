@@ -70,7 +70,7 @@ export default function Bestseller() {
                 {/* Header Section */}
                 <div className="flex flex-wrap items-center">
                     <div className="w-full lg:w-[75%]">
-                        <h4 className="text-[25px] font-extrabold leading-[35px] text-black">
+                        <h4 className="text-[24px] font-extrabold leading-[35px] text-black">
                             Bestseller Destinations
                         </h4>
                     </div>
