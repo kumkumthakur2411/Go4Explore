@@ -1,10 +1,7 @@
+import WhiteTripCard from "@/app/components/useable/WhiteTripCrad";
+import WhyChoose from "@/app/components/useable/WhyChoose";
 
-import WhiteTripCard from "../components/useAble/WhiteTripCrad";
-
-export default function weekendTripPage() {
-
-
-
+export default function domesticPage() {
   const trips = [
     {
       title: "Jibhi & Tirthan Valley",
@@ -12,7 +9,7 @@ export default function weekendTripPage() {
       oldPrice: "₹6,999",
       duration: "3 Days 2 Nights",
       discount: "₹500 OFF",
-      img: "/image.png",
+      img: "https://d2qa7a8q0vuocm.cloudfront.net/images/25431020220425093432.png",
     },
     {
       title: "Kasol Kheerganga Trek",
@@ -73,19 +70,19 @@ export default function weekendTripPage() {
   ];
 
   return (
-    <section className="py-25 md:py-12 px-1 md:px-20 ">
-      <div className="max-w-[94%] justify-center mx-auto">
+    <section className="w-full py-9 px-3 md:px-30 md:py-10">
+      <div className="max-w-7xl justify-center mx-auto">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4 pt-2 md:my-10">
-          <h2 className="text-2xl font-extrabold text-zinc-900">
-            Weekend Trips
-          </h2>
-        </div>
+<div className="flex flex-col md:flex-row items-center md:items-start md:justify-between mb-6 md:mb-2  gap-4 ">
+  <h2 className="font-bold w-full text-center md:text-left text-xl md:text-2xl font-extrabold  text-[#000]">
+    Domestic Trips
+  </h2>
+</div>
 
 
         {/* Cards Grid */}
-        <div className="mt-15 grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="md:mt-15 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {trips.map((trip, index) => (
             <WhiteTripCard key={index} trip={trip} />
           ))}
@@ -96,8 +93,9 @@ export default function weekendTripPage() {
          border-2 border-[#2755B0]">
             View More
         </button>
-          </div>
+        </div>
       </div>
+      <WhyChoose/>
     </section>
   );
 }

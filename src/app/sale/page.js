@@ -2,7 +2,7 @@ import Banner from "./[slug]/banner";
 import Benefit from "./[slug]/benefit";
 import Bestseller from "./[slug]/bestseller";
 import Tours from "./[slug]/tours";
-import TestimonialSection from "../components/useAble/testimonials/TestimonialsSection";
+import TestimonialSection from "../components/useable/TestimonialsSection";
 <<<<<<< HEAD
 import VideoSwiper from "../components/Home/VideoSwiper/VideoSwiper";
 

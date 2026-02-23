@@ -1,5 +1,8 @@
-import TripCard from "@/app/components/useAble/TripCard";
-import WhiteTripCard from "@/app/components/useAble/WhiteTripCrad";
+'use client'
+
+import WhiteTripCard from "@/app/components/useable/WhiteTripCrad";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 const tripCategories = [
   {
     categoryHeading: "Vietnam Leisure Trips – Relax & Explore!",
@@ -161,26 +164,53 @@ const tripCategories = [
 ];
 export default function Package_Swiper_div() {
   return (
-  <section className="py-10 px-10 w-full">
-      <div className="max-w-7xl mx-auto bg-red-400">
-      {tripCategories.map((section, idx) => (
-        <div key={idx}>
-          {/* Section Heading */}
-          <h2 className="text-2xl font-extrabold text-zinc-900 my-12">
-            {section.categoryHeading}
-          </h2>
+<section className="py-10 px-4 md:px-10 w-full bg-white">
+  <div className="max-w-7xl mx-auto">
+    {tripCategories.map((section, idx) => (
+      <div key={idx} className="mb-12 last:mb-0">
+        
+        {/* --- 1. SHARED HEADING --- */}
+        {/* Centered on mobile, Left on desktop */}
+        <h2 className="text-2xl md:text-3xl font-black text-zinc-900 text-center md:text-left mb-8 px-2">
+          {section.categoryHeading}
+        </h2>
 
-
-          {/* Trips Grid */}
-         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-  {section.trips.map((trip, index) => (
-    <WhiteTripCard key={index} trip={trip} />
-  ))}
-</div>
+        {/* --- 2. DESKTOP GRID (Hidden on Mobile) --- */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {section.trips.map((trip, index) => (
+            <WhiteTripCard key={index} trip={trip} />
+          ))}
         </div>
-      ))}
-    </div>
-    </section>
+
+        {/* --- 3. MOBILE SWIPER (Hidden on Desktop) --- */}
+        {/* We use -mx-4 to allow cards to slide edge-to-edge on small screens */}
+        <div className="md:hidden  px-4 overflow-hidden">
+          <Swiper
+            spaceBetween={16}
+            slidesPerView={2.3} // Shows 1 full card + peek of next for better UX
+            breakpoints={{
+              480: {
+                slidesPerView: 3.8,
+                spaceBetween: 20
+              },
+              640: {
+                slidesPerView: 2.2
+              }
+            }}
+            className="w-full !overflow-visible" // !overflow-visible ensures shadows aren't cut
+          >
+            {section.trips.map((trip, index) => (
+              <SwiperSlide key={index} className="pb-6">
+                <WhiteTripCard trip={trip} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+      </div>
+    ))}
+  </div>
+</section>
   );
 }
        

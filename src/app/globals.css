@@ -27,6 +27,9 @@
 }
 
 @layer utilities {
+  .custom-font{
+    font-weight: 900;
+  }
   /* Define the movement logic */
   @keyframes marquee {
     0% {

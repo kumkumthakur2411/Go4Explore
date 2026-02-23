@@ -2,50 +2,67 @@ import Image from "next/image";
 
 export function Hero_Image  () {
     return (<>
-    <section className="relative w-full h-[77vh]  overflow-hidden">
-      {/* Background Image */}
-      <Image
-        src="https://d2qa7a8q0vuocm.cloudfront.net/images/18409920240105072501.png" // Replace with your actual image path
-        alt="Vietnam Tour Packages"
-        fill
-        priority
-        className="absolute h-90 object-cover inset-x-0 bottom-60"
-      />
-  {/* Dark Gradient Overlay */}
+<section className="relative w-full min-h-[77vh] overflow-hidden bg-red-400">
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/98 via-black/0 to-transparent" />
-{/* Content Container */}
-<div className="absolute inset-0 z-10 h-full max-w-7xl mx-auto px-6 md:px-18  
+  {/* Background Image */}
+  <Image
+    src="https://d2qa7a8q0vuocm.cloudfront.net/images/18409920240105072501.png"
+    alt="Vietnam Tour Packages"
+    fill
+    priority
+    className="object-cover"
+  />
 
-  flex flex-col justify-start pt-10 md:pt-15 text-white">
-  
-  {/* Title */}
-  <h1 className="text-2xl md:text-4xl font-extrabold mb-8 tracking-tight">
-    Vietnam Tour Packages
-  </h1>
+  {/* Desktop Gradient Overlay */}
+  <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
 
-  {/* Subtitle */}
-  <p className="text-lg md:text-xl font-medium mb-20">
-    Explore Vietnam Tour Packages with Go4Explore
-  </p>
+  {/* Desktop Content */}
+  <div className="hidden md:flex absolute inset-0 z-10 max-w-7xl mx-auto px-6 lg:px-16 flex-col justify-center text-white">
+    
+    <h1 className="text-4xl lg:text-5xl font-extrabold mb-6">
+      Vietnam Tour Packages
+    </h1>
 
-  {/* Pricing */}
-  <div className="mb-6 flex items-center gap-2">
-    <span className="text-xl md:text-xl font-semibold">Starting Price:</span>
-    <span className="text-xl md:text-xl font-bold text-[#F9E400]">
-      ₹32,000 per person
-    </span>
+    <p className="text-lg lg:text-xl mb-10 font-medium">
+      Explore Vietnam Tour Packages with Go4Explore
+    </p>
+
+    <div className="mb-6 flex items-center gap-2">
+      <span className="text-lg font-semibold">Starting Price:</span>
+      <span className="text-xl font-bold text-[#F9E400]">
+        ₹32,000 per person
+      </span>
+    </div>
+
+    <button className="w-fit px-8 py-3 bg-[#F9E400] text-black font-bold rounded-full shadow-lg hover:scale-105 transition">
+      Request Callback
+    </button>
   </div>
 
-  {/* CTA Button */}
-  <button className="w-fit px-8 py-2 bg-[#F9E400] 
-  text-black font-bold rounded-full text-medium  
-  shadow-lg ">
-    
-    Request Callback
-  </button>
-  
-</div>
+  {/* Mobile Card Layout */}
+  <div className="absolute bottom-0 left-0 right-0 md:hidden z-20">
+    <div className="bg-white rounded-t-3xl p-6 shadow-xl text-black">
+
+      <h1 className="text-xl font-extrabold mb-3">
+        Vietnam Tour Packages
+      </h1>
+
+      <p className="text-sm mb-4 font-medium">
+        Explore Vietnam Tour Packages with Go4Explore
+      </p>
+
+      <p className="text-sm mb-4">
+        <span className="font-semibold">Starting Price:</span>{" "}
+        <span className="font-bold">₹32,000 per person</span>
+      </p>
+
+      <button className="w-full py-3 bg-[#F9E400] text-black font-bold rounded-full shadow-md">
+        Request Callback
+      </button>
+
+    </div>
+  </div>
+
 </section>
        </>
     )

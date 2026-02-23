@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useState } from "react";
 
-import TripCard from "../useAble/TripCard";
+import TripCard from "../useable/TripCard";
 
 export default function UpcomingTrips({ trips = [] }) {
     const months = [

@@ -1,4 +1,8 @@
-import TripCard from "@/app/components/useAble/TripCard";
+'use client'
+
+import TripCard from "@/app/components/useable/TripCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function Hand_Pick_by_Expert() {
 
@@ -10,7 +14,7 @@ export default function Hand_Pick_by_Expert() {
       duration: "3 Days 2 Nights",
       discount: "₹500 OFF",
       img: "/image.png",
-      per_person:"per person"
+      per_person: "per person"
     },
     {
       title: "Kasol Kheerganga Trek",
@@ -19,7 +23,7 @@ export default function Hand_Pick_by_Expert() {
       duration: "3 Days 2 Nights",
       discount: "₹500 OFF",
       img: "/image.png",
-      per_person:"per person"
+      per_person: "per person"
     },
     {
       title: "Chopta Tungnath Deoriatal",
@@ -28,7 +32,7 @@ export default function Hand_Pick_by_Expert() {
       duration: "3 Days 2 Nights",
       discount: "₹500 OFF",
       img: "/image.png",
-      per_person:"per person"
+      per_person: "per person"
     },
     {
       title: "Kanatal & Tehri Lake",
@@ -37,29 +41,54 @@ export default function Hand_Pick_by_Expert() {
       duration: "2 Days 1 Night",
       discount: "",
       img: "/image.png",
-      per_person:"per person"
+      per_person: "per person"
     },
-
-
   ];
 
   return (
-    <section className="py-10 px-10 ">
+    <section className="w-full py-10 px-4 md:px-10 bg-white">
+      {/* Standardized Max-Width Container */}
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
-          <h2 className="text-2xl font-extrabold text-zinc-900">
-           Hand Picked By Experts
+        {/* Header: Center on Mobile, Left on Desktop */}
+        <div className="mb-8">
+          <h2 className="w-full text-center md:text-left text-2xl md:text-3xl font-black text-zinc-900">
+            Hand Picked By Experts
           </h2>
+          {/* Subtext adds a premium feel to "Hand Picked" sections */}
+          <p className="hidden md:block text-gray-500 text-sm mt-2">
+            Specially curated experiences by our travel specialists.
+          </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* ✅ Desktop / Tablet Grid: 3 cols on tablet, 4 on large screens */}
+        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 gap-6">
           {trips.map((trip, index) => (
             <TripCard key={index} trip={trip} />
           ))}
         </div>
+
+        {/* ✅ Mobile Swiper: Improved visibility and spacing */}
+        <div className="md:hidden -mx-4 px-4"> 
+          {/* -mx-4 and px-4 allow the swiper to touch edges while keeping cards aligned */}
+          <Swiper
+            spaceBetween={15}
+            slidesPerView={2.3} // Shows 1 full card and a peek of the next for better UX
+            breakpoints={{
+              480: {
+                slidesPerView: 2.2,
+                spaceBetween: 20
+              }
+            }}
+          >
+            {trips.map((trip, index) => (
+              <SwiperSlide key={index} className="pb-4">
+                <TripCard trip={trip} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
       </div>
     </section>
   );

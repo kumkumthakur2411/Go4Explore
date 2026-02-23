@@ -15,14 +15,13 @@ const topMenu = [
   { name: "Payments", href: "#" },
   { name: "Contact Us", href: "#" },
 ];
-
 const bottomMenu = [
   { name: "Upcoming Group Trips", icon: "https://go4explore.com/assets/img/head-bottom/1.png" ,href:"/upcoming-trips" },
-  { name: "International Trips", icon: "https://go4explore.com/assets/img/head-bottom/2.png" ,href:"/International-trips"},
-  { name: "Domestic Trips", icon: "https://go4explore.com/assets/img/head-bottom/3.png",href:"/Domestic-trips" },
-  { name: "Weekend Trips", icon: "https://go4explore.com/assets/img/head-bottom/4.png" ,href:"/Weekend-trips" },
-  { name: "Backpacking Trips", icon: "https://go4explore.com/assets/img/head-bottom/5.png",href:"/upcoming-trips" },
-  { name: "Corporate Tours", icon: "https://go4explore.com/assets/img/head-bottom/6.png",href:"/upcoming-trips" },
+  { name: "International Trips", icon: "https://go4explore.com/assets/img/head-bottom/2.png" ,href:"/trips-category/international-trips"},
+  { name: "Domestic Trips", icon: "https://go4explore.com/assets/img/head-bottom/3.png",href:"/trips-category/domestic-trips" },
+  { name: "Weekend Trips", icon: "https://go4explore.com/assets/img/head-bottom/4.png" ,href:"/trips-category/weekend-trips" },
+  { name: "Backpacking Trips", icon: "https://go4explore.com/assets/img/head-bottom/5.png",href:"/trips-category/backpacking-trips" },
+  { name: "Corporate Tours", icon: "https://go4explore.com/assets/img/head-bottom/6.png",href:"/corporate-tours" },
 ];
 
 export default function NavBar() {
@@ -75,7 +74,7 @@ export default function NavBar() {
     </div>
 
     {/* 4. MOBILE-ONLY NAVIGATION (Independent Layout) */}
-    <div className="flex md:hidden w-full items-center justify-between ">
+    <div className="flex lg:hidden w-full items-center justify-between ">
       {/* Mobile Logo */}
       <Link href="/">
         <Image

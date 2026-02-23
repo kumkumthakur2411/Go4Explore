@@ -10,7 +10,7 @@ export default function Home() {
     <>
       {/* Normal Sections with Padding */}
       <Hero_Image />
-      <div className="w-full px-12 py-8 flex flex-col gap-10 items-start">
+      <div className="w-full   flex flex-col gap-10 items-start">
         <Hand_Pick_by_Expert/>
         <LeadForm/>
         <Package_Swiper_div/>

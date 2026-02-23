@@ -3,7 +3,8 @@ import { BsTelephone } from "react-icons/bs";
 
 export default function TripCard({ trip }) {
   return (
-<div className="relative rounded-2xl overflow-hidden shadow-lg group">
+<div className="relative rounded-2xl overflow-hidden 
+shadow-lg group">
 
   {/* Image */}
   <Image
@@ -48,7 +49,8 @@ export default function TripCard({ trip }) {
 
   <hr className="my-1 md:my-2 opacity-70" />
 
-  <div className="block md:flex items-center justify-between mt-1 md:mt-2">
+  <div className="block md:flex items-center 
+  justify-between mt-1 md:mt-2">
 
     {/* Price Section */}
     <div>
@@ -69,7 +71,8 @@ export default function TripCard({ trip }) {
     </div>
 
     {/* Button Section */}
-<div className="flex items-center justify-between md:justify-end gap-1 md:gap-2 
+<div className="flex items-center 
+justify-between md:justify-end gap-1 md:gap-2 
                 whitespace-nowrap">
 
   <BsTelephone

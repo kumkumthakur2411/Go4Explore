@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import TripCard from "../components/useAble/TripCard";
+import TripCard from "../components/useable/TripCard";
 
 export default function UpcomingTrips() {
   const months = [

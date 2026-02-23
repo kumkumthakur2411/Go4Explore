@@ -7,8 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function DomesticSection() {
   return (
     // Updated width/padding and centered mx-auto
-    <div className="w-[100%] md:w-[85%] 
-    h-auto md:h-[95vh]
+    <div className="w-full flex justify-center py-2 px-4 md:px-20
      bg-white/90 shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)]  
      rounded-xl px-1 py-8 md:px-6 md:py-10">
       

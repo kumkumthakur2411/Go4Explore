@@ -6,17 +6,17 @@ import TrendingSection from "./components/Home/Trending/TrendingSection";
 import ExploreCategories from "./components/Home/ExploreCategories";
 import DomesticSection from "./components/Home/DomesticSection/DomesticSection";
 import UpcomingTrips from "./components/Home/UpcomingTrips";
-import FeaturedNews from "./components/Home/FeaturedNews/FeaturedNews";
+import FeaturedNews from "./components/useable/FeaturedNews/FeaturedNews";
 import PlanTripSection from "./components/Home/PlanTripSection";
-import WhyChoose from "./components/useAble/WhyChoose";
+import WhyChoose from "./components/useable/WhyChoose";
 import TopBlogReads from "./components/Home/TopBlogReads";
 import { AboutUs } from "./components/Home/AboutUs";
 import Hero from "./components/Home/Hero";
-import BannerVideo  from "./components/useAble/BannerVideo";
+import BannerVideo  from "./components/useable/BannerVideo";
 import BrandsMarquee from "./components/Home/BrandMarquee";
 import VideoSwiperSection from "./components/Home/VideoSwiper/VideoSwiperSection";
-import { FaqsSection } from "./components/useAble/Faqs";
-import TestimonialSection from "./components/useAble/testimonials/TestimonialsSection";
+import { FaqsSection } from "./components/useable/Faqs";
+import TestimonialSection from "./components/useable/TestimonialsSection";
 
   const videos = [
     "https://go4explore.com/assets/img/vietnam-hm-slider.mp4",
