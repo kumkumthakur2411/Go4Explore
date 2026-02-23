@@ -125,21 +125,23 @@ export default function Home() {
   return (
     <>
       {/* Normal Sections with Padding */}
-      <div className="w-full px-4 flex flex-col gap-10 md:gap-15 items-center">
+      <div className="w-full  flex flex-col gap-10 md:gap-15 items-center  md:px-10">
         <Hero />
         <TrendingSection />
         <ExploreCategories />
         <InternationalSection />
-        <DomesticSection />
-        
-       <UpcomingTrips trips={trips}/>
-        <FeaturedNews />
-        <BannerVideo videos={videos}/>
+        <DomesticSection />        
+        <UpcomingTrips trips={trips}/>
       </div>
+      <div className="w-full  flex flex-col gap-10 md:gap-15 items-center px-2 md:px-10">
+        <FeaturedNews />
+      <BannerVideo videos={videos}/>
+      </div>
+      
       {/* FULL WIDTH SECTION */}
       <PlanTripSection />
       {/* Back to Normal Sections */}
-      <div className="w-full px-4 flex flex-col gap-10 md:gap-15 items-center">
+      <div className="w-full px-2 flex flex-col gap-10 md:gap-15 items-center">
         <BrandsMarquee />
         <VideoSwiperSection videos={reels} />
         <TestimonialSection/>

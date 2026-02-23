@@ -106,7 +106,7 @@ export default function WhyChoose() {
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center text-center px-6 pb-10">
                   
-                  <div className="w-16 h-16 mb-5 flex items-center justify-center">
+                  <div className="w-16 h-16 mt-2 mb-5 flex items-center justify-center">
                     <Image
                       src={item.icon}
                       alt={item.title}

@@ -52,11 +52,11 @@ const quick_links = [
 
 export default function Footer() {
   return (
-    <footer className="w-w-[90%] bg-slate-50 py-10 px-20 ">
-      <div className=" mx-auto  p-8  flex flex-col items-center justify-between">
+    <footer className="w-full w-[90%] bg-slate-50 py-10 px-4 ">
+      <div className=" mx-auto    flex flex-col items-center justify-between">
 
         {/* ================= TOP GRID LINKS ================= */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb:gap-10">
 
           {/* Company */}
           <div>
@@ -134,19 +134,20 @@ export default function Footer() {
               <span className="font-bold text-gray-900">Registered Office - </span>
               14/4, Girdhar Marg, Malviya Nagar, Jaipur (Rajasthan) - 302017
             </p>
-            <p className="text-sm text-gray-600 mb-2">
+            <p className="text-xs text-gray-600 mb-2">
               <span className="font-bold  text-gray-900">Corporate Office - </span>
               401, C-23, Sector 63, Noida (UP) - 201301
             </p>
-            <p className="text-sm text-gray-600">+91-9266710039</p>
-            <p className="text-sm text-gray-600">contact@go4explore.com</p>
+            <p className="text-xs text-gray-600">+91-9266710039</p>
+            <p className="text-xs text-gray-600">contact@go4explore.com</p>
           </div>
         </div>
 
 
 
         {/* ================= BRAND + PAYMENTS ================= */}
-<div className="flex flex-col md:flex-row w-[90%] rounded-xl bg-white/90 shadow-2xl p-6 justify-between items-center gap-8 mb-6">
+<div className="flex flex-col w-full md:flex-row w-[90%] 
+rounded-xl bg-white/90 shadow-2xl p-4 justify-between items-center gap-8 mb-6">
 
   {/* 1. LOGO (Start/Left) */}
   <div className="w-full md:w-1/5 flex justify-center md:justify-start">

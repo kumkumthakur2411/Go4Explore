@@ -30,10 +30,9 @@ export default function NavBar() {
 
   return (
     <>
-<header className="fixed top-0 left-0 w-full md:h-[18vh] h-[10vh] z-50 bg-white ">
-  {/* ===== TOP NAV ===== */}
-  <div className="w-[95vw] md:w-[88vw] h-full md:h-[55%] mx-auto flex items-center justify-between px-2 md:px-5">
-    
+<header className="fixed top-0 left-0 w-full h-22 md:h-[120px] z-50 bg-white shadow-sm">
+  {/* TOP NAV: 64px on mobile, approx 66px on desktop (55% of 120px) */}
+  <div className="w-[95vw] md:w-[88vw] h-full md:h-[55%] mx-auto flex items-center justify-between px-2 md:px-5">  
     {/* 1. Logo (Desktop) - Visible only on md and up */}
     <Link href="/" className="hidden md:block">
       <Image
@@ -94,7 +93,7 @@ export default function NavBar() {
         <a href="tel:+919266710039" className="flex items-center gap-1 border border-[#2755B0]
          px-3 py-1.5 rounded-full text-[#2755B0]">
           <RiWhatsappLine size={18} />
-          <span className="text-[10px] font-bold">+91 9266710039</span>
+          <span className="text-xs font-bold">+91 9266710039</span>
         </a>
         
         {/* Mobile Menu Button */}
@@ -106,7 +105,7 @@ export default function NavBar() {
   
 
   {/* ===== BOTTOM NAV (Desktop Only) ===== */}
-  <div className="hidden md:flex h-[45%] bg-[#2755B0] text-white items-center justify-center">
+<div className="hidden md:flex h-[45%] bg-[#2755B0] text-white items-center justify-center">
     <div className="w-[77%] flex items-center justify-between py-3 text-sm font-medium">
       {bottomMenu.map((item, index) => (
         <Link href={item.href} key={index}>
@@ -124,7 +123,7 @@ export default function NavBar() {
 </header>
       {/* ===== MOBILE DRAWER ===== */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-white z-[100] transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-full h-full bg-white z-[100] overflow-y-auto transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
@@ -196,18 +195,18 @@ export default function NavBar() {
               </div>
             ))}
           </div>
-</div>
-<div className="flex flex-row justify-center items-center  py-7">
+        </div>
+        <div className="flex flex-row justify-center items-center  py-7">
         <a href="tel:+919266710039" className="flex items-center gap-1 border border-[#2755B0]
          px-3 py-1.5 rounded-full text-[#2755B0]">
           <RiWhatsappLine size={18} />
-          <span className="text-[10px] font-bold">+91 9266710039</span>
+          <span className="text-xs font-bold">+91 9266710039</span>
         </a>
         <p className="text-3xl font-normal text-gray-700 px-2">|</p>
                 <a href="tel:+919266710039" className="flex items-center gap-1 border border-[#2755B0]
          px-3 py-1.5 rounded-full text-[#2755B0]">
           <IoPersonOutline size={18} />
-          <span className="text-[10px] font-bold">Login OR Register</span>
+          <span className="text-xs font-bold">Login OR Register</span>
         </a>
 
         </div>

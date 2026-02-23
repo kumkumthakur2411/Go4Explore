@@ -8,7 +8,9 @@
   --font-weight-extrablack: 1000; 
 }
 
-
+.animate-marquee {
+  animation: marquee 20s linear  infinite ;
+}
 
 /* Swiper Pagination Styling */
 .swiper-pagination-bullet {
@@ -176,26 +178,24 @@
   }
 }
 
-.animate-marquee {
-  animation: marquee 20s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
-}
 
-@keyframes marquee-reverse {
+
+/* @keyframes marquee-reverse {
   from {
     transform: translateX(-50%);
   }
   to {
     transform: translateX(0);
   }
-}
+} */
 
 .animate-marquee-two {
   animation: marquee 30s linear infinite;
 }
 
-.animate-marquee-reverse {
+/* .animate-marquee-reverse {
   animation: marquee-reverse 30s linear infinite;
-}
+} */
 
 /* Red → Pink animation */
 @keyframes redPinkCycle {

@@ -17,10 +17,10 @@ export default function FeaturedNews() {
   shadow-none md:shadow-2xl
   rounded-xl
   h-auto
-  p-0 md:px-4
+  p-0 md:px-4 
   flex flex-col md:flex-row
   items-center
-  gap-3 md:gap-10
+  -gap-3 md:gap-10
 ">
   {/* Text */}
   <div className="w-full md:w-[20%] text-center md:text-left md:px-4">
@@ -33,12 +33,11 @@ export default function FeaturedNews() {
   </div>
 
   {/* Swiper */}
-  <div className="w-[80%] md:flex-1">
+  <div className="w-full md:h-[10%] px-2 md:px-0 md:w-[80%] md:flex-1">
     <FeaturedNewsSwiper />
   </div>
 </div>
     </>
-  )
-  
+  )  
   
 }

@@ -5,8 +5,9 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function InternationalSection() {
   return (
     // SYNCED: Same width, height, shadow, and padding as Domestic
-    <div className="w-[100%] md:w-[85%] 
-    h-[76vh] md:h-[95vh]
+    <div className="w-full md:w-[85%] mx-auto
+    h-auto
+     md:h-[95vh]
      bg-white/90 shadow-[0_0_60px_-15px_rgba(0,0,0,0.3)]  
      rounded-xl px-1 py-8 md:px-6 md:py-10">
       

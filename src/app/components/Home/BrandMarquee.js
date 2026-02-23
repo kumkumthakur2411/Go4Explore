@@ -21,10 +21,11 @@ const row2 = [
 export default function BrandsMarquee() {
   return (
     <section className="w-[90%] md:w-[85%] mx-auto bg-white overflow-hidden">
-      <h1 className="w-full flex justify-center items-center py-8 text-lg md:text-2xl font-extrabold text-[#2755B0]">
+      <h1 className="w-full flex justify-center items-center py-8 text-lg 
+      md:text-2xl font-extrabold text-[#2755B0]">
 Recognitions & Collaborations
   </h1>
-      <div className="space-y-10">
+      <div className=" md:space-y-10">
 
         {/* ROW 1 */}
         <div className="relative w-full overflow-hidden">
@@ -47,7 +48,7 @@ Recognitions & Collaborations
 
         {/* ROW 2 (Reverse Direction) */}
         <div className="relative w-full overflow-hidden">
-          <div className="flex gap-2 md:gap-5 animate-marquee-reverse w-max">
+          <div className="flex gap-3 md:gap-5 animate-marquee-two w-max">
             {[...row2, ...row2].map((logo, index) => (
               <div
                 key={index}

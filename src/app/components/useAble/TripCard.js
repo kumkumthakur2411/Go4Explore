@@ -11,7 +11,7 @@ export default function TripCard({ trip }) {
     alt={trip.title}
     width={400}
     height={500}
-    className="w-full h-[270px] md:h-[400px] 
+    className="w-full h-[255px] md:h-[400px]
                object-cover 
                transition duration-300 
                group-hover:scale-105"

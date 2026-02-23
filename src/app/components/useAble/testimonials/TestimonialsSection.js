@@ -90,7 +90,6 @@ const reviewDetails = [
 ];
 
   return (
-<<<<<<< HEAD
     <div className="w-full md:w-[85%] md:h-[85%] mx-auto  ">
       <h1 className="w-full flex justify-center items-center py-8 text-xl
       md:text-3xl font-extrabold text-[#2755B0] mb-3 md:mb-8">
@@ -112,13 +111,6 @@ const reviewDetails = [
           <div className="h-30"><ReviewCard data={reviewDetails[2]} /></div>         
         <div className="h-45"><ImageCard data={visualContent[3]} /></div>           
         </div>
-=======
-    <div className="w-[90%] h-screen mx-auto  ">
-      <h1 className="w-full flex justify-center items-center py-8 text-3xl font-extrabold text-black mb-8">
-        Happy Faces & Stories
-      </h1>
-      <div className="overflow-hidden h-full">
->>>>>>> a69f63122113dea3d4b7027dc5595f7fefecba4d
 
       </div>
 
@@ -147,11 +139,7 @@ const reviewDetails = [
         <div className="flex h-full animate-marquee gap-4">
 
           {/* FIRST COPY */}
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-full w-full shrink-0">
-=======
-          <div className="grid grid-cols-4 gap-4 h-full w-full shrink-0">
->>>>>>> a69f63122113dea3d4b7027dc5595f7fefecba4d
 
             <div className="flex flex-col gap-4 h-full">
               <div className="h-[25%] ">
@@ -204,12 +192,8 @@ const reviewDetails = [
           </div>
 
           {/* SECOND COPY (duplicate for seamless loop) */}
-<<<<<<< HEAD
           <div className="grid grid-2 grid-cols-4 gap-4 h-full w-full shrink-0">
 
-=======
-          <div className="grid grid-cols-4 gap-4 h-full w-full shrink-0">
->>>>>>> a69f63122113dea3d4b7027dc5595f7fefecba4d
 
             <div className="flex flex-col gap-4 h-full">
               <div className="h-[25%] ">
@@ -336,4 +320,3 @@ function ImageCard({ data }) {
     </div>
   );
 }
-

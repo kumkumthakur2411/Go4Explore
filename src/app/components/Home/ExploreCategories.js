@@ -29,42 +29,45 @@ export default function ExploreCategories() {
   ];
 
   return (
-      <div className="w-[85%] mx-auto flex flex-col lg:flex-row gap-3 items-center">
+    <section className="w-full py-2 px-14 md:px-25 bg-white">
+      {/* Container capped at 1280px (max-w-7xl) for zoom stability */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
         
-        {/* Left Content */}
-        <div className="lg:w-[25%] text-center lg:text-left">
-          <h2 className="w-full md:w-[50%] text-xl md:text-2xl
-          font-extrabold text-[#2755B0] mb-3">
+        {/* Left Content - Takes up 25% on desktop */}
+        <div className="w-full lg:w-[25%] text-center lg:text-left">
+          <h2 className="text-2xl md:text-3xl font-black text-[#2755B0] mb-3 leading-tight">
             Explore Categories
           </h2>
-          <p className="text-black font-medium text-xs md:text-base mb-4">
-            Discover destinations that match your vibe, Trips tailored to your
-            preferences.
+          <p className="text-gray-600 font-medium text-sm md:text-base">
+            Discover destinations that match your vibe. Trips tailored to your preferences.
           </p>
         </div>
 
-        {/* Right Cards */}
-        <div className="lg:w-[75%] h-full grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {/* Right Cards Grid - Optimized scaling */}
+        <div className="w-full lg:w-[75%] grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {categories.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md py-5 px-2
-              text-center hover:shadow-lg transition duration-300"
+              className="bg-white rounded-2xl shadow-sm border border-gray-100 py-6 px-2
+                         text-center hover:shadow-xl hover:-translate-y-1 transition duration-300 cursor-pointer group"
             >
-              <div className="flex justify-center mb-5">
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={50}
-                  height={50}
-                  className="object-contain hover:scale-150 transition duration-300 "
-                />
+              <div className="flex justify-center mb-4">
+                <div className="relative w-12 h-12 md:w-14 md:h-14">
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    fill
+                    className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
               </div>
-              <p className="text-[10px] md:text-sm font-semibold text-zinc-900">{item.title}</p>
+              <p className="text-xs md:text-sm font-medium text-zinc-800 group-hover:text-[#2755B0] transition-colors">
+                {item.title}
+              </p>
             </div>
           ))}
         </div>
       </div>
-    
+    </section>
   );
 }

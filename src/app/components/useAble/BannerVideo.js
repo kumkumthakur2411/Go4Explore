@@ -19,7 +19,7 @@ export default function BannerVideo({ videos }) {
 
   return (
     <section className="w-full md:w-[85%] relative h-[20vh] 
-    md:h-[80vh] overflow-hidden mb-10">
+    md:h-[80vh] overflow-hidden mb-10 md:mb-0">
       {isLoaded && (
         <Swiper
           // 1. STRICTLY REMOVE 'Autoplay' from this array
@@ -54,7 +54,7 @@ export default function BannerVideo({ videos }) {
                 loop
                 playsInline
                 className="absolute inset-0 w-full 
-                h-[110] md:h-[75%] object-cover rounded-3xl"
+                h-[150] md:h-[75%] object-cover rounded-3xl"
               />
             </SwiperSlide>
           ))}
@@ -67,7 +67,7 @@ export default function BannerVideo({ videos }) {
 
       {/* DESKTOP NAVIGATION */}
       <div className="hidden absolute 
-bottom-20 right-0 lg:flex gap-3 z-30">
+bottom-16 right-0 lg:flex gap-3 z-30 ">
         <button
           ref={prevRef}
           className="bg-[#2556B0]

@@ -33,7 +33,7 @@ export default function FeaturedNewsSwiper() {
           modules={[Autoplay]}
           className="[&_.swiper-wrapper]:!ease-linear"
           breakpoints={{
-            320: { slidesPerView: 3 },
+            320: { slidesPerView: 3.5 },
             640: { slidesPerView: 3 },
             1024: { slidesPerView: 5 },
           }}
@@ -48,7 +48,7 @@ export default function FeaturedNewsSwiper() {
                     src={item.src}
                     alt={item.title}
                     fill
-                    className="object-contain size:5 md:size-20"
+                    className="object-contain size-3 md:size-20"
                   
                   />
                 </div>

@@ -27,7 +27,7 @@ const features = [
 
 export default function PlanTripSection() {
   return (
-    <section className="relative w-full py-20 overflow-hidden">
+    <section className="relative w-full md:py-12 overflow-hidden">
 
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -40,57 +40,59 @@ export default function PlanTripSection() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+<div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* LEFT IMAGE */}
-          <div className="relative w-full h-[500px] lg:h-[650px]">
+  {/* LEFT IMAGE */}
+  <div className="relative w-full h-[500px] lg:h-[650px] order-2 lg:order-1">
+    <Image
+      src="https://go4explore.com/assets/img/plan-trip.webp"
+      alt="Planning Trip"
+      fill
+      className="object-contain"
+    />
+  </div>
+
+  {/* RIGHT CONTENT */}
+  <div className="py-10 md:space-y-15 md:mt-20 order-1 lg:order-2">
+<h2 className="text-xl   md:text-2xl lg:text-3xl font-extrabold text-white text-center lg:text-left">
+  Planning Stress-Free Trips!
+</h2>
+
+    <div className="mt-5 md:mt-10 space-y-5">
+      {features.map((item, index) => (
+        <div
+          key={index}
+          className="flex items-start w-full md:w-[98%] gap-6 bg-white/95 backdrop-blur-md p-3
+          md:pl-8 md:pr-10 py-4 rounded-2xl shadow-xl hover:scale-[1.02]
+          transition-all duration-300"
+        >
+          <div className="relative w-12 h-12 md:w-15  md:h-15 
+          flex-shrink-0 bg-[#FFF500] rounded-full p-1 justify-center items-center flex">
             <Image
-              src="https://go4explore.com/assets/img/plan-trip.webp"
-              alt="Planning Trip"
-              fill
+              src={item.icon}
+              alt={item.title}
+              width={30}
+              height={30}
               className="object-contain"
             />
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="space-y-8">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white">
-              Planning Stress-Free Trips!
-            </h2>
-
-            <div className="space-y-5">
-              {features.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start gap-4 bg-white/95 backdrop-blur-md
-                  p-6 rounded-2xl shadow-xl hover:scale-[1.02]
-                  transition-all duration-300"
-                >
-                  <div className="relative w-14 h-14 flex-shrink-0">
-                    <Image
-                      src={item.icon}
-                      alt={item.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-
-                  <div>
-                    <h5 className="text-lg font-semibold text-gray-900">
-                      {item.title}
-                    </h5>
-                    <p className="text-gray-600 text-sm mt-2">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div>
+            <h5 className="text-sm md:text-lg font-semibold text-gray-900">
+              {item.title}
+            </h5>
+            <p className="text-gray-900 text-xs font-semibold md:text-sm md:font-medium mt-1">
+              {item.desc}
+            </p>
           </div>
-
         </div>
+      ))}
+    </div>
+  </div>
+
+</div>
       </div>
     </section>
   );

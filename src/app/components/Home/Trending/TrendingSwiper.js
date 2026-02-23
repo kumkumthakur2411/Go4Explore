@@ -45,80 +45,64 @@ const destinations_row2 = [
 ];
 export default function TrendingSwiper() {
   return (
-    <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={15}
-      // Increased space for better mobile clarity
-      loop={true}
-      navigation={{
-        nextEl: ".swiper-next",
-        prevEl: ".swiper-prev",
-      }}
-      // RESPONSIVE LOGIC
-      breakpoints={{
-        // Mobile (Portrait)
-        0: {
-          slidesPerView: 3.5,
-          spaceBetween: 8,
-        },
-        // Tablet (iPad)
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 12,
-        },
-        // Desktop
-        1024: {
-          slidesPerView: 8,
-          spaceBetween: 4,
-        },
-      }}
-      className="w-full"
-    >
+<Swiper
+  modules={[Navigation, Pagination, Autoplay]}
+  loop={true}
+  navigation={{
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  }}
+  breakpoints={{
+    // MOBILE: Increased spacing to prevent overlapping circles
+    0: { 
+      slidesPerView: 3.7, // Reduced slightly so the side-items "peek" in
+      spaceBetween: 10    // Increased spacing for mobile
+    },
+
+    // TABLET: Moderate spacing
+    768: { 
+      slidesPerView: 4, 
+      spaceBetween: 10 
+    },
+
+    // DESKTOP: Decreased spacing to keep the 8 items tight and aligned
+    1024: { 
+      slidesPerView: 8, 
+      spaceBetween: 10 
+    },
+
+    // LARGE DESKTOP / ZOOM OUT: Very tight spacing for maximum items
+    1440: { 
+      slidesPerView: 8, 
+      spaceBetween: 10 
+    },
+  }}
+  className="w-full"
+>
       {destinations_row1.map((item1, index) => {
         const item2 = destinations_row2[index];
-
         return (
           <SwiperSlide key={index}>
-            <div className="flex flex-col items-center gap-4 md:gap-8 py-2">
-              {/* Row 1 */}
-              
-              {/* Added 'group' class here so children can react to hovering over this div */}
-<div className="flex flex-col items-center gap-1 md:gap:3 group cursor-pointer">
-  
-  <div className="relative w-18 h-25 md:w-31 md:h-44 rounded-full overflow-hidden shadow-lg 
-   transition-all duration-300">
-    <Image
-      src={item1.src}
-      alt={item1.name}
-      fill
-      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-    />
-  </div>
-
-  <p className="font-medium pt-2 text-xs md:text-base text-center truncate w-full text-zinc-800
-  transition-colors duration-300 ">
-    {item1.name}
-  </p>
-</div>
-
-              {/* Row 2 */}
-              {item2 && (
-                <div className="flex flex-col items-center gap-1 md:gap:3 group cursor pointer">
-                  <div className="relative w-18 h-25 md:w-31  md:h-44 rounded-full overflow-hidden shadow-lg 
-                  transition-all duration-300 ">
-                    <Image
-                      src={item2.src}
-                      alt={item2.name}
-                      fill
-                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                    />
+            <div className="flex flex-col gap-8 py-4">
+              {/* Individual Item Component (Reuse this for Row 1 and Row 2) */}
+              {[item1, item2].map((item, i) => (
+                item && (
+                  <div key={i} className="group cursor-pointer flex flex-col items-center">
+                    {/* Fixed aspect ratio container for circles */}
+                    <div className="relative aspect-[2/3] w-full max-w-[140px] rounded-full overflow-hidden shadow-md transition-all duration-300 ring-0 group-hover:ring-4 ring-blue-100">
+                      <Image
+                        src={item.src}
+                        alt={item.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                    <p className="mt-3 font-medium text-sm md:text-base text-gray-900 group-hover:text-[#2556B0] transition-colors">
+                      {item.name}
+                    </p>
                   </div>
-                  <p className="font-medium pt-2 text-xs md:text-base text-center truncate w-full text-zinc-800
-                  transition-colors duration-300 ">
-                    {item2.name}
-                  </p>
-                </div>
-              )}
+                )
+              ))}
             </div>
           </SwiperSlide>
         );

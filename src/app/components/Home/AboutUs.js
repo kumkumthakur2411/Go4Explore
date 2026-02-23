@@ -65,9 +65,8 @@ export function AboutUs() {
             About Go4Explore
           </CardTitle>
 
-          <p className="text-gray-700 font-medium max-w-4xl mx-auto">
-            Go4explore takes pride in curating meticulous tour packages that
-            ensure a thrilling and serene experience...
+          <p className="text-gray-700 font-medium max-w-5xl mb-[4px]">
+            Go4explore takes pride in curating meticulous tour packages that ensure a thrilling and serene experience. We believe that travelling evolves you, the adventure transforms you and the journey traverses through every sense to form the tapestry....
           </p>
         </CardHeader>
 
@@ -82,10 +81,10 @@ export function AboutUs() {
 
               {/* Show View More ONLY when closed */}
 {!open && (
-  <div className="flex justify-center mt-4">
+  <div className="flex justify-center ">
     <button
       onClick={() => setOpen(true)}
-      className="font-semibold text-gray-800 hover:text-[#2755B0] flex items-center gap-2 transition"
+      className="font-semibold text-gray-800 hover:text-[#2755B0] text-sm flex items-center gap-2 transition"
     >
       View More
       <IoIosArrowDown size={16} />
@@ -116,7 +115,8 @@ export function AboutUs() {
                   <div className="flex justify-center mt-4">
                     <button
                       onClick={() => setOpen(false)}
-                      className="font-semibold text-gray-800 hover:text-[#2755B0] flex items-center gap-2 transition"
+                      className="font-semibold text-gray-800  text-sm hover:text-[#2755B0] 
+                      flex items-center gap-2 transition" 
                     >
                       Show Less 
                        <IoIosArrowUp size={16} />

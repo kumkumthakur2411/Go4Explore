@@ -38,7 +38,7 @@ export default function UpcomingTrips() {
       oldPrice: "₹6,999",
       duration: "3 Days 2 Nights",
       discount: "₹500 OFF",
-      img: "/image.png",
+      img: "https://d2qa7a8q0vuocm.cloudfront.net/images/957820240826103048.png",
     },
     {
       title: "Chopta Tungnath Deoriatal",
@@ -91,23 +91,26 @@ export default function UpcomingTrips() {
   ];
 
   return (
-    <section className="py-25 md:py-12 px-1 md:px-20 ">
-      <div className="max-w-[94%] justify-center mx-auto">
+    <section className="w-full py-6 px-3 md:px-30 md:py-1">
+      <div className="max-w-7xl justify-center mx-auto">
+       
+  
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-4 pt-2">
-          <h2 className="text-2xl font-extrabold text-[#2755B0]">
-            Upcoming Trips
-          </h2>
-        </div>
+<div className="flex flex-col md:flex-row items-center md:items-start md:justify-between mb-6 md:mb-2  gap-4 ">
+  <h2 className="w-full text-center md:text-left text-xl md:text-2xl font-extrabold  text-blue-900">
+    Upcoming Trips
+  </h2>
+</div>
 
 {/* Month Tabs */}
-<div className="flex gap-3 mb-2 md:mb-1 overflow-x-auto pb-2 scrollbar-hide md:scrollbar-default whitespace-nowrap">
+<div className="flex gap-1 md:gap-3 mt-8 md:mt-1 mb-2 md:mb-1 
+overflow-x-auto pb-2 scrollbar-hide md:scrollbar-default whitespace-nowrap">
   {months.map((month) => (
     <button
       key={month}
       onClick={() => setActiveMonth(month)}
-      className={`px-6 py-2 rounded-full text-xs font-semibold flex-shrink-0 ${
+      className={`px-2 md:px-6 py-2 rounded-full text-xs font-semibold flex-shrink-0 ${
         activeMonth === month
           ? "bg-[#2755B0] text-white"
           : "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -119,12 +122,12 @@ export default function UpcomingTrips() {
 </div>
 
 {/* Plan Tabs */}
-<div className="flex gap-3 mb-2 md:mb-1 overflow-x-auto pb-2 scrollbar-hide md:scrollbar-default whitespace-nowrap">
+<div className="flex gap-3 mt-7 md:mt-1 mb-2 md:mb-1 overflow-x-auto pb-2 scrollbar-hide md:scrollbar-default whitespace-nowrap">
   {plans.map((plan) => ( // Renamed 'plans' to 'plan' inside map for better naming
     <button
       key={plan}
       onClick={() => setActivePlan(plan)}
-      className={`px-6 py-4 md:py-2 rounded-full text-xs font-semibold flex-shrink-0 ${
+      className={`px-2 md:px-6 py-3  rounded-full text-xs font-semibold flex-shrink-0 cursor-pointer ${
         activePlan === plan
           ? "bg-[#2755B0] text-white"
           : "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -136,7 +139,7 @@ export default function UpcomingTrips() {
 </div>
 
         {/* Cards Grid */}
-        <div className="mt-15 grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-10 md:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {trips.map((trip, index) => (
             <TripCard key={index} trip={trip} />
           ))}

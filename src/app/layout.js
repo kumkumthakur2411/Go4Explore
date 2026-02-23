@@ -20,18 +20,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.className}>
-      <body className={`overflow-x-hidden flex flex-col`}>
+      <body className={`overflow-x-hidden flex flex-col justify-center`}>
 
         {/* Top navigation (fixed) */}
         <NavBar />
-
         {/* Main Content - add top padding equal to nav height (h-16) */}
-        <main className="flex-1 pt-16">
+      <main className="flex-1 pt-16 md:pt-[120px] ">  
           {children}
         </main>
-
         {/* Footer (stays at bottom) */}
         <Footer />
+        <MobileFixFooter/>
        
       </body>
     </html>
