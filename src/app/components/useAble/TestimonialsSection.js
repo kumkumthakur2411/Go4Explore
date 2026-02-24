@@ -92,7 +92,8 @@ const reviewDetails = [
   return (
        <section className="w-full py-8 md:py-16 px-4 md:px-10 bg-white">
       {/* Outer container uses max-width to prevent stretching on ultra-wide screens */}
-      <div className="max-w-7xl mx-auto shadow-[0_10px_50px_-15px_rgba(0,0,0,0.2)] rounded-[2rem] overflow-hidden border border-gray-50">
+      <div className="max-w-7xl mx-auto 
+       rounded-[2rem] overflow-hidden ">
         
         {/* 1. Header Section */}
         <div className="p-6 md:p-10 pb-0">

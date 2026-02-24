@@ -42,7 +42,7 @@ export default function BannerVideo({ videos }) {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
           }}
-          className="w-full h-[400px] md:h-[520px]"
+          className="w-full h-full rounded-[2.5rem] overflow-hidden"
         >
           {videos.map((videoSrc, index) => (
             <SwiperSlide key={index} className="w-full h-full">

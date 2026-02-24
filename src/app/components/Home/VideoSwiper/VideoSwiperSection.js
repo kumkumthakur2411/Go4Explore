@@ -44,7 +44,7 @@ export default function VideoSwiperSection({ videos }) {
               sizes="(max-width: 1024px) 0vw, 25vw"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#2556B0]/40 to-transparent" />
+            
           </div>
 
           {/* SWIPER: Full width on mobile, 75% on desktop */}
