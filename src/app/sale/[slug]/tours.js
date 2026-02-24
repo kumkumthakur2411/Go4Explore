@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useRef } from "react";
 import { GoChevronLeft } from "react-icons/go";
 import { GoChevronRight } from "react-icons/go";
@@ -8,7 +9,7 @@ import { SlPhone } from "react-icons/sl";
 const TourCard = ({ tour }) => {
     return (
         <div className="flex-shrink-0 w-[170.87px] md:w-[305px] h-[300px] md:h-[400px] relative rounded-[10px] overflow-hidden shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] transition-all duration-400 group">
-            <a href={tour.link} className="block h-full relative border-none!">
+            <Link href={tour.link} className="block h-full relative border-none!">
                 {/* Image Overlay/Container */}
                 <div className="relative h-full rounded-[16px] overflow-hidden">
                     <img
@@ -46,16 +47,15 @@ const TourCard = ({ tour }) => {
                             <div className="mx-[3px] w-8 h-8 rounded-full border border-white flex justify-center items-center transition-all duration-400 hover:bg-[#2755b0] hover:border-[#2755b0]">
                                 <SlPhone className="text-[17px] text-white" />
                             </div>
-                            <a
-                                href={tour.link}
+                            <div
                                 className="text-[12px] font-semibold text-black rounded-[6px] px-[6px] py-[5px] border border-white bg-white no-underline transition-all duration-400 hover:bg-[#2755b0] hover:border-[#2755b0] hover:text-white shrink-0"
                             >
                                 Trip Details
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     );
 };
