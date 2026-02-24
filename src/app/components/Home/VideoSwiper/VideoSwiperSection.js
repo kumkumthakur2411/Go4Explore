@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function VideoSwiperSection({ videos }) {
   return (
     // Switched to max-width and removed fixed vh for zoom stability
-    <section className="w-full max-w-7xl mx-auto py-10 px-4 md:px-10 relative z-10">
+    <section className="w-full max-w-7xl mx-auto py-10 px-4 md:px-30 relative z-10">
       <div className="bg-white/90 shadow-[0_15px_60px_-15px_rgba(0,0,0,0.2)] rounded-3xl p-6 md:p-10 border border-white/50">
         
         {/* Heading + Navigation */}
@@ -35,7 +35,8 @@ export default function VideoSwiperSection({ videos }) {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
           
           {/* SIDE IMAGE: Only visible on Desktop, uses aspect ratio for zoom safety */}
-          <div className="hidden lg:block lg:w-1/4 relative min-h-[400px] rounded-2xl overflow-hidden shadow-inner bg-gray-100">
+          <div className="hidden lg:block lg:w-1/4 
+          relative min-h-[400px]  overflow-hidden  ">
             <Image
               src="https://go4explore.com/assets/img/wanderlust/bg.webp"
               alt="Wanderlust"

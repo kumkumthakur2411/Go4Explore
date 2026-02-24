@@ -98,7 +98,7 @@ export default function UpcomingTrips() {
 
         {/* Header */}
 <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between mb-6 md:mb-2  gap-4 ">
-  <h2 className="w-full text-center md:text-left text-xl md:text-2xl font-extrabold  text-blue-900">
+  <h2 className="w-full text-center md:text-left  text-[#2755b0] heading">
     Upcoming Trips
   </h2>
 </div>

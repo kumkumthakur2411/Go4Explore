@@ -7,34 +7,41 @@ import {
 
 export function FaqsSection({ faqArray }) {
   return (
-    // Adjust width for responsiveness: full on mobile, 90% on larger screens
-    <div className="w-full md:w-[90%] mx-auto p-2 md:p-4 flex flex-col items-center">
-      <h1 className="w-full text-2xl md:text-3xl font-extrabold text-[#2755B0] text-center mb-8">
+    // 1. Changed md:w-[90%] to max-w-5xl for better centering and zoom resilience
+    <section className="w-full max-w-7xl mx-auto px-4 py-10 md:py-16">
+      
+      {/* 2. Headline with responsive scaling and logical margin */}
+      <h2 className="text-2xl md:text-4xl font-black text-[#2755B0] text-center mb-10 tracking-tight">
         FAQs: Have Any Doubts?
-      </h1>
+      </h2>
 
-      {/* Remove the border from the main container to allow individual items to stand out */}
+      {/* 3. Accordion container with relative gap for zoom spacing */}
       <Accordion
         type="single"
         collapsible
-        className="w-full flex flex-col gap-4" // Gap creates the space between cards seen in the image
+        className="w-full flex flex-col gap-4 md:gap-5"
       >
         {faqArray && faqArray.map((faq, index) => (
           <AccordionItem
             key={`faq-${index}`}
             value={`item-${index}`}
-            // White background, shadow, and rounded corners for the "card" look
-            className="border border-gray-100 rounded-lg shadow-sm bg-white px-4 md:px-6 overflow-hidden"
+            // 4. Enhanced 'Card' look with better padding and border logic
+            className="border border-gray-200 rounded-2xl shadow-sm bg-white px-5 md:px-8 transition-all hover:border-[#2755B0]/30 hover:shadow-md overflow-hidden"
           >
-            <AccordionTrigger className="font-semibold text-sm md:text-base text-left hover:no-underline">
-              {faq.question}
+            {/* 5. Trigger with min-h to prevent layout shift during zoom */}
+            <AccordionTrigger className="py-5 md:py-6 font-bold text-sm md:text-lg text-left hover:no-underline text-gray-800 transition-colors group">
+              <span className="group-data-[state=open]:text-[#2755B0] transition-colors">
+                {faq.question}
+              </span>
             </AccordionTrigger>
-            <AccordionContent className="text-sm md:text-base text-gray-600 pb-4">
+
+            {/* 6. Content with leading-relaxed for legibility on high zoom */}
+            <AccordionContent className="text-sm md:text-base text-gray-600 leading-relaxed pb-6 border-t border-gray-50 pt-4">
               {faq.content}
             </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
-    </div>
+    </section>
   );
 }

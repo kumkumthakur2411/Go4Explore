@@ -74,7 +74,7 @@ export default function NavBar() {
 
   {/* ===== TOP NAV ===== */}
   <div className="h-22 md:h-[74px] border-b border-gray-100">
-    <div className="max-w-screen-2xl mx-auto h-full  flex items-center justify-between">
+    <div className="max-w-7xl  mx-auto h-full  flex items-center justify-between">
 
       {/* Logo */}
       <div className="hidden md:block flex items-center gap-6">

@@ -4,7 +4,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function InternationalSection() {
   return (
-    <section className="w-full py-8 md:py-0 px-4 md:px-20 bg-white">
+    <section className="w-full py-8 md:py-0 px-4 md:px-30 bg-white">
       
       {/* Same Outer Container as Domestic */}
       <div className="max-w-7xl mx-auto 

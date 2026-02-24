@@ -5,15 +5,17 @@ import { IoIosArrowForward } from "react-icons/io";
 
 
 export default function DomesticSection() {
-
   return (
-    <section className="w-full py-8 md:py-16 px-4 md:px-10 bg-white">
-      {/* Outer container uses max-width to prevent stretching on ultra-wide screens */}
-      <div className="max-w-7xl mx-auto shadow-[0_10px_50px_-15px_rgba(0,0,0,0.2)] rounded-[2rem] overflow-hidden border border-gray-50">
+    <section className="w-full py-8 md:py-0 px-4 md:px-30 bg-white">
+      
+      {/* Same Outer Container as Domestic */}
+      <div className="max-w-7xl mx-auto 
+      shadow-[0_10px_50px_-15px_rgba(0,0,0,0.2)] rounded-[2rem] overflow-hidden border border-gray-50">
         
-        {/* 1. Header Section */}
+        {/* Header Section (Same Layout) */}
         <div className="p-6 md:p-10 pb-0">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4">
+            
             <div className="text-center md:text-left">
               <h1 className="text-xl md:text-3xl font-black text-[#2556B0] tracking-tight">
                 Domestic Escapes

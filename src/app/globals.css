@@ -169,6 +169,9 @@
     @apply bg-background text-foreground;
     @apply bg-background text-foreground;
   }
+    .heading {
+    @apply !text-[30px] !font-[800] !leading-[40px];
+  }
 }
 
 
@@ -181,16 +184,6 @@
   }
 }
 
-
-
-/* @keyframes marquee-reverse {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0);
-  }
-} */
 
 .animate-marquee-two {
   animation: marquee 30s linear infinite;

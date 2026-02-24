@@ -21,7 +21,7 @@ const row2 = [
 export default function BrandsMarquee() {
   return (
     // Changed w-[90%] to max-w for better zoom stability
-    <section className="w-full max-w-7xl mx-auto bg-white overflow-hidden py-10 px-4">
+    <section className="w-full max-w-7xl mx-auto bg-white overflow-hidden py-10 md:px-30 px-4">
       
       <h2 className="w-full text-center py-8 text-xl md:text-3xl font-black text-[#2755B0] tracking-tight">
         Recognitions & Collaborations
