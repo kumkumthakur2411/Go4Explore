@@ -15,10 +15,10 @@ export default function InternationalSection() {
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4">
             
             <div className="text-center md:text-left">
-              <h1 className="text-xl md:text-2xl font-extrabold text-[#2755B0] tracking-tight">
+              <h1 className="text-xl md:text-3xl font-black text-[#2556B0] tracking-tight">
                 International Getaways
               </h1>
-              <p className="text-gray-600 font-medium text-sm md:text-lg mt-1">
+              <p className="text-gray-700 font-medium text-sm md:text-lg mt-1">
                 Fly beyond the homeland to create 
                 <br/>unforgettable memories
               </p>
@@ -45,10 +45,9 @@ export default function InternationalSection() {
               src="https://go4explore.com/assets/img/international/bg.webp"
               alt="International Getaways"
               fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
+              className="object-cover  "
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#2556B0]/50 via-transparent to-transparent" />
           </div>
 
           {/* Swiper Area */}

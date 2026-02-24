@@ -89,12 +89,14 @@ export default function TrendingSwiper() {
                 item && (
                   <div key={i} className="group cursor-pointer flex flex-col items-center">
                     {/* Fixed aspect ratio container for circles */}
-                    <div className="relative aspect-[2/3] w-full max-w-[140px] rounded-full overflow-hidden shadow-md transition-all duration-300 ring-0 group-hover:ring-4 ring-blue-100">
+                    <div className="relative aspect-[2/3] w-full max-w-[140px] rounded-full
+                     overflow-hidden shadow-md transition-all duration-300 ring-0 
+                     group-hover">
                       <Image
                         src={item.src}
                         alt={item.name}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
                     <p className="mt-3 font-medium text-sm md:text-base text-gray-900 group-hover:text-[#2556B0] transition-colors">

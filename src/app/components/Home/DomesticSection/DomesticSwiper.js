@@ -68,7 +68,7 @@ navigation={{
               <div className="group relative w-[95%] 
               h-[200px]  md:h-[185px]
               rounded-xl overflow-hidden  
-              cursor-pointer">
+              cursor-pointer group">
                 <Image
                   src={item1.src}
                   alt={item1.name}
@@ -79,20 +79,22 @@ navigation={{
                 
                 <div className="absolute bottom-3 left-3 z-10">
                   <div className="flex flex-col">
-                    <h4 className="text-white font-semibold text-sm">{item1.name}</h4>
-                    <p className="text-white font-semibold text-[10px] md:text-xs">Starting From {item1.price}</p>
+                    <h4 className="text-white font-semibold text-base">{item1.name}</h4>
+                    <p className="text-white font-semibold text-xs md:text-sm">Starting From {item1.price}</p>
                   </div>
                 </div>
 
-                <div className="absolute top-3 right-3 border border-white rounded-full w-5 h-5 flex items-center justify-center text-white z-10 hover:bg-white hover:text-red-700 transition">
-                  <MdArrowOutward size={10} />
+                <div className="absolute top-3 right-3 border border-white 
+                rounded-full w-8 h-8 flex items-center justify-center text-white z-10 
+                group-hover:bg-white group-hover:text-blue-900 transition">
+                  <MdArrowOutward size={20} />
                 </div>
               </div>
 
               {/* Row 2 */}
               {item2 && (
                 <div className="group relative w-[95%] 
-                h-[200px] md:h-[185px] rounded-xl overflow-hidden  cursor-pointer">
+                h-[200px] md:h-[185px] rounded-xl overflow-hidden  cursor-pointer group">
                   <Image
                     src={item2.src}
                     alt={item2.name}
@@ -103,13 +105,15 @@ navigation={{
                   
                   <div className="absolute bottom-3 left-3 z-10">
                     <div className="flex flex-col">
-                      <h4 className="text-white font-semibold text-sm">{item2.name}</h4>
-                      <p className="text-white font-semibold text-[10px] md:text-xs">Starting From {item2.price}</p>
+                      <h4 className="text-white font-semibold text-base">{item2.name}</h4>
+                      <p className="text-white font-semibold text-xs md:text-sm">Starting From {item2.price}</p>
                     </div>
                   </div>
 
-                  <div className="absolute top-3 right-3 border border-white rounded-full w-5 h-5 flex items-center justify-center text-white z-10 hover:bg-white hover:text-red-700 transition">
-                    <MdArrowOutward size={10} />
+                  <div className="absolute top-3 right-3 border border-white 
+                  rounded-full w-8 h-8 flex items-center justify-center text-white 
+                  z-10 group-hover:bg-white group-hover:text-blue-900 transition">
+                    <MdArrowOutward size={20} />
                   </div>
                 </div>
               )}

@@ -3,7 +3,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useState } from "react";
-
+import { MdArrowOutward } from "react-icons/md";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
+import { BsArrowUpRightCircle } from "react-icons/bs";
 import TripCard from "../useable/TripCard";
 
 export default function UpcomingTrips({ trips = [] }) {
@@ -25,18 +27,26 @@ export default function UpcomingTrips({ trips = [] }) {
   }
 
   return (
-<section className="w-full max-w-7xl mx-auto py-10 px-4 md:px-10 overflow-hidden">
+<section className="w-full max-w-7xl mx-auto py-2 px-4 overflow-hidden">
 
   {/* Header Container */}
-  <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
-    <h2 className="text-2xl md:text-3xl font-black text-[#2755B0] tracking-tight text-center md:text-left">
+  <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-3">
+    <h2 className="text-xl md:text-3xl font-black text-[#2556B0] tracking-tight tracking-tight text-center md:text-left">
       Upcoming Trips
     </h2>
     
     {/* Desktop View More - Moved into the header flex for stability */}
-    <button className="hidden md:block bg-[#2755B0] text-white px-8 py-2.5 rounded-full text-sm font-bold hover:bg-blue-800 transition-all shadow-md active:scale-95">
-      View More
-    </button>
+<button
+  className="hidden md:flex items-center gap-2
+  bg-[#2755B0] text-white
+  px-4 py-3 rounded-full text-sm font-bold
+  hover:bg-white hover:text-blue-900 hover:border hover:border-blue-900
+  transition-all duration-300
+  shadow-md active:scale-95"
+>
+  <BsArrowUpRightCircle size={16} />
+  View More
+</button>
   </div>
 
   {/* Month Tabs: Improved horizontal scroll stability */}

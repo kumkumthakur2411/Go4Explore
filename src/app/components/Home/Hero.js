@@ -25,7 +25,7 @@ export default function Hero() {
 
   return (
     // 1. Outer wrapper: Full width, relative, handles the overall height
-    <section className="relative w-full h-[85vh] md:h-[83vh] overflow-hidden bg-white">
+    <section className="relative flex w-full h-[85vh] md:h-[80vh] justify-end items-center overflow-hidden ">
       
       {/* 2. BACKGROUND LAYER: Full width decoration */}
       <div className="absolute bottom-0 left-0 w-full h-[30vh] hidden md:block z-0">
@@ -34,16 +34,17 @@ export default function Hero() {
           alt="background decoration"
           fill
           priority
-          className="object-cover opacity-90"
+          className=" opacity-90"
         />
       </div>
 
       {/* 3. MAIN CONTENT CONTAINER: Capped at max-w-7xl and centered */}
-      <div className="relative w-full max-w-screen-2xl mx-auto h-[97%]
-       px-4 md:px-19  z-10 flex items-center justify-center md:items-end">
+      <div className="relative w-full max-w-screen-2xl mx-auto h-[97%] 
+         z-10 flex items-center justify-end md:items-end">
         
         {/* 4. THE BANNER BOX: The actual rounded container with video/image */}
-        <div className="relative w-full h-[95%] md:h-[75vh] rounded-3xl shadow-2xl overflow-hidden bg-zinc-900">
+        <div className="relative bottom-0 left-0 w-full h-[95%] md:h-[75vh] rounded-3xl
+         overflow-hidden ">
           
           {/* Fallback Banner Image */}
           <Image
@@ -75,49 +76,52 @@ export default function Hero() {
           <div className="absolute inset-0 z-20 flex flex-col justify-center items-center px-4 text-center">
             
             {/* Top Content: Headlines & Search */}
-            <div className="flex flex-col items-center text-center w-full">
-              <h1 className="text-white text-2xl md:text-5xl font-medium leading-tight drop-shadow-md">
-                Spreading <span className="text-[#FFF401] font-bold">Happiness</span> <br className="md:hidden" /> & 
-                Crafting <span className="text-[#FFF401] font-bold">Stories</span> 
+            <div className="flex flex-col items-center text-center w-full gap-5 md:gap-12">
+              <h1 className="text-white text-xl md:text-4xl font-normal leading-tight ">
+                Spreading <span className="text-[#FFF401] ">Happiness &</span> <br className="md:hidden" /> 
+                Crafting <span className="text-[#FFF401] ">Stories</span> 
               </h1>
 
-              <h2 className="text-white text-4xl md:text-8xl font-black leading-tight mt-4 md:mt-6 mb-8 flex items-center gap-3 drop-shadow-xl">
+              <h2 className="text-white text-4xl md:text-7xl font-bold leading-tight 
+               flex items-center gap-3 ">
                 Across Globe
                 <Image 
                   src="https://go4explore.com/_next/image?url=%2Fassets%2Fimg%2Fbanner%2F1.png&w=48&q=75"
                   alt="global icon" 
-                  width={48} 
-                  height={48}
-                  className="w-10 h-10 md:w-16 md:h-16 animate-pulse"
+                  width={45} 
+                  height={45}
+                  className=" object-cover "
                 />
               </h2>
 
               {/* Search Bar Container */}
-              <div className="flex w-full max-w-md md:max-w-2xl items-center p-1.5 md:p-2 rounded-full bg-white shadow-2xl transform transition-transform hover:scale-[1.02]">
+              <div className="flex w-full max-w-md md:max-w-xl 
+              items-center mx-6  rounded-full bg-white shadow-2xl
+               transform transition-transform ">
                 <input 
                   type="text"
-                  placeholder="Pick Best Suitable Packages, Destinations..."
-                  className="text-sm md:text-base flex-1 px-4 py-2 focus:outline-none text-gray-800 placeholder:text-gray-400"
+                  placeholder="Pick Best Suitable Packages, Destinations & more for you"
+                  className="text-xs md:text-sm flex-1 px-5 py-2 focus:outline-none 
+                  text-gray-800 placeholder:text-gray-500"
                 />
                 <button type="submit" className="p-1 md:p-2 rounded-full hover:bg-gray-100 transition-colors">
                   <Image
                     src="https://go4explore.com/assets/img/banner/2.webp"
                     alt="search"
-                    width={40}
-                    height={40}
-                    className="w-8 h-8 md:w-12 md:h-12"
+                    width={35}
+                    height={35}
+                    className="object-cover"
                   />
                 </button>
               </div>
-            </div>
-
-            {/* Bottom Content: Trust Badges */}
-            <div className="w-full flex flex-col md:flex-row gap-4 items-center justify-center bg-black/20 backdrop-blur-sm md:bg-transparent py-4 md:py-0 rounded-2xl">
+              {/* Bottom Content: Trust Badges */}
+            <div className="w-full flex flex-col md:flex-row gap-4 
+            items-center justify-center  py-5  ">
               
-              <div className="flex items-center justify-center text-white gap-4">
+              <div className="flex items-center justify-center text-white gap-1">
                 <div className="flex items-center gap-1.5">
                   <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
-                  <span className="text-xs md:text-sm font-bold tracking-wide uppercase">
+                  <span className="text-xs md:text-sm font-normal tracking-wide uppercase">
                     <span className="text-[#FFF500]">500+</span> Destinations
                   </span>
                 </div>
@@ -126,7 +130,7 @@ export default function Hero() {
 
                 <div className="flex items-center gap-1.5">
                   <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
-                  <span className="text-xs md:text-sm font-bold tracking-wide uppercase">
+                  <span className="text-xs md:text-sm font-normal tracking-wide uppercase">
                     <span className="text-[#FFF500]">Seamless</span> Booking
                   </span>
                 </div>
@@ -136,11 +140,14 @@ export default function Hero() {
 
               <div className="flex items-center justify-center gap-1.5 text-white">
                 <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
-                <span className="text-xs md:text-sm font-bold tracking-wide uppercase">
+                <span className="text-xs md:text-sm font-normal tracking-wide uppercase">
                   <span className="text-[#FFF500]">8+ Years</span> Experience
                 </span>
               </div>
             </div>
+            </div>
+
+            
 
           </div>
         </div>

@@ -90,7 +90,12 @@ const reviewDetails = [
 ];
 
   return (
-    <div className="w-full md:w-[85%] md:h-[85%] mx-auto  ">
+       <section className="w-full py-8 md:py-16 px-4 md:px-10 bg-white">
+      {/* Outer container uses max-width to prevent stretching on ultra-wide screens */}
+      <div className="max-w-7xl mx-auto shadow-[0_10px_50px_-15px_rgba(0,0,0,0.2)] rounded-[2rem] overflow-hidden border border-gray-50">
+        
+        {/* 1. Header Section */}
+        <div className="p-6 md:p-10 pb-0">
       <h1 className="w-full flex justify-center items-center py-8 text-xl
       md:text-3xl font-extrabold text-[#2755B0] mb-3 md:mb-8">
         Happy Faces & Stories
@@ -248,6 +253,8 @@ const reviewDetails = [
         </div>
       </div>
     </div>
+    </div>
+  </section>
   );
 }
 

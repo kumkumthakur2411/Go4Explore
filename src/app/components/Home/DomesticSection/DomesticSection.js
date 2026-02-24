@@ -15,10 +15,10 @@ export default function DomesticSection() {
         <div className="p-6 md:p-10 pb-0">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4">
             <div className="text-center md:text-left">
-              <h1 className="text-2xl md:text-4xl font-black text-[#2755B0] tracking-tight">
+              <h1 className="text-xl md:text-3xl font-black text-[#2556B0] tracking-tight">
                 Domestic Escapes
               </h1>
-              <p className="text-gray-600 font-medium text-sm md:text-lg mt-1">
+              <p className="text-gray-700 font-medium text-sm md:text-lg mt-1">
                 Explore breathtaking destinations within India
               </p>
             </div>
@@ -44,12 +44,11 @@ export default function DomesticSection() {
               src="https://go4explore.com/assets/img/domestic/bg.webp"
               alt="Domestic Getaways"
               fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
+              className="object-cover "
               priority
             />
-            {/* Visual branding overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#2556B0]/50 via-transparent to-transparent" />
-          </div>
+            
+               </div>
 
           {/* SWIPER: Flexible width calculation */}
           <div className="w-full lg:w-3/4 flex items-center overflow-hidden">

@@ -10,7 +10,7 @@ export default function TrendingSection() {
       {/* 1. Added mx-auto and max-w-7xl to fix zoom-out issues 
          2. Removed fixed vh height to prevent content cutoff on zoom-in
       */}
-      <div className="w-full max-w-7xl mx-auto bg-white shadow-[0_0_50px_-15px_rgba(0,0,0,0.2)] rounded-2xl py-8 px-4 md:p-10">
+      <div className="w-full max-w-7xl mx-auto bg-white shadow-[0_0_50px_-10px_rgba(0,0,0,0.2)] rounded-2xl py-8 px-4 md:p-10">
         
         <div className="w-full flex justify-center 
         lg:justify-between items-center mb-10 px-2">        

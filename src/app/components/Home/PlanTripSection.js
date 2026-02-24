@@ -27,7 +27,7 @@ const features = [
 
 export default function PlanTripSection() {
   return (
-    <section className="relative w-full md:py-12 overflow-hidden">
+    <section className="relative w-full md:pt-12 pb-0 overflow-hidden">
 
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -45,7 +45,7 @@ export default function PlanTripSection() {
 <div className="grid lg:grid-cols-2 gap-12 items-center">
 
   {/* LEFT IMAGE */}
-  <div className="relative w-full h-[500px] lg:h-[650px] order-2 lg:order-1">
+  <div className="relative w-full h-[500px] lg:h-[730px] order-2 lg:order-1">
     <Image
       src="https://go4explore.com/assets/img/plan-trip.webp"
       alt="Planning Trip"

@@ -125,7 +125,7 @@ export default function Home() {
   return (
     <>
       {/* Normal Sections with Padding */}
-      <div className="w-full  flex flex-col  items-center  ">
+      <div className="w-full  flex flex-col  items-center md:gap-10 ">
         <Hero />
         <TrendingSection />
         <ExploreCategories />
@@ -133,10 +133,10 @@ export default function Home() {
         <DomesticSection />        
         <UpcomingTrips trips={trips}/>
       </div>
-      <div className="w-full  flex flex-col gap-10 md:gap-15 items-center px-2 md:px-10">
+      
         <FeaturedNews />
       <BannerVideo videos={videos}/>
-      </div>
+      
       
       {/* FULL WIDTH SECTION */}
       <PlanTripSection />
