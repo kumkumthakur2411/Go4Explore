@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules"; 
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -18,17 +18,18 @@ export default function BannerVideo({ videos }) {
   }, []);
 
   return (
-    <section className="w-full md:w-[85%] relative h-[20vh] 
-    md:h-[80vh] overflow-hidden mb-10 md:mb-0">
+<section className="w-full py-10 md:py-20 px-4 md:px-10 bg-white">
+  <div className="max-w-7xl mx-auto">
+
+    {/* VIDEO CONTAINER */}
+    <div className="relative
+      
+      rounded-[2.5rem] overflow-hidden border border-gray-100">
+
       {isLoaded && (
         <Swiper
-          // 1. STRICTLY REMOVE 'Autoplay' from this array
-          modules={[Pagination, Navigation]} 
-          loop={true}
-          // 2. EXPLICITLY set autoplay to false
-          autoplay={false} 
-          // 3. Ensure user can swipe manually
-          allowTouchMove={true}
+          modules={[Pagination, Navigation]}
+          loop
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
@@ -41,54 +42,55 @@ export default function BannerVideo({ videos }) {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
           }}
-          className="w-full h-full 
-           overflow-hidden "
+          className="w-full h-[400px] md:h-[520px]"
         >
           {videos.map((videoSrc, index) => (
-            <SwiperSlide key={index} 
-            className="relative w-full h-[20] md:h-95">
+            <SwiperSlide key={index} className="w-full h-full">
               <video
                 src={videoSrc}
-                autoPlay // This stays so the video plays, but swiper won't move
+                autoPlay
                 muted
                 loop
                 playsInline
-                className="absolute inset-0 w-full 
-                h-[150] md:h-[75%] object-cover rounded-3xl"
+                className="w-full h-full object-contain"
               />
             </SwiperSlide>
           ))}
         </Swiper>
       )}
+    </div>
 
-      {/* MOBILE PAGINATION */}
-     <div className="custom-pagination absolute bottom-2 
-     left-0 right-0 flex justify-center md:hidden z-20" />
+    {/* BELOW VIDEO ROW */}
+    <div className="flex items-center justify-between mt-6">
 
-      {/* DESKTOP NAVIGATION */}
-      <div className="hidden absolute 
-bottom-16 right-0 lg:flex gap-3 z-30 ">
+      {/* Pagination (mobile only) */}
+      <div className="custom-pagination md:hidden" />
+
+      {/* Navigation (desktop only) */}
+      <div className="hidden lg:flex gap-3">
         <button
           ref={prevRef}
-          className="bg-[#2556B0]
- w-9 h-9 rounded-full flex items-center
-  justify-center text-white cursor-pointer
-   hover:bg-blue-700 transition"  >
-          <IoIosArrowBack  />
+          className="bg-[#2556B0] w-10 h-10 rounded-full
+          flex items-center justify-center text-white
+          hover:bg-blue-700 transition"
+        >
+          <IoIosArrowBack />
         </button>
 
         <button
           ref={nextRef}
-          className="bg-[#2556B0] w-9 h-9 rounded-full 
-          flex items-center justify-center text-white 
-          cursor-pointer hover:bg-blue-700 transition"
- >   
-          <IoIosArrowForward  />
+          className="bg-[#2556B0] w-10 h-10 rounded-full
+          flex items-center justify-center text-white
+          hover:bg-blue-700 transition"
+        >
+          <IoIosArrowForward />
         </button>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
   );
 }
-
 
 

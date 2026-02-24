@@ -18,8 +18,8 @@ export default function FeaturedNewsSwiper() {
   ];
 
   return (
-    <div className="w-full pt-2 md:py-4 md:py-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="max-w-screen-xl pt-2 md:py-4 md:py-8 px-10">
+      <div className="max-w-screen-xl mx-auto">
         <Swiper
           slidesPerView={4}
           spaceBetween={15}

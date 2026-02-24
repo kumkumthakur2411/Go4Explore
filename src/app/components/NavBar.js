@@ -9,7 +9,7 @@ import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const topMenu = [
-  { name: "About Us", href: "#" },
+  { name: "About Us", href: "/aboutus" },
   { name: "Blogs", href: "#" },
   { name: "Careers", href: "#" },
   { name: "Payments", href: "#" },
@@ -74,7 +74,7 @@ export default function NavBar() {
 
   {/* ===== TOP NAV ===== */}
   <div className="h-22 md:h-[74px] border-b border-gray-100">
-    <div className="max-w-screen-2xl mx-auto h-full px-4 md:px-19 flex items-center justify-between">
+    <div className="max-w-screen-2xl mx-auto h-full  flex items-center justify-between">
 
       {/* Logo */}
       <div className="hidden md:block flex items-center gap-6">
