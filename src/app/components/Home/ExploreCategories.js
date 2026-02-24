@@ -29,7 +29,7 @@ export default function ExploreCategories() {
   ];
 
   return (
-    <section className="w-full py-2 px-14 md:px-25 bg-white">
+    <section className="w-full py-2 px-14 md:px-30 bg-white">
       {/* Container capped at 1280px (max-w-7xl) for zoom stability */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 items-center">
         

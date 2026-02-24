@@ -59,7 +59,7 @@ export function AboutUs() {
 
   return (
     // Changed to max-width and added responsive padding for zoom stability
-    <section className="w-full max-w-7xl mx-auto my-10 px-4 md:px-10">
+    <section className="w-full max-w-7xl mx-auto my-10 px-4 md:px-30">
       <Card className="w-full rounded-[2rem] shadow-xl border-none bg-white overflow-hidden">
         
         {/* Header - Using flex-col with center alignment for scaling */}

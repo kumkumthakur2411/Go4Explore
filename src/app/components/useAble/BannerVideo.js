@@ -61,13 +61,13 @@ export default function BannerVideo({ videos }) {
     </div>
 
     {/* BELOW VIDEO ROW */}
-    <div className="flex items-center justify-between mt-6">
+    <div className="flex items-center justify-end mt-6">
 
       {/* Pagination (mobile only) */}
       <div className="custom-pagination md:hidden" />
 
       {/* Navigation (desktop only) */}
-      <div className="hidden lg:flex gap-3">
+      <div className="hidden lg:flex gap-3 ">
         <button
           ref={prevRef}
           className="bg-[#2556B0] w-10 h-10 rounded-full

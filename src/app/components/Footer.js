@@ -52,151 +52,136 @@ const quick_links = [
 
 export default function Footer() {
   return (
-    <footer className="w-full w-[90%] bg-slate-50 py-10 px-4 ">
-      <div className=" mx-auto    flex flex-col items-center justify-between">
-
-        {/* ================= TOP GRID LINKS ================= */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb:gap-10">
-
-          {/* Company */}
-          <div>
-            <h3 className="text-blue-800 font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-2 text-xs text-gray-600 mb-8">
-              {Company_items.map((item, index) => (
-  <li key={index} className="hover:text-blue-700 cursor-pointer">
-    <Link href={item.href}>{item.text}</Link>
-  </li>
-))}
-
-            </ul>
-          </div>
-
-          {/* Weekend Trips */}
-          <div>
-            <h3 className="text-blue-800 font-semibold text-lg mb-4">Weekend Trips</h3>
-            <ul className="space-y-2 text-xs text-gray-600 mb-8">
-              {weekend_trips.map((item, index) => (
-  <li key={index} className="hover:text-blue-7">
-    <Link href={item.href}>{item.text}</Link>
-  </li>
-))}
-
-            </ul>
-                        <h3 className="text-blue-800 font-semibold text-lg mb-4">Backpacking Trips</h3>
-            <ul className="space-y-2 text-xs text-gray-600 mb-8">
-             {backpacking_trips.map((item, index) => (
-  <li key={index} className="hover:text-blue-7">
-    <Link href={item.href}>{item.text}</Link>
-  </li>
-))}
-
-
-            </ul>
-          </div>
-
-          {/* Backpacking */}
-
-
-          {/* International + Domestic */}
-          <div>
-            <h3 className="text-blue-800 font-semibold text-lg mb-4">International</h3>
-            <ul className="space-y-2 text-xs text-gray-600 mb-8">
-             {international_trip.map((item, index) => (
-  <li key={index} className="hover:text-blue-7">
-    <Link href={item.href}>{item.text}</Link>
-  </li>
-))}
-            </ul>
-
-            <h3 className="text-blue-900 font-semibold text-lg mb-4">Domestic</h3>
-            <ul className="space-y-2 text-xs text-gray-600 mb-8">
-             {domestic_trip.map((item, index) => (
-  <li key={index} className="hover:text-blue-7">
-    <Link href={item.href}>{item.text}</Link>
-  </li>
-))}
-            </ul>
-          </div>
-
-          {/* Quick Links + Presence */}
-          <div>
-            <h3 className="text-blue-800 font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-xs text-gray-600 mb-8">
-             {quick_links.map((item, index) => (
-  <li key={index} className="hover:text-blue-7">
-    <Link href={item.href}>{item.text}</Link>
-  </li>
-))}
-            </ul>
-
-            <h3 className="text-blue-800 font-semibold text-lg mb-3">Our Presence</h3>
-            <p className="text-xs text-gray-600 mb-2">
-              <span className="font-bold text-gray-900">Registered Office - </span>
-              14/4, Girdhar Marg, Malviya Nagar, Jaipur (Rajasthan) - 302017
-            </p>
-            <p className="text-xs text-gray-600 mb-2">
-              <span className="font-bold  text-gray-900">Corporate Office - </span>
-              401, C-23, Sector 63, Noida (UP) - 201301
-            </p>
-            <p className="text-xs text-gray-600">+91-9266710039</p>
-            <p className="text-xs text-gray-600">contact@go4explore.com</p>
-          </div>
-        </div>
-
-
-
-        {/* ================= BRAND + PAYMENTS ================= */}
-<div className="flex flex-col w-full md:flex-row w-[90%] 
-rounded-xl bg-white/90 shadow-2xl p-4 justify-between items-center gap-8 mb-6">
-
-  {/* 1. LOGO (Start/Left) */}
-  <div className="w-full md:w-1/5 flex justify-center md:justify-start">
-    <div className="relative w-[150px] h-[100px]">
-      <Image
-        src="https://go4explore.com/assets/img/footer-logo.webp"
-        alt="Go4Explore Logo"
-        fill
-        className="object-contain"
-        priority
-      />
-    </div>
-  </div>
-
-  {/* 2. COPYRIGHT + PAYMENT (Center) */}
-  <div className="flex flex-col items-center  w-full md:w-2/5">
-    <div className="relative w-full max-w-[350px] h-[60px]">
-      <Image
-        src="https://go4explore.com/assets/img/payment.webp"
-        alt="Payment Methods"
-        fill
-        className="object-contain"
-        priority
-      />
-    </div>
-    <hr className="border-gray-300 w-full mb-3" />
-    <p className="text-gray-600 text-xs lg:text-xs font-medium text-center">
-      © 2017-2025 Go4Explore Community Private Limited. All Rights Reserved.
-    </p>
-  </div>
-
-  {/* 3. SOCIALS (End/Right) */}
-  <div className="flex items-center justify-center md:justify-end w-full md:w-1/5 gap-1">
-    <a href="#" className="p-2 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white rounded-full hover:scale-110 transition-transform">
-      <Instagram size={12} />
-    </a>
-    <a href="#" className="p-2 bg-red-600 text-white rounded-full hover:scale-110 transition-transform">
-      <Youtube size={10} />
-    </a>
-    <a href="#" className="p-2 bg-blue-700 text-white rounded-full hover:scale-110 transition-transform">
-      <Linkedin size={12} />
-    </a>
-    <a href="#" className="p-2 bg-green-500 text-white rounded-full hover:scale-110 transition-transform">
-      <MessageCircle size={12} />
-    </a>
-  </div>
-
-</div>
+<footer className="w-full bg-slate-50 py-12 px-4 md:px-30">
+  <div className="max-w-7xl mx-auto flex flex-col items-center">
+    
+    {/* ================= TOP GRID LINKS ================= */}
+    <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+      
+      {/* Company */}
+      <div className="flex flex-col">
+        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Company</h3>
+        <ul className="space-y-3">
+          {Company_items.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">
+                {item.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-    </footer>
+
+      {/* Trips Column */}
+      <div className="flex flex-col">
+        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Weekend Trips</h3>
+        <ul className="space-y-3 mb-8">
+          {weekend_trips.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+            </li>
+          ))}
+        </ul>
+        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Backpacking</h3>
+        <ul className="space-y-3">
+          {backpacking_trips.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* International & Domestic */}
+      <div className="flex flex-col">
+        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">International</h3>
+        <ul className="space-y-3 mb-8">
+          {international_trip.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+            </li>
+          ))}
+        </ul>
+        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Domestic</h3>
+        <ul className="space-y-3">
+          {domestic_trip.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Quick Links & Contact */}
+      <div className="flex flex-col">
+        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Quick Links</h3>
+        <ul className="space-y-3 mb-8">
+          {quick_links.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+            </li>
+          ))}
+        </ul>
+        <h3 className="text-[#2755B0] font-bold text-base mb-4 uppercase tracking-wide">Our Presence</h3>
+        <div className="space-y-3">
+          <p className="text-sm text-gray-600 leading-relaxed">
+            <span className="font-bold text-gray-900">Registered:</span> Jaipur, Rajasthan - 302017
+          </p>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            <span className="font-bold text-gray-900">Corporate:</span> Sector 63, Noida (UP) - 201301
+          </p>
+          <p className="text-sm font-bold text-[#2755B0]">+91-9266710039</p>
+          <p className="text-sm text-gray-600">contact@go4explore.com</p>
+        </div>
+      </div>
+    </div>
+
+    {/* ================= BRAND + PAYMENTS ================= */}
+    <div className="w-full flex flex-col md:flex-row rounded-3xl bg-white shadow-xl border border-gray-100 p-6 md:p-8 justify-between items-center gap-8">
+      
+      {/* 1. Logo */}
+      <div className="flex-shrink-0">
+        <Image
+          src="https://go4explore.com/assets/img/footer-logo.webp"
+          alt="Go4Explore Logo"
+          width={150}
+          height={80}
+          className="h-16 w-auto object-contain"
+        />
+      </div>
+
+      {/* 2. Center Content */}
+      <div className="flex flex-col items-center flex-1 max-w-md">
+        <div className="mb-4">
+          <Image
+            src="https://go4explore.com/assets/img/payment.webp"
+            alt="Payment Methods"
+            width={300}
+            height={40}
+            className="h-8 w-auto object-contain"
+          />
+        </div>
+        <div className="w-full h-px bg-gray-100 mb-4" />
+        <p className="text-gray-500 text-[10px] md:text-xs font-medium text-center">
+          © 2017-2026 Go4Explore Community Private Limited. <br className="md:hidden" /> All Rights Reserved.
+        </p>
+      </div>
+
+      {/* 3. Social Icons */}
+      <div className="flex items-center gap-3">
+        {[
+          { icon: <Instagram size={18} />, color: "bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600" },
+          { icon: <Youtube size={18} />, color: "bg-[#FF0000]" },
+          { icon: <Linkedin size={18} />, color: "bg-[#0077B5]" },
+          { icon: <MessageCircle size={18} />, color: "bg-[#25D366]" }
+        ].map((social, i) => (
+          <a key={i} href="#" className={`${social.color} p-2.5 text-white rounded-full hover:scale-110 hover:-translate-y-1 transition-all shadow-md`}>
+            {social.icon}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
   );
 }
