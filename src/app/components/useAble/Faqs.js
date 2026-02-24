@@ -12,7 +12,7 @@ export function FaqsSection({ faqArray }) {
       <h1 className="w-full text-2xl md:text-3xl font-extrabold text-[#2755B0] text-center mb-8">
         FAQs: Have Any Doubts?
       </h1>
-      
+
       {/* Remove the border from the main container to allow individual items to stand out */}
       <Accordion
         type="single"

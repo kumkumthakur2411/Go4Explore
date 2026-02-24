@@ -13,7 +13,7 @@ export default function Bestseller() {
             link: "/trip/leh-ladakh-tour-packages",
         },
         {
-            title: "Spiti Valey",
+            title: "Spiti Valley",
             img: "https://go4explore.com/_next/image?url=%2Fassets%2Fimg%2Fsale-page%2Fbestseller-2.jpg&w=828&q=75",
             link: "/trip/spiti-valley-tour-packages",
         },
@@ -65,7 +65,7 @@ export default function Bestseller() {
     };
 
     return (
-        <section className="max-w-[1320px] mx-auto px-4 lg:px-6 py-6">
+        <section className="max-w-[1320px] mx-auto px-4 lg:px-6 py-8">
             <div className="bg-white shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] rounded-[15px] p-[30px]">
                 {/* Header Section */}
                 <div className="flex flex-wrap items-center">
@@ -95,7 +95,7 @@ export default function Bestseller() {
                 </div>
 
                 {/* destinations Slider */}
-                <div className="mt-10 overflow-hidden">
+                <div className="mt-5 md:mt-10 overflow-hidden">
                     <div
                         ref={scrollRef}
                         className="flex gap-[10px] overflow-x-auto no-scrollbar scroll-smooth snap-x touch-pan-x"
