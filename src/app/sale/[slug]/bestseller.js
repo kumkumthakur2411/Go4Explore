@@ -65,12 +65,12 @@ export default function Bestseller() {
     };
 
     return (
-        <section className="max-w-[1320px] mx-auto px-4 lg:px-6 py-8">
-            <div className="bg-white shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] rounded-[15px] p-[30px]">
+        <section className="w-full max-w-[1320px] mx-auto px-3 md:px-4 lg:px-6 py-4 md:py-8">
+            <div className="bg-white box-border w-full h-full shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)] md:shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] rounded-[0.375rem] md:rounded-[15px] p-[15px] md:p-[30px] text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] text-[#35211f] font-poppins">
                 {/* Header Section */}
                 <div className="flex flex-wrap items-center">
-                    <div className="w-full lg:w-[75%]">
-                        <h4 className="text-[24px] font-extrabold leading-[35px] text-black">
+                    <div className="w-full lg:w-[75%] text-center lg:text-left">
+                        <h4 className="text-[18px] md:text-[24px] font-extrabold leading-[25px] md:leading-[35px] text-black">
                             Bestseller Destinations
                         </h4>
                     </div>
@@ -103,19 +103,19 @@ export default function Bestseller() {
                         {destinations.map((destination, index) => (
                             <div
                                 key={index}
-                                className="flex-shrink-0 w-[142px] md:w-[calc((100%-30px)/4)] xl:w-[142px] snap-start group"
+                                className="flex-shrink-0 w-[100px] md:w-[calc((100%-30px)/4)] xl:w-[142px] snap-start group"
                             >
                                 <a href={destination.link} className="block text-center">
-                                    <div className="overflow-hidden aspect-[1.9/2.8] rounded-[98px]">
+                                    <div className="overflow-hidden aspect-[1.9/2.8] rounded-[50px] md:rounded-[98px]">
                                         <img
                                             src={destination.img}
                                             alt={destination.title}
                                             width={400}
                                             height={300}
-                                            className="w-full h-full object-cover rounded-[100px] transition-transform duration-1000 group-hover:scale-105"
+                                            className="w-full h-full object-cover rounded-[50px] md:rounded-[100px] transition-transform duration-1000 group-hover:scale-105"
                                         />
                                     </div>
-                                    <h5 className="mt-3 text-[16px] leading-[20px] font-medium text-[#222] capitalize">
+                                    <h5 className="mt-2 text-[13px] md:text-[16px] leading-[18px] md:leading-[20px] font-medium text-[#222] capitalize">
                                         {destination.title}
                                     </h5>
                                 </a>

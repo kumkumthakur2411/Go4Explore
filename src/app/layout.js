@@ -7,7 +7,7 @@ import MobileFixFooter from "./components/MobileFixFooter";
 // Load Poppins font
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -25,13 +25,13 @@ export default function RootLayout({ children }) {
         {/* Top navigation (fixed) */}
         <NavBar />
         {/* Main Content - add top padding equal to nav height (h-16) */}
-      <main className="flex-1  ">  
+        <main className="flex-1  ">
           {children}
         </main>
         {/* Footer (stays at bottom) */}
         <Footer />
-        <MobileFixFooter/>
-       
+        <MobileFixFooter />
+
       </body>
     </html>
   );

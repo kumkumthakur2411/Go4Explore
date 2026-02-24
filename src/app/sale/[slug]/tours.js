@@ -8,10 +8,10 @@ import { SlPhone } from "react-icons/sl";
 
 const TourCard = ({ tour }) => {
     return (
-        <div className="flex-shrink-0 w-[170.87px] md:w-[305px] h-[300px] md:h-[400px] relative rounded-[10px] overflow-hidden shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] transition-all duration-400 group">
+        <div className="flex-shrink-0 w-[170.87px] md:w-[305px] h-[260px] md:h-[400px] relative rounded-[12px] md:rounded-[10px] overflow-hidden shadow-[0_0.5rem_1rem_rgba(0,0,0,0.15)] md:shadow-[rgba(99,99,99,0.2)_0px_2px_8px_0px] transition-all duration-400 [backface-visibility:hidden] [transform:translateZ(0)] group">
             <Link href={tour.link} className="block h-full relative border-none!">
                 {/* Image Overlay/Container */}
-                <div className="relative h-full rounded-[16px] overflow-hidden">
+                <div className="relative h-full rounded-[12px] md:rounded-[16px] overflow-hidden">
                     <img
                         src={tour.image}
                         alt={tour.title}
@@ -19,36 +19,38 @@ const TourCard = ({ tour }) => {
                     />
                     {/* Badges Container */}
                     <div className="absolute top-[3%] left-0 w-full z-[2]">
-                        <span className="inline-block text-white px-[8px] py-[3px] md:px-[14px] md:py-[6px] rounded-r-[1px] text-[9px] md:text-[11px] font-extrabold md:font-bold uppercase tracking-[0.5px] md:tracking-[0.8px] shadow-[0_4px_12px_rgba(39,85,176,0.4)] bg-gradient-to-r from-[#ff3532] via-[#ff6640] to-[#ff8b4b]">
+                        <span className="inline-block text-white px-[5px] py-[2px] md:px-[14px] md:py-[6px] rounded-r-[1px] text-[8px] md:text-[11px] font-extrabold md:font-bold uppercase tracking-[0.5px] md:tracking-[0.8px] shadow-[0_4px_12px_rgba(39,85,176,0.4)] bg-gradient-to-r from-[#ff3532] via-[#ff6640] to-[#ff8b4b]">
                             Discount: ₹{tour.discount} OFF
                         </span>
-                        <span className="absolute bottom-[-100%] md:bottom-[-110%] right-[4%] bg-[#fff500] text-black px-[6px] py-[4px] md:px-[10px] md:py-[8px] rounded-[6px] md:rounded-[8px] text-[10px] md:text-[12px] font-bold md:font-semibold backdrop-blur-[5px] border border-white/30 translate-y-[140px] md:translate-y-[200px]">
+                        <span className="absolute bottom-[-20%] md:bottom-[-110%] right-[4%] bg-[#fff500] text-black px-[4px] py-[3px] md:px-[10px] md:py-[8px] rounded-[3px] md:rounded-[8px] text-[8px] md:text-[12px] font-bold md:font-semibold backdrop-blur-[5px] border border-white/30 translate-y-[120px] md:translate-y-[200px]">
                             {tour.duration}
                         </span>
                     </div>
                 </div>
 
                 {/* Content Section (Bottom Gradient) */}
-                <div className="absolute bottom-0 left-0 w-full p-[80px_20px_20px] bg-[linear-gradient(180deg,rgba(148,118,47,0)_0%,#000000_100%)] z-[3]">
-                    <div>
-                        <h5 className="text-[15px] leading-[20px] md:text-[18px] md:leading-[22px] text-white border-b border-white/50 pb-[10px] mb-2 font-medium font-poppins">
+                <div className="absolute bottom-0 left-0 w-full p-[15px_10px_12px] md:p-[80px_20px_20px] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,#000000_100%)] z-[3]">
+                    <div className="mb-1">
+                        <h5 className="text-[10px] leading-[16px] font-semibold md:text-[15px] md:leading-[16px] text-white border-b border-white/40 pb-1 md:pb-[10px] font-extrabold md:font-medium font-poppins line-clamp-1 md:line-clamp-none whitespace-nowrap overflow-hidden text-ellipsis">
                             {tour.title}
                         </h5>
                     </div>
 
-                    <div className="flex justify-between items-center">
-                        <div className="text-[14px] leading-[15px]">
-                            <span className="text-[13px] leading-[20px] font-bold text-white">₹{tour.currentPrice}</span>
-                            <span className="text-[11px] text-[#eee] line-through ml-1">₹{tour.originalPrice}</span>
-                            <em className="block text-[9px] leading-[10px] text-[#eee] font-medium not-italic whitespace-nowrap">per person</em>
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                        {/* Price Details */}
+                        <div className="flex items-baseline flex-wrap gap-x-1.5 mb-1 md:mb-0 md:flex-col md:items-start md:gap-0">
+                            <span className="text-[14px] md:text-[13px] font-extrabold md:font-bold text-white">₹ {tour.currentPrice}</span>
+                            <span className="text-[8px] md:text-[10px] text-white/70 line-through">₹ {tour.originalPrice}</span>
+                            <span className="text-[8px] md:text-[10px] text-white/90 font-medium">per person</span>
                         </div>
 
-                        <div className="flex items-center justify-end w-full">
-                            <div className="mx-[3px] w-8 h-8 rounded-full border border-white flex justify-center items-center transition-all duration-400 hover:bg-[#2755b0] hover:border-[#2755b0]">
-                                <SlPhone className="text-[17px] text-white" />
+                        {/* Actions */}
+                        <div className="flex justify-between items-center md:items-center md:justify-end md:gap-2">
+                            <div className="w-[20px] h-[20px] md:w-8 md:h-8 rounded-full border border-white flex justify-center items-center transition-all duration-400 hover:bg-[#2755b0] hover:border-[#2755b0]">
+                                <SlPhone className="text-[12px] md:text-[17px] text-white" />
                             </div>
                             <div
-                                className="text-[12px] font-semibold text-black rounded-[6px] px-[6px] py-[5px] border border-white bg-white no-underline transition-all duration-400 hover:bg-[#2755b0] hover:border-[#2755b0] hover:text-white shrink-0"
+                                className="text-[9px] md:text-[12px] font-bold md:font-semibold text-black rounded-[4px] md:rounded-[6px] px-[12px] py-[6px] md:px-[6px] md:py-[5px] border border-white bg-white no-underline transition-all duration-400 hover:bg-[#2755b0] hover:border-[#2755b0] hover:text-white shrink-0"
                             >
                                 Trip Details
                             </div>

@@ -39,7 +39,7 @@ export default function SalePage() {
     return (
         <>
             <Banner />
-            <div className="px-0 md:px-7 pb-10">
+            <div className="px-0 md:px-3 pb-10">
                 <Benefit />
                 <Bestseller />
                 <Tours />
