@@ -22,31 +22,30 @@ export default function Hero() {
     };
   }, []);
 
+
   return (
-    // Height adjusted to fit mobile screens better (90vh on mobile, 80vh on desktop)
-    <div className="relative w-full h-[80vh] md:h-[80vh]">
+    // 1. Outer wrapper: Full width, relative, handles the overall height
+    <section className="relative w-full h-[85vh] md:h-[83vh] overflow-hidden bg-white">
       
-      {/* Container with rounded corners */}
-      <div className="absolute inset-0 flex justify-center items-center md:items-end z-10">
-        <div className="relative w-[95vw] md:w-[88vw] h-full md:h-[75vh] 
-                        rounded-b-lg md:rounded-2xl shadow-xl overflow-hidden">
-                           {/* Bottom Background - Hidden on mobile using 'hidden md:block' */}
-      <div className="absolute bottom-0 left-0 w-full h-[30vh] hidden md:block">
+      {/* 2. BACKGROUND LAYER: Full width decoration */}
+      <div className="absolute bottom-0 left-0 w-full h-[30vh] hidden md:block z-0">
         <Image
           src="https://go4explore.com/assets/img/banner/bg.webp"
-          alt="background"
+          alt="background decoration"
           fill
           priority
-          className="object-cover"
+          className="object-cover opacity-90"
         />
       </div>
 
-      {/* Main Container */}
-      <div className="absolute inset-0 flex justify-center items-center md:items-end z-10">
-        <div className="relative w-[95vw] md:w-[88vw] 
-        h-[100%] md:h-[75vh] rounded-b-lg md:rounded-2xl shadow-xl overflow-hidden">
-
-          {/* Fallback Banner */}
+      {/* 3. MAIN CONTENT CONTAINER: Capped at max-w-7xl and centered */}
+      <div className="relative w-full max-w-screen-2xl mx-auto h-[97%]
+       px-4 md:px-19  z-10 flex items-center justify-center md:items-end">
+        
+        {/* 4. THE BANNER BOX: The actual rounded container with video/image */}
+        <div className="relative w-full h-[95%] md:h-[75vh] rounded-3xl shadow-2xl overflow-hidden bg-zinc-900">
+          
+          {/* Fallback Banner Image */}
           <Image
             src="https://go4explore.com/assets/img/banner/home-v-banner.webp"
             alt="banner"
@@ -55,10 +54,11 @@ export default function Hero() {
             className="object-cover"
           />
 
+          {/* Video Layer */}
           {playVideo && (
             <video
               ref={videoRef}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                 videoReady ? "opacity-100" : "opacity-0"
               }`}
               autoPlay muted loop playsInline preload="auto"
@@ -68,90 +68,84 @@ export default function Hero() {
             </video>
           )}
           
-          {/* Overlay Darkener */}
-          <div className="absolute inset-0 bg-black/30"></div>
+          {/* Subtle Overlay for Text Legibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
 
-          {/* Content Overlay - Centered for mobile */}
-          <div className="absolute inset-0 z-20 flex flex-col justify-between items-center py-16 px-4">
-  <div className="flex flex-col items-center text-center">
+          {/* 5. TEXT & INTERFACE OVERLAY */}
+          <div className="absolute inset-0 z-20 flex flex-col justify-center items-center px-4 text-center">
             
-            {/* H1: Adjusted text size (3xl mobile, 4xl desktop) */}
-            <h1 className="text-white text-2xl md:text-4xl font-normal leading-tight">
-              Spreading <span className="text-[#FFF401]">Happiness <br className="md:hidden" /> & </span> 
-             Crafting <span className="text-[#FFF401]">Stories</span> 
-            </h1>
+            {/* Top Content: Headlines & Search */}
+            <div className="flex flex-col items-center text-center w-full">
+              <h1 className="text-white text-2xl md:text-5xl font-medium leading-tight drop-shadow-md">
+                Spreading <span className="text-[#FFF401] font-bold">Happiness</span> <br className="md:hidden" /> & 
+                Crafting <span className="text-[#FFF401] font-bold">Stories</span> 
+              </h1>
 
-            {/* H2: Adjusted text size (4xl mobile, 7xl desktop) */}
-            <h2 className="text-white text-4xl md:text-7xl font-extrabold leading-tight
-            mt-5 mb-8 md:mb-10 flex flex-row justify-center items-center gap-3">
-              Across Globe
-              <Image 
-                src="https://go4explore.com/_next/image?url=%2Fassets%2Fimg%2Fbanner%2F1.png&w=48&q=75"
-                alt="global" 
-                width={40} 
-                height={40}
-                className="w-8 h-8 md:w-12 md:h-12"
-              />
-            </h2>
-
-            {/* Search Bar: Full width on mobile, 50% on desktop */}
-            <div className="
-            flex w-full max-w-md md:max-w-2xl 
-            items-center 
-            px-4 py-2 md:py-3 rounded-full bg-white shadow-lg">
-              <input 
-                type="text"
-                placeholder="Pick Best Suitable Packages, Destinations & More For"
-                className="text-base md:text-sm flex-1 font-sm focus:outline-none leading-tighter text-gray-800 placeholder:text-gray-400"
-              />
-              <button type="submit" className="ml-2">
-                <Image
-                  src="https://go4explore.com/assets/img/banner/2.webp"
-                  alt="search"
-                  width={35}
-                  height={35}
-                  className="w-8 h-8 md:w-10 md:h-10"
+              <h2 className="text-white text-4xl md:text-8xl font-black leading-tight mt-4 md:mt-6 mb-8 flex items-center gap-3 drop-shadow-xl">
+                Across Globe
+                <Image 
+                  src="https://go4explore.com/_next/image?url=%2Fassets%2Fimg%2Fbanner%2F1.png&w=48&q=75"
+                  alt="global icon" 
+                  width={48} 
+                  height={48}
+                  className="w-10 h-10 md:w-16 md:h-16 animate-pulse"
                 />
-              </button>
+              </h2>
+
+              {/* Search Bar Container */}
+              <div className="flex w-full max-w-md md:max-w-2xl items-center p-1.5 md:p-2 rounded-full bg-white shadow-2xl transform transition-transform hover:scale-[1.02]">
+                <input 
+                  type="text"
+                  placeholder="Pick Best Suitable Packages, Destinations..."
+                  className="text-sm md:text-base flex-1 px-4 py-2 focus:outline-none text-gray-800 placeholder:text-gray-400"
+                />
+                <button type="submit" className="p-1 md:p-2 rounded-full hover:bg-gray-100 transition-colors">
+                  <Image
+                    src="https://go4explore.com/assets/img/banner/2.webp"
+                    alt="search"
+                    width={40}
+                    height={40}
+                    className="w-8 h-8 md:w-12 md:h-12"
+                  />
+                </button>
+              </div>
             </div>
+
+            {/* Bottom Content: Trust Badges */}
+            <div className="w-full flex flex-col md:flex-row gap-4 items-center justify-center bg-black/20 backdrop-blur-sm md:bg-transparent py-4 md:py-0 rounded-2xl">
+              
+              <div className="flex items-center justify-center text-white gap-4">
+                <div className="flex items-center gap-1.5">
+                  <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
+                  <span className="text-xs md:text-sm font-bold tracking-wide uppercase">
+                    <span className="text-[#FFF500]">500+</span> Destinations
+                  </span>
+                </div>
+
+                <div className="h-4 w-px bg-white/40"></div>
+
+                <div className="flex items-center gap-1.5">
+                  <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
+                  <span className="text-xs md:text-sm font-bold tracking-wide uppercase">
+                    <span className="text-[#FFF500]">Seamless</span> Booking
+                  </span>
+                </div>
+              </div>
+
+              <div className="hidden md:block h-4 w-px bg-white/40"></div>
+
+              <div className="flex items-center justify-center gap-1.5 text-white">
+                <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
+                <span className="text-xs md:text-sm font-bold tracking-wide uppercase">
+                  <span className="text-[#FFF500]">8+ Years</span> Experience
+                </span>
+              </div>
+            </div>
+
           </div>
-          {/* Trust Badges (The yellow checkmarks in your image) */}
-        
-{/* Trust Badges Container */}
-<div className="w-full flex flex-col md:flex-row gap-4 items-center justify-center">
-  
-  {/* Top Row: Destinations and Booking */}
-  <div className="flex items-center justify-center  text-[9px] md:text-sm uppercase 
-  tracking-tight text-white">
-    <div className="flex items-center gap-1">
-      <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-lg" />
-      <span className="text-xs font-bold text-[#FFF500]">500+</span> 
-      <span className="font-medium">Destinations</span>
-    </div>
-
-    <div className="h-7 w-[2px] bg-white mx-1"></div> {/* Vertical Divider */}
-
-    <div className="flex items-center gap-1">
-      <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-lg" />
-      <span className="text-xs font-bold text-[#FFF500]">Seamless</span> 
-      <span className="font-medium">Booking</span>
-    </div>
-    <div className="h-7 w-[2px] bg-white mx-1"></div> 
-  </div>
-
-  {/* Bottom Row: Experience */}
-  <div className="flex items-center justify-center gap-1 text-[11px] 
-  md:text-sm uppercase tracking-wide text-white">
-    <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-lg" />
-    <span className=" text-xs font-bold text-[#FFF500]">8+ Years</span> 
-    <span className="font-medium">Experience</span>
-  </div>
-</div>
-        </div>
         </div>
       </div>
-    </div>
-    </div>
-    </div>
+    </section>
   );
 }
+

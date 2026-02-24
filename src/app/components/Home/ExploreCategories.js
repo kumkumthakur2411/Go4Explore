@@ -35,10 +35,10 @@ export default function ExploreCategories() {
         
         {/* Left Content - Takes up 25% on desktop */}
         <div className="w-full lg:w-[25%] text-center lg:text-left">
-          <h2 className="text-2xl md:text-3xl font-black text-[#2755B0] mb-3 leading-tight">
+          <h2 className="text-xl md:text-2xl lg:w-[80%] font-extrabold text-blue-800 mb-3 leading-tight">
             Explore Categories
           </h2>
-          <p className="text-gray-600 font-medium text-sm md:text-base">
+          <p className="text-gray-900 font-medium text-xs md:text-base">
             Discover destinations that match your vibe. Trips tailored to your preferences.
           </p>
         </div>

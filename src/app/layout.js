@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         {/* Top navigation (fixed) */}
         <NavBar />
         {/* Main Content - add top padding equal to nav height (h-16) */}
-      <main className="flex-1 pt-16 md:pt-[120px] ">  
+      <main className="flex-1  ">  
           {children}
         </main>
         {/* Footer (stays at bottom) */}

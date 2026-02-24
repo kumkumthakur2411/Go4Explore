@@ -40,10 +40,10 @@ export default function DomesticSwiper({ prevEl, nextEl }) {
   return (
 <Swiper
   modules={[Navigation, Pagination, Autoplay]}
-  navigation={{
-prevEl: `.${prevEl}`,
-nextEl: `.${nextEl}`,
-  }}
+navigation={{
+  prevEl,
+  nextEl,
+}}
   loop={true}
   enabled={true}
   breakpoints={{

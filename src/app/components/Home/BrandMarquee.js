@@ -20,51 +20,58 @@ const row2 = [
 
 export default function BrandsMarquee() {
   return (
-    <section className="w-[90%] md:w-[85%] mx-auto bg-white overflow-hidden">
-      <h1 className="w-full flex justify-center items-center py-8 text-lg 
-      md:text-2xl font-extrabold text-[#2755B0]">
-Recognitions & Collaborations
-  </h1>
-      <div className=" md:space-y-10">
+    // Changed w-[90%] to max-w for better zoom stability
+    <section className="w-full max-w-7xl mx-auto bg-white overflow-hidden py-10 px-4">
+      
+      <h2 className="w-full text-center py-8 text-xl md:text-3xl font-black text-[#2755B0] tracking-tight">
+        Recognitions & Collaborations
+      </h2>
 
-        {/* ROW 1 */}
-        <div className="relative w-full overflow-hidden">
-          <div className="flex gap-5 md:gap-10 animate-marquee w-max">
-            {[...row1, ...row1].map((logo, index) => (
+      <div className="space-y-6 md:space-y-12">
+        {/* ROW 1: Standard Direction */}
+        <div className="group relative flex overflow-hidden p-2">
+          {/* mask-image creates a fade effect on edges so logos don't 'pop' in/out during zoom */}
+          <div className="flex gap-8 md:gap-16 animate-marquee whitespace-nowrap 
+          ">
+            {[...row1, ...row1, ...row1].map((logo, index) => (
               <div
                 key={index}
-                className="relative   w-[60px] md:w-[140px] h-[80px] flex-shrink-0  "
+                className="relative w-[80px] md:w-[150px] aspect-[3/2] flex-shrink-0 
+                transition-transform duration-300 hover:scale-110"
               >
                 <Image
                   src={logo}
-                  alt="brand"
+                  alt="brand logo"
                   fill
-                  className="object-contain"
+                  sizes="(max-width: 768px) 80px, 150px"
+                  className="object-contain  hover:grayscale-0 transition-all"
                 />
               </div>
             ))}
           </div>
         </div>
 
-        {/* ROW 2 (Reverse Direction) */}
-        <div className="relative w-full overflow-hidden">
-          <div className="flex gap-3 md:gap-5 animate-marquee-two w-max">
-            {[...row2, ...row2].map((logo, index) => (
+        {/* ROW 2: Reverse Direction */}
+        <div className="group relative flex overflow-hidden p-2">
+          <div className="flex gap-8 md:gap-16 animate-marquee
+
+           whitespace-nowrap ">
+            {[...row2, ...row2, ...row2].map((logo, index) => (
               <div
                 key={index}
-                className="relative w-[80px] md:w-[180] h-[80px] flex-shrink-0 "
+                className="relative w-[80px] md:w-[150px] aspect-[3/2] flex-shrink-0 transition-transform duration-300 hover:scale-110"
               >
                 <Image
                   src={logo}
-                  alt="brand"
+                  alt="collaboration logo"
                   fill
-                  className="object-contain"
+                  sizes="(max-width: 768px) 80px, 150px"
+                  className="object-contain  hover:grayscale-0 transition-all"
                 />
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -16,110 +16,201 @@ const topMenu = [
   { name: "Contact Us", href: "#" },
 ];
 const bottomMenu = [
-  { name: "Upcoming Group Trips", icon: "https://go4explore.com/assets/img/head-bottom/1.png" ,href:"/upcoming-trips" },
-  { name: "International Trips", icon: "https://go4explore.com/assets/img/head-bottom/2.png" ,href:"/trips-category/international-trips"},
-  { name: "Domestic Trips", icon: "https://go4explore.com/assets/img/head-bottom/3.png",href:"/trips-category/domestic-trips" },
-  { name: "Weekend Trips", icon: "https://go4explore.com/assets/img/head-bottom/4.png" ,href:"/trips-category/weekend-trips" },
-  { name: "Backpacking Trips", icon: "https://go4explore.com/assets/img/head-bottom/5.png",href:"/trips-category/backpacking-trips" },
-  { name: "Corporate Tours", icon: "https://go4explore.com/assets/img/head-bottom/6.png",href:"/corporate-tours" },
+  { name: "Upcoming Group Trips",
+     icon: "https://go4explore.com/assets/img/head-bottom/1.png" ,
+     href:"/upcoming-trips",
+      submenu: [
+      { name: "Himachal Trips", href: "/group-trips/himachal" },
+      { name: "Kashmir Trips", href: "/group-trips/kashmir" },
+      { name: "Uttarakhand Trips", href: "/group-trips/uttarakhand" },
+    ], 
+  },
+  { name: "International Trips", 
+    icon: "https://go4explore.com/assets/img/head-bottom/2.png" ,
+    href:"/trips-category/international-trips",
+      submenu: [
+      { name: "Himachal Trips", href: "/group-trips/himachal" },
+      { name: "Kashmir Trips", href: "/group-trips/kashmir" },
+      { name: "Uttarakhand Trips", href: "/group-trips/uttarakhand" },
+    ],
+  },
+  { name: "Domestic Trips", icon: "https://go4explore.com/assets/img/head-bottom/3.png",
+    href:"/trips-category/domestic-trips",
+      submenu: [
+      { name: "Himachal Trips", href: "/group-trips/himachal" },
+      { name: "Kashmir Trips", href: "/group-trips/kashmir" },
+      { name: "Uttarakhand Trips", href: "/group-trips/uttarakhand" },
+    ], },
+  { name: "Weekend Trips", icon: "https://go4explore.com/assets/img/head-bottom/4.png" ,
+    href:"/trips-category/weekend-trips",
+      submenu: [
+      { name: "Himachal Trips", href: "/group-trips/himachal" },
+      { name: "Kashmir Trips", href: "/group-trips/kashmir" },
+      { name: "Uttarakhand Trips", href: "/group-trips/uttarakhand" },
+    ], },
+  { name: "Backpacking Trips", icon: "https://go4explore.com/assets/img/head-bottom/5.png",
+    href:"/trips-category/backpacking-trips" ,
+      submenu: [
+      { name: "Himachal Trips", href: "/group-trips/himachal" },
+      { name: "Kashmir Trips", href: "/group-trips/kashmir" },
+      { name: "Uttarakhand Trips", href: "/group-trips/uttarakhand" },
+    ],},
+  { name: "Corporate Tours", icon: "https://go4explore.com/assets/img/head-bottom/6.png",
+    href:"/corporate-tours",
+      submenu: [
+      { name: "Himachal Trips", href: "/group-trips/himachal" },
+      { name: "Kashmir Trips", href: "/group-trips/kashmir" },
+      { name: "Uttarakhand Trips", href: "/group-trips/uttarakhand" },
+    ], },
 ];
+
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-<header className="fixed top-0 left-0 w-full h-22 md:h-[120px] z-50 bg-white shadow-sm">
-  {/* TOP NAV: 64px on mobile, approx 66px on desktop (55% of 120px) */}
-  <div className="w-[95vw] md:w-[88vw] h-full md:h-[55%] mx-auto flex items-center justify-between px-2 md:px-5">  
-    {/* 1. Logo (Desktop) - Visible only on md and up */}
-    <Link href="/" className="hidden md:block">
-      <Image
-        src="https://go4explore.com/assets/img/logo.webp"
-        alt="Go4Explore"
-        width={160}
-        height={160}
-        priority
-      />
-    </Link>
+<header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
 
-    {/* 2. Desktop Center Menu */}
-    <div className="hidden md:flex items-center gap-5">
-    <div className="hidden md:flex items-center gap-5">
-      <button className="btn-cycle px-4 py-1 rounded-full
-       text-sm font-bold text-white flex items-center gap-2 hover:bg-white 
-      hover:text-red-600 hover:border-red-600 transition-all">
-        <Image src="https://go4explore.com/assets/img/sale-page/sale-nav-bar-icon.png"
-         alt="offer" width={20} height={20} />
-        Early Bird offer 2026
-      </button>
-      <div className="flex items-center gap-6 text-base font-semibold text-[#000000]">
-        {topMenu.map((item, index) => (
-          <Link key={index} href={item.href} className="hover:text-blue-600">{item.name}</Link>
-        ))}
-      </div>
-    </div>
+  {/* ===== TOP NAV ===== */}
+  <div className="h-22 md:h-[74px] border-b border-gray-100">
+    <div className="max-w-screen-2xl mx-auto h-full px-4 md:px-19 flex items-center justify-between">
 
-    {/* 3. Desktop Right Side Actions */}
-    <div className="hidden md:flex items-center justify-center gap-4">
-      <div className="flex items-center gap-2 border border-[#2755B0] px-3 py-2 rounded-full text-[#2755B0] cursor-pointer hover:bg-[#2755B0] hover:text-white transition-all">
-        <RiWhatsappLine size={20} />
-        <span className="text-xs font-medium">+91 9266710039</span>
-      </div>
-      <p className="text-3xl font-semibold text-zinc-900">|</p>
-      <div className="w-8 h-8 flex items-center justify-center rounded-full bg-[#2755B0] text-white">
-        <IoPersonOutline size={18} />
-      </div>
-    </div>
-    </div>
-
-    {/* 4. MOBILE-ONLY NAVIGATION (Independent Layout) */}
-    <div className="flex lg:hidden w-full items-center justify-between ">
-      {/* Mobile Logo */}
-      <Link href="/">
-        <Image
-          src="https://go4explore.com/assets/img/footer-logo.webp"
-          alt="Go4Explore"
-          width={45} 
-          height={45}
-          priority
-        />
-      </Link>
-
-      {/* Mobile Actions Container */}
-      
-        {/* Mobile WhatsApp Button (Icon + Number) */}
-        <a href="tel:+919266710039" className="flex items-center gap-1 border border-[#2755B0]
-         px-3 py-1.5 rounded-full text-[#2755B0]">
-          <RiWhatsappLine size={18} />
-          <span className="text-xs font-bold">+91 9266710039</span>
-        </a>
-        
-        {/* Mobile Menu Button */}
-        <button onClick={() => setIsOpen(true)} className="text-gray-800">
-          <HiOutlineMenuAlt3 size={28} />
-        </button>
-    </div>
-</div>
-  
-
-  {/* ===== BOTTOM NAV (Desktop Only) ===== */}
-<div className="hidden md:flex h-[45%] bg-[#2755B0] text-white items-center justify-center">
-    <div className="w-[77%] flex items-center justify-between py-3 text-sm font-medium">
-      {bottomMenu.map((item, index) => (
-        <Link href={item.href} key={index}>
-        <div  className="flex items-center gap-2 hover:text-yellow-300 cursor-pointer">
-          
-
-          <Image src={item.icon} alt={item.name} width={20} height={20} />
-          <span>{item.name}</span>
-          
-        </div>
+      {/* Logo */}
+      <div className="hidden md:block flex items-center gap-6">
+        <Link href="/">
+          <Image
+            src="https://go4explore.com/assets/img/logo.webp"
+            alt="Go4Explore"
+            width={150}
+            height={50}
+            priority
+          />
         </Link>
-      ))}
+
+      </div>
+
+      {/* Desktop  Offer  + Menu */}
+      <nav className="hidden xl:flex items-center gap-6 text-sm font-semibold text-gray-800">
+        
+        {/* Early Bird Button - Desktop only */}
+        <Link href="/">
+        <button className="hidden lg:flex btn-cycle px-2 py-2 
+        rounded-full text-xs font-bold text-white items-center gap-2 border border-transparent hover:bg-white hover:text-red-600 hover:border-red-600 transition-all">
+          <Image
+            src="https://go4explore.com/assets/img/sale-page/sale-nav-bar-icon.png"
+            alt="offer"
+            width={18}
+            height={18}
+          />
+          EARLY BIRD OFFERS 2026
+        </button>
+        </Link>
+        {topMenu.map((item, index) => (
+          <Link key={index} href={item.href} className="hover:text-[#2755B0] transition">
+            {item.name}
+          </Link>
+        ))}
+              {/* Right Side Desktop */}
+      <div className="hidden md:flex items-center gap-4">
+        <a
+          href="tel:+919266710039"
+          className="flex items-center gap-2 
+          border-1 border-[#2755B0] px-3 py-2 rounded-full text-[#2755B0] text-xs font-bold hover:bg-[#2755B0] hover:text-white transition"
+        >
+          <RiWhatsappLine size={18} />
+          +91 9266710039
+        </a>
+
+        <div className="w-[2px] h-7 bg-gray-700 "></div>
+
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-[#2755B0] text-white cursor-pointer hover:bg-blue-800 transition">
+          <IoPersonOutline size={20} />
+        </div>
+      </div>
+      </nav>
+
+
+
+      {/* Mobile Controls */}
+      <div className="flex w-full  md:hidden items-center justify-between">
+
+  {/* Mobile Logo */} 
+  <Link href="/">
+   <Image src="https://go4explore.com/assets/img/footer-logo.webp" 
+alt="Go4Explore" width={45} height={45} priority /> 
+</Link> 
+{/* Mobile WhatsApp Button (Icon + Number) */} 
+<a href="tel:+919266710039"
+ className="flex items-center gap-1 border border-[#2755B0] px-3 py-1.5 rounded-full text-[#2755B0]"> 
+  <RiWhatsappLine size={18} /> 
+  <span className="text-xs font-bold">+91 9266710039</span>
+   </a>
+   {/* Mobile Menu Button */}
+    <button onClick={() => setIsOpen(true)} className="text-gray-800"> 
+      <HiOutlineMenuAlt3 size={28} /> 
+      </button>
+      </div>
+
     </div>
   </div>
+
+  {/* ===== BOTTOM NAV (Desktop Only) ===== */}
+<div className="hidden md:block bg-[#2755B0] text-white">
+  <div className="max-w-7xl mx-auto px-30">
+    <div className="flex items-center justify-between py-3 text-sm font-semibold">
+
+      {bottomMenu.map((item, index) => (
+        <div key={index} className="relative group">
+
+          {/* Main Menu Item */}
+          <Link href={item.href}>
+            <div className="flex items-center gap-2 cursor-pointer whitespace-nowrap hover:text-yellow-300 transition">
+              <Image
+                src={item.icon}
+                alt={item.name}
+                width={20}
+                height={20}
+              />
+              {item.name}
+            </div>
+          </Link>
+
+          {/* Dropdown */}
+          {item.submenu && (
+            <div className="
+              absolute left-0 top-full mt-3
+              bg-white text-gray-800
+              rounded-xl shadow-xl
+              min-w-[200px]
+              opacity-0 invisible
+              group-hover:opacity-100 group-hover:visible
+              transition-all duration-300
+              z-50
+            ">
+              <div className="py-3">
+                {item.submenu.map((subItem, subIndex) => (
+                  <Link key={subIndex} href={subItem.href}>
+                    <div className="px-5 py-3 hover:bg-gray-100 
+                     transition cursor-pointer text-base font-medium ">
+                      {subItem.name}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+        </div>
+      ))}
+
+    </div>
+  </div>
+</div>
 </header>
+
+{/* Spacer */}
+<div className="h-[70px] md:h-[115px]"></div>
       {/* ===== MOBILE DRAWER ===== */}
       <div
         className={`fixed top-0 left-0 w-full h-full bg-white z-[100] overflow-y-auto transform transition-transform duration-300 ${

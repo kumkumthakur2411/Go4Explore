@@ -25,77 +25,80 @@ export default function UpcomingTrips({ trips = [] }) {
   }
 
   return (
-    <section className="w-full md:w-[85%] mx-auto py-10 px-2">
+<section className="w-full max-w-7xl mx-auto py-10 px-4 md:px-10 overflow-hidden">
 
-      {/* Header */}
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-xl md:text-2xl font-bold text-blue-700">
-          Upcoming Trips
-        </h2>
-<div className="flex gap-3 mb-2 md:mb-1 overflow-x-auto pb-2 scrollbar-hide md:scrollbar-default whitespace-nowrap">
-
-</div>
-
-        {/* Desktop View More */}
-        <button className="hidden md:block bg-blue-700 text-white px-4 py-2 rounded-full text-sm">
-          View More
-        </button>
-      </div>
-      
-
-      
-{/* Month Tabs */}
-<div className="flex gap-3  md:mb-1 overflow-x-auto pb-2 scrollbar-hide
-mb-10
-md:scrollbar-default whitespace-nowrap">
-  {months.map((month) => (
-    <button
-      key={month}
-      onClick={() => setActiveMonth(month)}
-      className={`px-4 py-2 rounded-full text-xs font-semibold flex-shrink-0 mb-1 ${
-        activeMonth === month
-          ? "bg-[#2755B0] text-white"
-          : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-      }`}
-    >
-      {month}
+  {/* Header Container */}
+  <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+    <h2 className="text-2xl md:text-3xl font-black text-[#2755B0] tracking-tight text-center md:text-left">
+      Upcoming Trips
+    </h2>
+    
+    {/* Desktop View More - Moved into the header flex for stability */}
+    <button className="hidden md:block bg-[#2755B0] text-white px-8 py-2.5 rounded-full text-sm font-bold hover:bg-blue-800 transition-all shadow-md active:scale-95">
+      View More
     </button>
-  ))}
-</div>
+  </div>
 
-      {/* ================= DESKTOP ================= */}
-      <div className="hidden md:grid grid-cols-4 gap-6">
-        {visibleTrips.map((trip, index) => (
-          <TripCard key={index} trip={trip} />
-        ))}
-      </div>
-
-      {/* ================= MOBILE ================= */}
-      <div className="md:hidden">
-        <Swiper
-          spaceBetween={12}
-          slidesPerView={2.2}
-          loop={true}
+  {/* Month Tabs: Improved horizontal scroll stability */}
+  <div className="relative mb-10 group">
+    <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide snap-x no-scrollbar">
+      {months.map((month) => (
+        <button
+          key={month}
+          onClick={() => setActiveMonth(month)}
+          className={`px-6 py-2.5 rounded-full text-xs md:text-sm font-bold flex-shrink-0 transition-colors snap-start border ${
+            activeMonth === month
+              ? "bg-[#2755B0] text-white border-[#2755B0]"
+              : "bg-gray-50 text-gray-600 border-gray-200 hover:border-[#2755B0] hover:text-[#2755B0]"
+          }`}
         >
-          {groupedTrips.map((group, index) => (
-            <SwiperSlide key={index}>
-              <div className="flex flex-col gap-4">
-                {group.map((trip, i) => (
-                  <TripCard key={i} trip={trip} />
-                ))}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          {month}
+        </button>
+      ))}
+    </div>
+    {/* Visual indicator that more months exist (optional) */}
+    <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white to-transparent pointer-events-none md:hidden" />
+  </div>
 
-        {/* Mobile View More */}
-        <div className="flex justify-center mt-8">
-          <button className="bg-blue-700 text-white px-5 py-2 rounded-full text-sm">
-            View More
-          </button>
-        </div>
+  {/* ================= DESKTOP GRID ================= */}
+  {/* Using a responsive grid that adjusts columns based on screen width rather than just md:grid-cols-4 */}
+  <div className="hidden md:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {visibleTrips.map((trip, index) => (
+      <div key={index} className="h-full">
+        <TripCard trip={trip} />
       </div>
+    ))}
+  </div>
 
-    </section>
+  {/* ================= MOBILE SWIPER ================= */}
+  <div className="md:hidden -mx-4 px-4">
+    <Swiper
+      spaceBetween={16}
+      slidesPerView={1.2} // Show 1 full card and peek of next to encourage scrolling
+      breakpoints={{
+        480: { slidesPerView: 1.5 },
+        640: { slidesPerView: 2.2 }
+      }}
+      className="!overflow-visible" // Crucial for zoom: keeps card shadows visible
+    >
+      {/* IMPORTANT: Your groupedTrips.map was nesting two cards per slide. 
+          For zoom stability, it is safer to map each trip individually in Swiper.
+      */}
+      {visibleTrips.map((trip, index) => (
+        <SwiperSlide key={index} className="pb-6">
+          <TripCard trip={trip} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+
+    {/* Mobile View More */}
+    <div className="flex justify-center mt-6">
+      <button className="w-full bg-[#2755B0] text-white py-4 rounded-xl text-sm font-bold shadow-lg active:scale-95 transition-transform">
+        View More
+      </button>
+    </div>
+  </div>
+
+</section>
   );
 }

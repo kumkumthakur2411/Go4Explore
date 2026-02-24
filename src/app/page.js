@@ -125,7 +125,7 @@ export default function Home() {
   return (
     <>
       {/* Normal Sections with Padding */}
-      <div className="w-full  flex flex-col gap-10 md:gap-15 items-center  md:px-10">
+      <div className="w-full  flex flex-col  items-center  ">
         <Hero />
         <TrendingSection />
         <ExploreCategories />
