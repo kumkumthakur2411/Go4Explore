@@ -96,7 +96,7 @@ const reviewDetails = [
        rounded-[2rem] overflow-hidden ">
         
         {/* 1. Header Section */}
-        <div className="p-6 md:p-10 pb-0">
+        <div className=" ">
       <h1 className="w-full flex justify-center items-center py-8 text-xl
       md:text-3xl font-extrabold text-[#2755B0] mb-3 md:mb-8">
         Happy Faces & Stories
