@@ -18,7 +18,7 @@ export default function BannerVideo({ videos }) {
   }, []);
 
   return (
-<section className="w-full py-10 md:py-20 px-4 md:px-10 bg-white">
+<section className="w-full py-10  px-4 md:px-10 bg-white">
   <div className="max-w-7xl mx-auto">
 
     {/* VIDEO CONTAINER */}
@@ -61,7 +61,7 @@ export default function BannerVideo({ videos }) {
     </div>
 
     {/* BELOW VIDEO ROW */}
-    <div className="flex items-center justify-end mt-6">
+    <div className="flex items-center justify-end mt-3">
 
       {/* Pagination (mobile only) */}
       <div className="custom-pagination md:hidden" />

@@ -21,13 +21,13 @@ const row2 = [
 export default function BrandsMarquee() {
   return (
     // Changed w-[90%] to max-w for better zoom stability
-    <section className="w-full max-w-7xl mx-auto bg-white overflow-hidden py-10 md:px-30 px-4">
+    <section className="w-full max-w-7xl mx-auto bg-white overflow-hidden pt-10 md:px-30 px-4">
       
       <h2 className="w-full text-center py-8 text-xl md:text-3xl font-black text-[#2755B0] tracking-tight">
         Recognitions & Collaborations
       </h2>
 
-      <div className="space-y-6 md:space-y-12">
+      <div className="space-y-2">
         {/* ROW 1: Standard Direction */}
         <div className="group relative flex overflow-hidden p-2">
           {/* mask-image creates a fade effect on edges so logos don't 'pop' in/out during zoom */}

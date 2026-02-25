@@ -25,7 +25,8 @@ export default function Hero() {
 
   return (
     // 1. Outer wrapper: Full width, relative, handles the overall height
-    <section className="relative flex w-full h-[85vh] md:h-[80vh] justify-end items-center overflow-hidden ">
+    // 1. Outer wrapper: Full width, relative, handles the overall height
+    <section className="relative flex w-full h-[80vh] md:h-[80vh] justify-end items-center overflow-hidden ">
       
       {/* 2. BACKGROUND LAYER: Full width decoration */}
       <div className="absolute bottom-0 left-0 w-full h-[30vh] hidden md:block z-0">
@@ -39,11 +40,11 @@ export default function Hero() {
       </div>
 
       {/* 3. MAIN CONTENT CONTAINER: Capped at max-w-7xl and centered */}
-      <div className="relative w-full max-w-screen-2xl mx-auto h-[97%] 
-         z-10 flex items-center justify-end md:items-end">
+      <div className="relative w-full max-w-screen-2xl mx-auto h-[700px] md:h-[97%] 
+         z-10 flex items-center justify-start md:justify-end md:items-end px-5 md:px-0">
         
         {/* 4. THE BANNER BOX: The actual rounded container with video/image */}
-        <div className="relative bottom-0 left-0 w-full h-[95%] md:h-[75vh] rounded-3xl
+        <div className="relative bottom-0 left-0 w-full h-[100%] md:h-[75vh]  rounded-b-xl md:rounded-3xl
          overflow-hidden ">
           
           {/* Fallback Banner Image */}
@@ -82,7 +83,7 @@ export default function Hero() {
                 Crafting <span className="text-[#FFF401] ">Stories</span> 
               </h1>
 
-              <h2 className="text-white text-4xl md:text-7xl font-bold leading-tight 
+              <h2 className="text-white text-4xl md:text-6xl font-[800] leading-tight 
                flex items-center gap-3 ">
                 Across Globe
                 <Image 
@@ -115,32 +116,32 @@ export default function Hero() {
                 </button>
               </div>
               {/* Bottom Content: Trust Badges */}
-            <div className="w-full flex flex-col md:flex-row gap-4 
+            <div className="w-full flex flex-col md:flex-row gap-1 
             items-center justify-center  py-5  ">
               
               <div className="flex items-center justify-center text-white gap-1">
                 <div className="flex items-center gap-1.5">
                   <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
-                  <span className="text-xs md:text-sm font-normal tracking-wide uppercase">
+                  <span className="text-xs md:text-sm font-medium tracking-wide ">
                     <span className="text-[#FFF500]">500+</span> Destinations
                   </span>
                 </div>
 
-                <div className="h-4 w-px bg-white/40"></div>
+                <div className="h-6 w-[2px] bg-white"></div>
 
                 <div className="flex items-center gap-1.5">
                   <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
-                  <span className="text-xs md:text-sm font-normal tracking-wide uppercase">
+                  <span className="text-xs md:text-sm font-normal tracking-wide ">
                     <span className="text-[#FFF500]">Seamless</span> Booking
                   </span>
                 </div>
               </div>
 
-              <div className="hidden md:block h-4 w-px bg-white/40"></div>
+              <div className="hidden md:block h-6 w-[2px] bg-white"></div>
 
               <div className="flex items-center justify-center gap-1.5 text-white">
                 <IoMdCheckmarkCircleOutline className="text-[#FFF500] text-xl" />
-                <span className="text-xs md:text-sm font-normal tracking-wide uppercase">
+                <span className="text-xs md:text-sm font-normal tracking-wide ">
                   <span className="text-[#FFF500]">8+ Years</span> Experience
                 </span>
               </div>

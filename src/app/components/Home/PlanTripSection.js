@@ -27,7 +27,7 @@ const features = [
 
 export default function PlanTripSection() {
   return (
-    <section className="relative w-full md:pt-12 pb-0 overflow-hidden">
+    <section className="relative w-full mt-5 md:pt-16 pb-0 overflow-hidden">
 
       {/* Background */}
       <div className="absolute inset-0 -z-10">

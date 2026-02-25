@@ -59,17 +59,17 @@ export function AboutUs() {
 
   return (
     // Changed to max-width and added responsive padding for zoom stability
-    <section className="w-full max-w-7xl mx-auto my-10 px-4 md:px-30">
-      <Card className="w-full rounded-[2rem] shadow-xl border-none bg-white overflow-hidden">
+    <section className="w-full max-w-7xl mx-auto px-4 pt-5">
+      <Card className="w-full bg-white shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] rounded-xl border-none bg-white overflow-hidden">
         
         {/* Header - Using flex-col with center alignment for scaling */}
-        <CardHeader className="text-center pt-10 pb-4 px-6 md:px-12">
+        <CardHeader className="text-center pt-5  px-2">
           <CardTitle className="text-2xl md:text-4xl font-black text-[#2755B0] mb-4">
             About Go4Explore
           </CardTitle>
 
           <div className="flex justify-center">
-            <p className="text-gray-600 font-medium text-sm md:text-base leading-relaxed max-w-4xl">
+            <p className="text-gray-600 font-medium text-sm md:text-base leading-relaxed text-start px-4">
               Go4explore takes pride in curating meticulous tour packages that ensure a thrilling and serene experience. 
               We believe that travelling evolves you, the adventure transforms you and the journey traverses through 
               every sense to form the tapestry of memories...
@@ -77,7 +77,7 @@ export function AboutUs() {
           </div>
         </CardHeader>
 
-        <CardContent className="px-6 md:px-12 pb-10">
+        <CardContent className="px-6 md:px-12 pb-4">
           <Accordion
             type="single"
             collapsible
@@ -87,11 +87,12 @@ export function AboutUs() {
             <AccordionItem value="about" className="border-none">
               
               {/* Toggle Button Container */}
-              <div className="flex justify-center mt-2">
+              <div className="flex justify-center ">
                 {!open && (
                   <button
                     onClick={() => setOpen(true)}
-                    className="font-bold text-[#2755B0] bg-blue-50 px-6 py-2 rounded-full hover:bg-blue-100 text-sm flex items-center gap-2 transition-all active:scale-95"
+                    className="font-bold text-gray-700 px-6 
+                      text-sm flex items-center gap-2 transition-all active:scale-95"
                   >
                     View More
                     <IoIosArrowDown size={18} />
