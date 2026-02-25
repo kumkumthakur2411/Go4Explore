@@ -7,11 +7,7 @@ import MobileFixFooter from "./components/MobileFixFooter";
 // Load Poppins font
 const poppins = Poppins({
   subsets: ["latin"],
-<<<<<<< HEAD
   weight: ["300", "400", "500", "600", "700", "800", "900"],
-=======
-  weight: ["300", "400", "500", "600", "700","800","900"],
->>>>>>> e8073eea154675263ed15ba78e3cbbf2c1b28525
   variable: "--font-poppins",
   display: "swap",
 });
