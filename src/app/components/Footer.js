@@ -2,6 +2,7 @@ import { Instagram, Youtube, Linkedin, MessageCircle, } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+
   const Company_items = [
   {text:"About Us" , href:"/aboutus"},
   {text:"Contact Us" , href:"/contactus"},
@@ -52,19 +53,19 @@ const quick_links = [
 
 export default function Footer() {
   return (
-<footer className="w-full bg-slate-50 py-12 px-4 md:px-30">
-  <div className="max-w-7xl mx-auto flex flex-col items-center">
+<footer className="w-full bg-slate-50 py-12 px-6 mt-10">
+  <div className="max-w-7xl mx-auto flex flex-col items-center px-5">
     
     {/* ================= TOP GRID LINKS ================= */}
     <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
       
       {/* Company */}
       <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Company</h3>
-        <ul className="space-y-3">
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Company</h3>
+        <ul className="space-y-1">
           {Company_items.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">
+              <Link href={item.href} className="text-sm  text-gray-700 font-medium transition-colors">
                 {item.text}
               </Link>
             </li>
@@ -74,19 +75,20 @@ export default function Footer() {
 
       {/* Trips Column */}
       <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Weekend Trips</h3>
-        <ul className="space-y-3 mb-8">
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Weekend Trips</h3>
+        <ul className="space-y-1 mb-8">
           {weekend_trips.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+              <Link href={item.href} className="text-sm text-gray-700 font-medium 
+               transition-colors">{item.text}</Link>
             </li>
           ))}
         </ul>
-        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Backpacking</h3>
-        <ul className="space-y-3">
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Backpacking</h3>
+        <ul className="space-y-1">
           {backpacking_trips.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+              <Link href={item.href} className="text-sm text-gray-700 font-medium ">{item.text}</Link>
             </li>
           ))}
         </ul>
@@ -94,19 +96,19 @@ export default function Footer() {
 
       {/* International & Domestic */}
       <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">International</h3>
-        <ul className="space-y-3 mb-8">
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">International</h3>
+        <ul className="space-y-1 mb-8">
           {international_trip.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+              <Link href={item.href} className="text-sm text-gray-700 font-medium ">{item.text}</Link>
             </li>
           ))}
         </ul>
-        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Domestic</h3>
-        <ul className="space-y-3">
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Domestic</h3>
+        <ul className="space-y-1">
           {domestic_trip.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+              <Link href={item.href} className="text-sm text-gray-700 font-medium ">{item.text}</Link>
             </li>
           ))}
         </ul>
@@ -114,16 +116,16 @@ export default function Footer() {
 
       {/* Quick Links & Contact */}
       <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-bold text-base md:text-lg mb-4 uppercase tracking-wide">Quick Links</h3>
-        <ul className="space-y-3 mb-8">
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Quick Links</h3>
+        <ul className="space-y-1 mb-8">
           {quick_links.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-600 hover:text-[#2755B0] transition-colors">{item.text}</Link>
+              <Link href={item.href} className="text-sm text-gray-700 font-medium ">{item.text}</Link>
             </li>
           ))}
         </ul>
-        <h3 className="text-[#2755B0] font-bold text-base mb-4 uppercase tracking-wide">Our Presence</h3>
-        <div className="space-y-3">
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Our Presence</h3>
+        <div className="space-y-1">
           <p className="text-sm text-gray-600 leading-relaxed">
             <span className="font-bold text-gray-900">Registered:</span> Jaipur, Rajasthan - 302017
           </p>
@@ -168,18 +170,31 @@ export default function Footer() {
       </div>
 
       {/* 3. Social Icons */}
-      <div className="flex items-center gap-3">
-        {[
-          { icon: <Instagram size={18} />, color: "bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600" },
-          { icon: <Youtube size={18} />, color: "bg-[#FF0000]" },
-          { icon: <Linkedin size={18} />, color: "bg-[#0077B5]" },
-          { icon: <MessageCircle size={18} />, color: "bg-[#25D366]" }
-        ].map((social, i) => (
-          <a key={i} href="#" className={`${social.color} p-2.5 text-white rounded-full hover:scale-110 hover:-translate-y-1 transition-all shadow-md`}>
-            {social.icon}
-          </a>
-        ))}
-      </div>
+<div className="flex items-center gap-3">
+  {[
+    { icon: "https://go4explore.com/assets/img/social/1.webp", href: "https://www.instagram.com/go4explore/", alt: "Instagram" },
+    { icon: "https://go4explore.com/assets/img/social/2.webp", href: "https://www.facebook.com/go4explore/", alt: "Facebook" },
+    { icon: "https://go4explore.com/assets/img/social/3.webp", href: "https://www.youtube.com/go4explore/", alt: "YouTube" },
+    { icon: "https://go4explore.com/assets/img/social/4.webp", href: "https://www.twitter.com/go4explore/", alt: "Twitter" }
+  ].map((social, i) => (
+    <Link 
+      key={i} 
+      href={social.href} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="block  bg-gray-800 text-white 
+      rounded-full hover:scale-110 hover:-translate-y-1 transition-all shadow-md"
+    >
+      <Image 
+        src={social.icon} 
+        alt={social.alt} 
+        width={20} 
+        height={20} 
+        className="object-contain"
+      />
+    </Link>
+  ))}
+</div>
     </div>
   </div>
 </footer>

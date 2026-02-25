@@ -69,8 +69,9 @@ export default function InternationalSwiper() {
                     <p className="text-white font-semibold text-xs md:text-sm">Starting From {item1.price || "N/A"}</p>
                   </div>
                 </div>
-                <div className="absolute top-3 right-3 border border-white rounded-full
-                 w-8 h-8 flex items-center justify-center text-white z-10  group-hover:bg-white   group-hover:text-blue-800 transition">
+                <div className="absolute top-3 right-3 border-2 border-white rounded-full
+                 w-8 h-8 flex items-center justify-center text-white z-10 
+                  group-hover:bg-white   group-hover:text-blue-800 transition">
                   <MdArrowOutward size={20} />
                 </div>
               </div>
@@ -91,7 +92,7 @@ export default function InternationalSwiper() {
                       <p className="text-white font-semibold text-xs md:text-sm">Starting From {item2.price}</p>
                     </div>
                   </div>
-                  <div className="absolute top-3 right-3 border border-white rounded-full
+                  <div className="absolute top-3 right-3 border-2 border-white rounded-full
                    w-8 h-8 flex items-center justify-center text-white z-10 
                    group-hover:bg-white   group-hover:text-blue-800 transition">
                     <MdArrowOutward size={20} />

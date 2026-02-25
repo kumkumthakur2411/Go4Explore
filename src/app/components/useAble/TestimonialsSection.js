@@ -90,15 +90,15 @@ const reviewDetails = [
 ];
 
   return (
-       <section className="w-full py-8 md:py-16 px-4 md:px-10 bg-white">
+       <section className="w-full   px-4 md:px-10 bg-white">
       {/* Outer container uses max-width to prevent stretching on ultra-wide screens */}
       <div className="max-w-7xl mx-auto 
        rounded-[2rem] overflow-hidden ">
         
         {/* 1. Header Section */}
         <div className=" ">
-      <h1 className="w-full flex justify-center items-center py-8 text-xl
-      md:text-3xl font-extrabold text-[#2755B0] mb-3 md:mb-8">
+      <h1 className="w-full flex justify-center items-center py-2 text-xl
+      md:text-3xl font-[800] text-[#2755B0] mb-3 md:mb-8">
         Happy Faces & Stories
       </h1>
  <div className="flex md:hidden  overflow-hidden">
@@ -262,17 +262,17 @@ const reviewDetails = [
 
 const ReviewCard = ({ data }) => {
   return (
-<div className="bg-white border border-gray-100 
-p-3 md:p-5
+<div className="bg-white border border-gray-100 px-3 py-4 md:px-8
+md:py-5 justify-center items-start
 rounded-2xl md:rounded-3xl 
 shadow-sm hover:shadow-md 
 transition-shadow duration-300
 flex flex-col justify-between 
 h-full w-full
-overflow-hidden">
+overflow-hidden gap-2">
 
   {/* Header */}
-  <div className="flex items-start gap-3 mb-2">
+  <div className="flex items-start gap-2 mb:gap-3 mb-1 mb:mb-3">
 
     <div className="w-7 h-7 md:w-8 md:h-8 
     rounded-full bg-[#fefe00]
@@ -283,11 +283,11 @@ overflow-hidden">
       {data?.initial}
     </div>
 
-    <div className="flex flex-col overflow-hidden w-80">
+    <div className="flex flex-col text-wrap">
       <h5 className="text-xs font-semibold text-gray-800 truncate">
         {data?.name}
       </h5>
-      <p className="text-[10px] md:text-[11px] text-gray-500 truncate">
+      <p className="text-[9px] md:text-[11px] text-gray-500 truncate text-wrap">
         {data?.booked}
       </p>
     </div>
@@ -296,10 +296,9 @@ overflow-hidden">
 
   {/* Review Content */}
   <div className="flex-1">
-    <p className="text-xs md:text-xs text-gray-700 
+    <p className="text-xs md:text-sm text-gray-800 
     tracking-tight md:tracking-normal 
    font-normal
-
     line-clamp-3 md:line-clamp-4 ">
       {data?.review}
     </p>

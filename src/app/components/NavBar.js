@@ -73,8 +73,9 @@ export default function NavBar() {
 <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
 
   {/* ===== TOP NAV ===== */}
-  <div className="h-22 md:h-[74px] border-b border-gray-100">
-    <div className="max-w-7xl  mx-auto h-full  flex items-center justify-between">
+  <div className="h-23 md:h-[74px] ">
+    <div className="max-w-screen-2xl  mx-auto h-full  flex items-center justify-between px-5 
+    ">
 
       {/* Logo */}
       <div className="hidden md:block flex items-center gap-6">
@@ -107,7 +108,7 @@ export default function NavBar() {
         </button>
         </Link>
         {topMenu.map((item, index) => (
-          <Link key={index} href={item.href} className="hover:text-[#2755B0] transition">
+          <Link key={index} href={item.href} className="font-medium text-[#000] transition">
             {item.name}
           </Link>
         ))}
@@ -116,7 +117,8 @@ export default function NavBar() {
         <a
           href="tel:+919266710039"
           className="flex items-center gap-2 
-          border-1 border-[#2755B0] px-3 py-2 rounded-full text-[#2755B0] text-xs font-bold hover:bg-[#2755B0] hover:text-white transition"
+          border-1 border-[#2755B0] px-3 py-2 rounded-full text-[#2755B0] 
+          text-xs font-semibold hover:bg-[#2755B0] hover:text-white transition"
         >
           <RiWhatsappLine size={18} />
           +91 9266710039
@@ -129,9 +131,6 @@ export default function NavBar() {
         </div>
       </div>
       </nav>
-
-
-
       {/* Mobile Controls */}
       <div className="flex w-full  md:hidden items-center justify-between">
 
@@ -144,7 +143,7 @@ alt="Go4Explore" width={45} height={45} priority />
 <a href="tel:+919266710039"
  className="flex items-center gap-1 border border-[#2755B0] px-3 py-1.5 rounded-full text-[#2755B0]"> 
   <RiWhatsappLine size={18} /> 
-  <span className="text-xs font-bold">+91 9266710039</span>
+  <span className="text-xs font-semibold">+91 9266710039</span>
    </a>
    {/* Mobile Menu Button */}
     <button onClick={() => setIsOpen(true)} className="text-gray-800"> 
@@ -179,14 +178,14 @@ alt="Go4Explore" width={45} height={45} priority />
           {/* Dropdown */}
           {item.submenu && (
             <div className="
-              absolute left-0 top-full mt-3
+              absolute left-0 -top-[px] mt-1
               bg-white text-gray-800
               rounded-xl shadow-xl
               min-w-[200px]
               opacity-0 invisible
               group-hover:opacity-100 group-hover:visible
               transition-all duration-300
-              z-50
+              z-99
             ">
               <div className="py-3">
                 {item.submenu.map((subItem, subIndex) => (

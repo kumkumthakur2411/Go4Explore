@@ -84,7 +84,7 @@ navigation={{
                   </div>
                 </div>
 
-                <div className="absolute top-3 right-3 border border-white 
+                <div className="absolute top-3 right-3 border-2 border-white 
                 rounded-full w-8 h-8 flex items-center justify-center text-white z-10 
                 group-hover:bg-white group-hover:text-blue-900 transition">
                   <MdArrowOutward size={20} />
@@ -110,7 +110,7 @@ navigation={{
                     </div>
                   </div>
 
-                  <div className="absolute top-3 right-3 border border-white 
+                  <div className="absolute top-3 right-3 border-2 border-white 
                   rounded-full w-8 h-8 flex items-center justify-center text-white 
                   z-10 group-hover:bg-white group-hover:text-blue-900 transition">
                     <MdArrowOutward size={20} />

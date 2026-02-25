@@ -6,31 +6,34 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function DomesticSection() {
   return (
-    <section className="w-full py-8 md:py-0 px-4 md:px-30 bg-white">
+    <section className="w-full py-0 px-4 md:px-30 bg-white md:mt-10">
       
       {/* Same Outer Container as Domestic */}
       <div className="max-w-7xl mx-auto 
-      shadow-[0_10px_50px_-15px_rgba(0,0,0,0.2)] rounded-[2rem] overflow-hidden border border-gray-50">
+      bg-white shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] rounded-xl overflow-hidden border border-gray-50">
         
         {/* Header Section (Same Layout) */}
         <div className="p-6 md:p-10 pb-0">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4">
             
             <div className="text-center md:text-left">
-              <h1 className="text-xl md:text-3xl font-black text-[#2556B0] tracking-tight">
+              <h1 className="text-xl md:text-3xl font-[800] text-[#2556B0] tracking-tight">
                 Domestic Escapes
               </h1>
-              <p className="text-gray-700 font-medium text-sm md:text-lg mt-1">
+              <p className="text-gray-800 font-medium text-sm md:text-lg mt-1">
                 Explore breathtaking destinations within India
               </p>
             </div>
 
             {/* Navigation Buttons: Hidden on Mobile */}
             <div className="hidden md:flex gap-3 mb-1">
-              <button className="Domestic-swiper-prev bg-[#2556B0] w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-all active:scale-90 shadow-lg">
+              <button className="Domestic-swiper-prev bg-[#2556B0] w-8 h-8 rounded-full
+               flex items-center justify-center text-white 
+                ">
                 <IoIosArrowBack size={20} />
               </button>
-              <button className="Domestic-swiper-next bg-[#2556B0] w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-all active:scale-90 shadow-lg">
+              <button className="Domestic-swiper-next bg-[#2556B0] w-8 h-8 rounded-full flex items-center 
+              justify-center text-white ">
                 <IoIosArrowForward size={20} />
               </button>
             </div>
@@ -38,11 +41,11 @@ export default function DomesticSection() {
         </div>
 
         {/* 2. Content Area: Grid-based for stability during zoom */}
-        <div className="flex flex-col lg:flex-row p-6 md:p-10 gap-6 lg:gap-8 items-stretch">
-          
-          {/* SIDE IMAGE: Uses aspect ratio instead of fixed height to survive zoom */}
+        <div className="flex flex-col lg:flex-row px-2 py-5 md:p-6 md:p-10 gap-6 lg:gap-8 items-stretch">
+
+          {/* Side Image */}
           <div className="hidden lg:block lg:w-1/4 relative min-h-[350px] rounded-2xl overflow-hidden">
-            <Image
+              <Image
               src="https://go4explore.com/assets/img/domestic/bg.webp"
               alt="Domestic Getaways"
               fill

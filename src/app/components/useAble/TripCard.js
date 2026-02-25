@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { BsTelephone } from "react-icons/bs";
-
+// import { BsTelephone } from "react-icons/bs";
+import { IoCallOutline } from "react-icons/io5";
 export default function TripCard({ trip }) {
   return (
 <div className="relative rounded-2xl overflow-hidden 
@@ -75,10 +75,10 @@ shadow-lg group">
 justify-between md:justify-end gap-1 md:gap-2 
                 whitespace-nowrap">
 
-  <BsTelephone
-    className="w-5 h-5 md:w-7 md:h-7 
+  <IoCallOutline size={20} 
+    className="w-5 h-5 md:w-10 md:h-10
                rounded-full border border-white 
-               p-1 md:p-2
+               p-1 md:p-2 bold
                transition-colors duration-300 
                group-hover:bg-white 
                group-hover:text-black"
@@ -87,7 +87,7 @@ justify-between md:justify-end gap-1 md:gap-2
   <button
     className="bg-white text-black 
                font-bold text-[8px] md:text-[10px]  
-               px-2 md:px-3
+               px-2 md:px-2
                h-6 md:h-8
                rounded
                whitespace-nowrap
