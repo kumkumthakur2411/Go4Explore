@@ -17,7 +17,7 @@ export default function WeOffer() {
 
                 {/* Section Title */}
                 <div className="text-center mb-[40px] md:mb-[60px]">
-                    <h4 className="text-[24px] md:text-[30px] font-bold text-[#200f0d]">
+                    <h4 className="text-[18px] md:text-[28px] font-bold text-[#200f0d]">
                         What We Offer
                     </h4>
                 </div>

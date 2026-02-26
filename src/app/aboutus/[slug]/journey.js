@@ -48,7 +48,7 @@ export default function Journey() {
 
                 {/* Title */}
                 <div className="flex justify-center mb-16">
-                    <h4 className="text-[24px] md:text-[30px] font-bold text-[#200f0d]">
+                    <h4 className="text-[18px] md:text-[28px] font-bold text-[#200f0d]">
                         Our Journey So Far
                     </h4>
                 </div>
