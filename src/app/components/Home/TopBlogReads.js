@@ -1,7 +1,8 @@
 
 'use client'
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { MdArrowOutward } from "react-icons/md";
+import { BsArrowUpRightCircle } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -31,19 +32,20 @@ const blogs = [
 export default function TopBlogReads() {
   return (
 <section className="w-[90%] mt-8">
-  <div className="max-w-7xl mx-auto md:px-4">
+  <div className="md:w-[1110px] mx-auto ">
 
     {/* Header */}
-    <div className="flex items-center justify-between mb-12">
-      <h2 className="text-2xl font-extrabold text-[#2755B0]">
-        Top Blog Reads
-      </h2>
+<div className="flex items-center justify-between mb-10 md:mb-18">
+  <h2 className="text-xl md:text-3xl font-extrabold text-[#2755B0] text-center md:text-left w-full md:w-auto">
+    Top Blog Reads
+  </h2>
 
       {/* Desktop View More */}
-      <button className="hidden sm:flex items-center gap-2 bg-blue-700 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-800 transition">
-        View More
-        <ArrowUpRight size={16} />
-      </button>
+        <button className="hidden md:flex items-center gap-2 bg-[#2755B0] text-white border border-[#2755B0] px-4 py-3 rounded-full text-sm font-bold hover:bg-white hover:text-blue-900 hover:border hover:border-blue-900 transition-all duration-300 
+         active:scale-95">
+          <BsArrowUpRightCircle size={16} />
+          View More
+        </button>
     </div>
 
     {/* ✅ Mobile Swiper */}
@@ -54,9 +56,9 @@ export default function TopBlogReads() {
       >
         {blogs.map((blog, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
               
-              <div className="relative w-full h-48">
+              <div className="relative w-full h-16">
                 <Image
                   src={blog.img}
                   alt={blog.title}
@@ -65,14 +67,19 @@ export default function TopBlogReads() {
                 />
               </div>
 
-              <div className="p-4">
-                <h3 className="font-semibold text-gray-900 text-sm line-clamp-2">
+              <div className="pt-2 pb-6  px-1 text-center">
+                <h3 className="font-semibold text-gray-900 text-xs line-clamp-2">
                   {blog.title}
                 </h3>
                 <p className="text-gray-500 text-xs mt-3">
                   {blog.date}
                 </p>
               </div>
+               <div className="absolute top-3 right-3 border-2 border-white 
+                              rounded-full w-4 h-4 flex items-center justify-center text-white z-10 
+                              group-hover:bg-white group-hover:text-blue-900 transition">
+                                <MdArrowOutward size={15} />
+                              </div>
 
             </div>
           </SwiperSlide>
@@ -81,9 +88,10 @@ export default function TopBlogReads() {
 
       {/* ✅ Mobile View More Button */}
       <div className="flex justify-center mt-6">
-        <button className="flex items-center gap-2 bg-blue-700 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-800 transition">
+        <button className="hidden md:flex items-center gap-2 bg-[#2755B0] 
+        text-white border border-[#2755B0] px-4 py-3 rounded-full text-sm font-bold hover:bg-white hover:text-blue-900 hover:border hover:border-blue-900 transition-all duration-300 shadow-md active:scale-95">
+          <BsArrowUpRightCircle size={16} />
           View More
-          <ArrowUpRight size={16} />
         </button>
       </div>
     </div>
@@ -93,7 +101,7 @@ export default function TopBlogReads() {
       {blogs.map((blog, index) => (
         <div
           key={index}
-          className="bg-white rounded-2xl shadow-md overflow-hidden group hover:shadow-lg transition"
+          className="relative bg-white rounded-2xl shadow-md overflow-hidden group hover:shadow-lg transition"
         >
           <div className="relative w-full h-48">
             <Image
@@ -104,7 +112,7 @@ export default function TopBlogReads() {
             />
           </div>
 
-          <div className="p-4">
+          <div className="p-4 mb-15">
             <h3 className="font-semibold text-gray-900 text-sm line-clamp-2">
               {blog.title}
             </h3>
@@ -112,7 +120,13 @@ export default function TopBlogReads() {
               {blog.date}
             </p>
           </div>
+             <div className="absolute top-3 right-3 border-2 border-white 
+                rounded-full w-8 h-8 flex items-center justify-center text-white z-10 
+                group-hover:bg-white group-hover:text-blue-900 transition">
+                  <MdArrowOutward size={20} />
+                </div> 
         </div>
+        
       ))}
     </div>
 

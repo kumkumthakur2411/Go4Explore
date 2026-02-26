@@ -65,7 +65,7 @@ export default function PlanTripSection() {
         <div
           key={index}
           className="flex items-start w-full md:w-[98%] gap-6 bg-white/95 backdrop-blur-md p-3
-          md:pl-8 md:pr-10 py-4 rounded-2xl shadow-xl hover:scale-[1.02]
+          md:pl-8 md:pr-10 py-4 rounded-2xl shadow-xl 
           transition-all duration-300"
         >
           <div className="relative w-12 h-12 md:w-15  md:h-15 

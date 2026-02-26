@@ -18,13 +18,13 @@ export default function BannerVideo({ videos }) {
   }, []);
 
   return (
-<section className="w-full py-10  px-4 md:px-10 bg-white">
-  <div className="max-w-7xl mx-auto">
+<section className="w-full py-10    bg-white">
+  <div className="md:w-[1110px] mx-auto">
 
     {/* VIDEO CONTAINER */}
     <div className="relative
       
-      rounded-[2.5rem] overflow-hidden border border-gray-100">
+      rounded-2xl overflow-hidden border border-gray-100">
 
       {isLoaded && (
         <Swiper
@@ -42,7 +42,7 @@ export default function BannerVideo({ videos }) {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
           }}
-          className="w-full h-full rounded-[2.5rem] overflow-hidden"
+          className="w-full h-full rounded-xl overflow-hidden"
         >
           {videos.map((videoSrc, index) => (
             <SwiperSlide key={index} className="w-full h-full">
@@ -61,27 +61,28 @@ export default function BannerVideo({ videos }) {
     </div>
 
     {/* BELOW VIDEO ROW */}
-    <div className="flex items-center justify-end mt-3">
+    <div className="flex items-center justify-center md:justify-end mt-3">
+
 
       {/* Pagination (mobile only) */}
-      <div className="custom-pagination md:hidden" />
+      <div className="custom-pagination md:hidden flex items-center justify-center " />
 
       {/* Navigation (desktop only) */}
       <div className="hidden lg:flex gap-3 ">
         <button
           ref={prevRef}
-          className="bg-[#2556B0] w-10 h-10 rounded-full
+          className="bg-[#2556B0] w-8 h-8 rounded-full
           flex items-center justify-center text-white
-          hover:bg-blue-700 transition"
+          "
         >
           <IoIosArrowBack />
         </button>
 
         <button
           ref={nextRef}
-          className="bg-[#2556B0] w-10 h-10 rounded-full
+          className="bg-[#2556B0] w-8 h-8 rounded-full
           flex items-center justify-center text-white
-          hover:bg-blue-700 transition"
+          "
         >
           <IoIosArrowForward />
         </button>

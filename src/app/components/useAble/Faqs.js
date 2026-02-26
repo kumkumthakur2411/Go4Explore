@@ -8,10 +8,10 @@ import {
 export function FaqsSection({ faqArray }) {
   return (
     // 1. Changed md:w-[90%] to max-w-5xl for better centering and zoom resilience
-    <section className="w-full max-w-7xl mx-auto px-4 py-5 ">
+    <section className="w-full md:w-[1110px] mx-auto px-2 md:px-0 py-5 ">
       
       {/* 2. Headline with responsive scaling and logical margin */}
-      <h2 className="text-xl md:text-3xl font-[800] text-[#2755B0] text-center mb-10 tracking-tight">
+      <h2 className="text-xl md:text-2xl font-[800] text-[#2755B0] text-center mb-10 tracking-tight">
         FAQs: Have Any Doubts?
       </h2>
 
@@ -26,11 +26,12 @@ export function FaqsSection({ faqArray }) {
             key={`faq-${index}`}
             value={`item-${index}`}
             // 4. Enhanced 'Card' look with better padding and border logic
-            className="border border-gray-200 rounded-2xl shadow-sm bg-white px-5 md:px-8 transition-all hover:border-[#2755B0]/30 hover:shadow-md overflow-hidden"
+            className="border border-gray-200 rounded-xl 
+             bg-white px-5  transition-all  shadow-md overflow-hidden"
           >
             {/* 5. Trigger with min-h to prevent layout shift during zoom */}
-            <AccordionTrigger className="py-5 md:py-6 font-bold text-sm 
-            md:text-lg text-left hover:no-underline text-gray-800 transition-colors group">
+            <AccordionTrigger className="py-4 font-semibold text-sm 
+            md:text-base text-left hover:no-underline text-gray-800 transition-colors group">
               <span className="">
                 {faq.question}
               </span>

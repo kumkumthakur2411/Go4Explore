@@ -39,18 +39,19 @@ function VideoSlide({ video, index, activeIndex, setActiveIndex }) {
   return (
     <div
       className="relative w-full
-      h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg"
+      h-[320px] md:h-[420px] rounded-2xl overflow-hidden "
     >
+      <div>
       <video
         ref={videoRef}
         src={video.src}
-        className="w-full h-full object-cover"
+        className="w-full h-full  object-contain "
         muted
         loop
         playsInline
         autoPlay
       />
-
+</div>
       <button
         onClick={toggleMute}
         className="absolute bottom-4 right-4
@@ -58,7 +59,7 @@ function VideoSlide({ video, index, activeIndex, setActiveIndex }) {
         text-white p-2 rounded-full
         hover:bg-black/80 transition"
       >
-        {isMuted ? <HiVolumeOff size={20} /> : <HiVolumeUp size={20} />}
+        {isMuted ? <HiVolumeOff size={15} /> : <HiVolumeUp size={15} />}
       </button>
     </div>
   );

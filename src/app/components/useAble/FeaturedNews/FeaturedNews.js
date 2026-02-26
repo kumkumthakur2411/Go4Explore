@@ -10,11 +10,11 @@ const FeaturedNewsSwiper = dynamic(
 
 export default function FeaturedNews() {
   return (
- <section className="w-full py-8 md:py-0 px-4 md:px-30 bg-white">
+ <section className="w-full py-2 md:py-0 px-0 md:px-4 md:px-30  bg-white">
       
       {/* Same Outer Container as Domestic */}
       <div className="max-w-7xl mx-auto 
-            bg-white shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] rounded-xl overflow-hidden border border-gray-100">
+            bg-white md:shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] rounded-xl overflow-hidden md:border md:border-gray-100">
          <div className="flex flex-col md:flex-row items-center  ">
           
           {/* Text Section: Removed fixed width to allow text to scale naturally on zoom */}

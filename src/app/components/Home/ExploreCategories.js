@@ -45,11 +45,11 @@ export default function ExploreCategories() {
         </div>
 
         {/* Right Cards Grid - Optimized scaling */}
-        <div className="w-full lg:w-[75%] grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+        <div className="w-full lg:w-[75%] grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
           {categories.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 py-4 md:py-6 px-2
+              className="bg-white rounded-2xl border border-gray-100 py-4 md:py-6 px-2
                          text-center 
                          cursor-pointer group"
             >
@@ -63,7 +63,7 @@ export default function ExploreCategories() {
                   />
                 </div>
               </div>
-              <p className="text-xs md:text-base font-medium text-zinc-800 ">
+              <p className="text-[9px] md:text-base font-medium text-zinc-800 ">
                 {item.title}
               </p>
             </div>

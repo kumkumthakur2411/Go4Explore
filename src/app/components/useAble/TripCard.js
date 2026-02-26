@@ -75,10 +75,10 @@ shadow-lg group">
 justify-between md:justify-end gap-1 md:gap-2 
                 whitespace-nowrap">
 
-  <IoCallOutline size={20} 
-    className="w-5 h-5 md:w-10 md:h-10
+  <IoCallOutline size={14} 
+    className="w-5 h-5 md:w-6 md:h-6
                rounded-full border border-white 
-               p-1 md:p-2 bold
+               p-1  bold
                transition-colors duration-300 
                group-hover:bg-white 
                group-hover:text-black"
@@ -88,7 +88,7 @@ justify-between md:justify-end gap-1 md:gap-2
     className="bg-white text-black 
                font-bold text-[8px] md:text-[10px]  
                px-2 md:px-2
-               h-6 md:h-8
+               h-6 
                rounded
                whitespace-nowrap
                hover:bg-[#2755B0]  

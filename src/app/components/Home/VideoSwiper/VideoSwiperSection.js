@@ -69,7 +69,7 @@ export default function VideoSwiperSection({ videos }) {
     //   </div>
     // </section>
 
-    <section className="w-full py-8 md:py-0 px-4 md:px-30 bg-white">
+    <section className="w-full py-8  px-4 md:px-30 bg-white">
       
       {/* Same Outer Container as Domestic */}
       <div className="max-w-7xl mx-auto 
@@ -90,10 +90,12 @@ export default function VideoSwiperSection({ videos }) {
 
             {/* Navigation Buttons: Hidden on Mobile */}
             <div className="hidden md:flex gap-3 mb-1">
-              <button className="custom-prev bg-[#2556B0] w-8 h-8 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-all active:scale-90 shadow-lg">
+              <button className="custom-prev bg-[#2556B0] w-8 h-8 rounded-full flex 
+              items-center justify-center text-white ">
                 <IoIosArrowBack size={20} />
               </button>
-              <button className="custom-next bg-[#2556B0] w-8 h-8 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-all active:scale-90 shadow-lg">
+              <button className="custom-next bg-[#2556B0] w-8 h-8 rounded-full 
+              flex items-center justify-center text-white ">
                 <IoIosArrowForward size={20} />
               </button>
             </div>

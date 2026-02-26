@@ -70,11 +70,11 @@ export default function NavBar() {
 
   return (
     <>
-<header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
+<header className="fixed top-0 left-0 w-full z-50 bg-white ">
 
   {/* ===== TOP NAV ===== */}
   <div className="h-23 md:h-[74px] ">
-    <div className="max-w-screen-2xl  mx-auto h-full  flex items-center justify-between px-5 
+    <div className="md:w-[1200px]  mx-auto h-full  flex items-center justify-between px-5 
     ">
 
       {/* Logo */}
@@ -157,19 +157,20 @@ alt="Go4Explore" width={45} height={45} priority />
   {/* ===== BOTTOM NAV (Desktop Only) ===== */}
 <div className="hidden md:block bg-[#2755B0] text-white">
   <div className="max-w-7xl mx-auto px-30">
-    <div className="flex items-center justify-between py-3 text-sm font-semibold">
+    <div className="flex items-center justify-between py-3 text-sm md:text-[14px] font-semibold">
 
       {bottomMenu.map((item, index) => (
         <div key={index} className="relative group">
 
           {/* Main Menu Item */}
           <Link href={item.href}>
-            <div className="flex items-center gap-2 cursor-pointer whitespace-nowrap hover:text-yellow-300 transition">
+            <div className="flex items-center gap-2 cursor-pointer
+             whitespace-nowrap hover:text-yellow-300 transition">
               <Image
                 src={item.icon}
                 alt={item.name}
-                width={20}
-                height={20}
+                width={14}
+                height={14}
               />
               {item.name}
             </div>

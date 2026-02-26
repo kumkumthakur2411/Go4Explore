@@ -8,20 +8,26 @@ export default function Hero() {
   const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef(null);
 
-  useEffect(() => {
-    const startVideo = () => {
-      setPlayVideo(true);
-      window.removeEventListener("click", startVideo);
-      window.removeEventListener("scroll", startVideo);
-    };
-    window.addEventListener("click", startVideo);
-    window.addEventListener("scroll", startVideo);
-    return () => {
-      window.removeEventListener("click", startVideo);
-      window.removeEventListener("scroll", startVideo);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const startVideo = () => {
+  //     setPlayVideo(true);
+  //     window.removeEventListener("click", startVideo);
+  //     window.removeEventListener("scroll", startVideo);
+  //   };
+  //   window.addEventListener("click", startVideo);
+  //   window.addEventListener("scroll", startVideo);
+  //   return () => {
+  //     window.removeEventListener("click", startVideo);
+  //     window.removeEventListener("scroll", startVideo);
+  //   };
+  // }, []);
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setPlayVideo(true);
+  }, 5000); // 5 seconds delay
 
+  return () => clearTimeout(timer);
+}, []);
 
   return (
     // 1. Outer wrapper: Full width, relative, handles the overall height
@@ -41,34 +47,40 @@ export default function Hero() {
 
       {/* 3. MAIN CONTENT CONTAINER: Capped at max-w-7xl and centered */}
       <div className="relative w-full max-w-screen-2xl mx-auto h-[700px] md:h-[97%] 
-         z-10 flex items-center justify-start md:justify-end md:items-end px-5 md:px-0">
+         z-10 flex items-center justify-start md:justify-center md:items-end px-5 md:px-0">
         
         {/* 4. THE BANNER BOX: The actual rounded container with video/image */}
-        <div className="relative bottom-0 left-0 w-full h-[100%] md:h-[75vh]  rounded-b-xl md:rounded-3xl
+        <div className="relative bottom-0 left-0 w-full md:w-[1200px] h-[100%] md:h-[75vh]  rounded-b-xl md:rounded-3xl
          overflow-hidden ">
           
-          {/* Fallback Banner Image */}
-          <Image
-            src="https://go4explore.com/assets/img/banner/home-v-banner.webp"
-            alt="banner"
-            fill
-            priority
-            className="object-cover"
-          />
+<Image
+  src="https://go4explore.com/assets/img/banner/home-v-banner.webp"
+  alt="banner"
+  fill
+  priority
+  className="object-cover"
+/>
 
-          {/* Video Layer */}
-          {playVideo && (
-            <video
-              ref={videoRef}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                videoReady ? "opacity-100" : "opacity-0"
-              }`}
-              autoPlay muted loop playsInline preload="auto"
-              onCanPlay={() => setVideoReady(true)}
-            >
-              <source src="https://d2qa7a8q0vuocm.cloudfront.net/assets/images/hero.mp4" type="video/mp4" />
-            </video>
-          )}
+{/* Video Layer */}
+{playVideo && (
+  <video
+    ref={videoRef}
+    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+      videoReady ? "opacity-100" : "opacity-0"
+    }`}
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    onCanPlay={() => setVideoReady(true)}
+  >
+    <source
+      src="https://d2qa7a8q0vuocm.cloudfront.net/assets/images/hero.mp4"
+      type="video/mp4"
+    />
+  </video>
+)}
           
           {/* Subtle Overlay for Text Legibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
@@ -97,7 +109,7 @@ export default function Hero() {
 
               {/* Search Bar Container */}
               <div className="flex w-full max-w-md md:max-w-xl 
-              items-center mx-6  rounded-full bg-white shadow-2xl
+              items-center mx-6  rounded-full bg-white 
                transform transition-transform ">
                 <input 
                   type="text"

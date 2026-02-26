@@ -27,11 +27,11 @@ export default function UpcomingTrips({ trips = [] }) {
   }
 
   return (
-    <section className="w-full max-w-7xl mx-auto py-10 px-4 md:px:0 overflow-hidden">
+    <section className=" md:w-[1110px] mx-auto py-10 px-4 md:px-0 mt-10 overflow-hidden">
       
       {/* HEADER (unchanged) */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-3">
-        <h2 className="text-xl md:text-3xl font-[800] text-[#2556B0] tracking-tight text-left">
+      <div className="flex flex-col md:flex-row justify-between  gap-4 mb-3">
+        <h2 className="text-xl md:text-3xl font-[800] text-[#2556B0] tracking-tight text-start">
           Upcoming Trips
         </h2>
 
@@ -76,63 +76,35 @@ export default function UpcomingTrips({ trips = [] }) {
 <div className="md:hidden -mx-4 px-4">
   <Swiper
     spaceBetween={16}
-    slidesPerView={2.2}   // show 2.2 cards
-    className="!overflow-visible"
-  >
-    {/* First Row */}
-    <div className="mb-4">
-      {trips.slice(0, 4).map((trip, index) => (
-        <SwiperSlide key={`row1-${index}`}>
-          <TripCard trip={trip} />
-        </SwiperSlide>
-      ))}
-    </div>
-
-    {/* Second Row */}
-    <div>
-      {trips.slice(4, 8).map((trip, index) => (
-        <SwiperSlide key={`row2-${index}`}>
-          <TripCard trip={trip} />
-        </SwiperSlide>
-      ))}
-    </div>
-  </Swiper>
-
-  {/* Mobile View More */}
-
-
-{/* ================= MOBILE SWIPER ================= */}
-<div className="md:hidden -mx-4 px-4">
-  <Swiper
-    modules={[Grid]}
     slidesPerView={2.2}
-    spaceBetween={16}
-    grid={{
-      rows: 2,
-      fill: "row",
-    }}
+    loop={true}
     className="!overflow-visible"
   >
-    {trips.slice(0, 8).map((trip, index) => (
-      <SwiperSlide key={index}>
-        <TripCard trip={trip} />
-      </SwiperSlide>
-    ))}
+    {Array.from({ length: Math.ceil(trips.length / 2) }).map((_, index) => {
+      const first = trips[index * 2];
+      const second = trips[index * 2 + 1];
+
+      return (
+        <SwiperSlide key={index}>
+          <div className="flex flex-col gap-4">
+            {first && <TripCard trip={first} />}
+            {second && <TripCard trip={second} />}
+          </div>
+        </SwiperSlide>
+      );
+    })}
   </Swiper>
 
   <div className="flex justify-center mt-6">
     <button className="flex items-center gap-2
       bg-[#2755B0] text-white border border-[#2755B0]
       px-4 py-3 rounded-full text-sm font-bold
-      hover:bg-white hover:text-blue-900 hover:border 
-      hover:border-blue-900
-      transition-all duration-300
-      shadow-md active:scale-95">
+      hover:bg-white hover:text-blue-900 hover:border-blue-900
+      transition-all duration-300 shadow-md active:scale-95">
       <BsArrowUpRightCircle size={16} />
       View More
     </button>
   </div>
-</div>
 </div>
 
     </section>

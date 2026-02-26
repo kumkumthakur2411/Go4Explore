@@ -21,9 +21,12 @@ const row2 = [
 export default function BrandsMarquee() {
   return (
     // Changed w-[90%] to max-w for better zoom stability
-    <section className="w-full max-w-7xl mx-auto bg-white overflow-hidden pt-10 md:px-30 px-4">
+     <section className="w-full py-8 md:py-0 px-4 md:px-30 bg-white md:mt-5">
       
-      <h2 className="w-full text-center py-8 text-xl md:text-3xl font-black text-[#2755B0] tracking-tight">
+      {/* Same Outer Container as Domestic */}
+      <div className="max-w-7xl mx-auto 
+       overflow-hidden ">
+       <h2 className="w-full text-center py-8 text-xl md:text-3xl font-[800] text-[#2755B0] tracking-tight">
         Recognitions & Collaborations
       </h2>
 
@@ -36,7 +39,7 @@ export default function BrandsMarquee() {
             {[...row1, ...row1, ...row1].map((logo, index) => (
               <div
                 key={index}
-                className="relative w-[80px] md:w-[150px] aspect-[3/2] flex-shrink-0 
+                className="relative w-[50px] md:w-[120px] aspect-[3/2] flex-shrink-0 
                 transition-transform duration-300 hover:scale-110"
               >
                 <Image
@@ -59,7 +62,7 @@ export default function BrandsMarquee() {
             {[...row2, ...row2, ...row2].map((logo, index) => (
               <div
                 key={index}
-                className="relative w-[80px] md:w-[150px] aspect-[3/2] flex-shrink-0 transition-transform duration-300 hover:scale-110"
+                className="relative w-[60px] md:w-[100px] aspect-[3/2] flex-shrink-0 transition-transform duration-300 hover:scale-110"
               >
                 <Image
                   src={logo}
@@ -72,6 +75,7 @@ export default function BrandsMarquee() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

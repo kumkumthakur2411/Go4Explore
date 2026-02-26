@@ -53,21 +53,24 @@ const quick_links = [
 
 export default function Footer() {
   return (
-<footer className="w-full bg-slate-50 py-12 px-6 mt-10">
-  <div className="max-w-7xl mx-auto flex flex-col items-center px-5">
+<footer className="w-full bg-slate-50 py-12 px-6 mt-15">
+  <div className="md:w-[1140px] mx-auto flex flex-col items-center px-5">
     
     {/* ================= TOP GRID LINKS ================= */}
     <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
       
       {/* Company */}
       <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Company</h3>
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-2xl mb-5  tracking-wide">Company</h3>
         <ul className="space-y-1">
           {Company_items.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm  text-gray-700 font-medium transition-colors">
-                {item.text}
-              </Link>
+              <Link
+  href={item.href}
+  className="text-sm text-gray-700 font-normal transition-all duration-300 hover:text-blue-600 hover:translate-x-2 inline-block"
+>
+  {item.text}
+</Link>
             </li>
           ))}
         </ul>
@@ -75,71 +78,92 @@ export default function Footer() {
 
       {/* Trips Column */}
       <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Weekend Trips</h3>
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 tracking-wide">Weekend Trips</h3>
         <ul className="space-y-1 mb-8">
           {weekend_trips.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-700 font-medium 
-               transition-colors">{item.text}</Link>
+                            <Link
+  href={item.href}
+  className="text-sm text-gray-700 font-normal transition-all duration-300 hover:text-blue-600 hover:translate-x-2 inline-block"
+>
+  {item.text}
+</Link>
             </li>
           ))}
         </ul>
-        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Backpacking</h3>
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4  tracking-wide">Backpacking</h3>
         <ul className="space-y-1">
           {backpacking_trips.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-700 font-medium ">{item.text}</Link>
-            </li>
+                           <Link
+  href={item.href}
+  className="text-sm text-gray-700 font-normal transition-all duration-300 hover:text-blue-600 hover:translate-x-2 inline-block"
+>
+  {item.text}
+</Link>            </li>
           ))}
         </ul>
       </div>
 
       {/* International & Domestic */}
       <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">International</h3>
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4  tracking-wide">International</h3>
         <ul className="space-y-1 mb-8">
           {international_trip.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-700 font-medium ">{item.text}</Link>
-            </li>
+                            <Link
+  href={item.href}
+  className="text-sm text-gray-700 font-normal transition-all duration-300 hover:text-blue-600 hover:translate-x-2 inline-block"
+>
+  {item.text}
+</Link>            </li>
           ))}
         </ul>
-        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Domestic</h3>
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4  tracking-wide">Domestic</h3>
         <ul className="space-y-1">
           {domestic_trip.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-700 font-medium ">{item.text}</Link>
-            </li>
+                           <Link
+  href={item.href}
+  className="text-sm text-gray-700 font-normal transition-all duration-300 hover:text-blue-600 hover:translate-x-2 inline-block"
+>
+  {item.text}
+</Link>  </li>
           ))}
         </ul>
       </div>
 
       {/* Quick Links & Contact */}
       <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Quick Links</h3>
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4  tracking-wide">Quick Links</h3>
         <ul className="space-y-1 mb-8">
           {quick_links.map((item, index) => (
             <li key={index}>
-              <Link href={item.href} className="text-sm text-gray-700 font-medium ">{item.text}</Link>
+              <Link
+  href={item.href}
+  className="text-sm text-gray-700 font-normal transition-all duration-300 hover:text-blue-600 hover:translate-x-2 inline-block"
+>
+  {item.text}
+</Link>
             </li>
           ))}
         </ul>
-        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4 uppercase tracking-wide">Our Presence</h3>
+        <h3 className="text-[#2755B0] font-semibold text-base md:text-xl mb-4  tracking-wide">Our Presence</h3>
         <div className="space-y-1">
-          <p className="text-sm text-gray-600 leading-relaxed">
+          <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
             <span className="font-bold text-gray-900">Registered:</span> Jaipur, Rajasthan - 302017
           </p>
-          <p className="text-sm text-gray-600 leading-relaxed">
+          <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
             <span className="font-bold text-gray-900">Corporate:</span> Sector 63, Noida (UP) - 201301
           </p>
-          <p className="text-sm font-bold text-[#2755B0]">+91-9266710039</p>
-          <p className="text-sm text-gray-600">contact@go4explore.com</p>
+          <p className="text-xs md:text-sm font-bold text-[#2755B0]">+91-9266710039</p>
+          <p className="text-xs md:text-sm text-gray-600">contact@go4explore.com</p>
         </div>
       </div>
     </div>
 
     {/* ================= BRAND + PAYMENTS ================= */}
-    <div className="w-full flex flex-col md:flex-row rounded-3xl bg-white shadow-xl border border-gray-100 p-6 md:p-8 justify-between items-center gap-8">
+    <div className="w-full flex flex-col md:flex-row rounded-3xl bg-white  border border-gray-100 p-6 md:p-8 justify-between items-center gap-8">
       
       {/* 1. Logo */}
       <div className="flex-shrink-0">
@@ -183,7 +207,7 @@ export default function Footer() {
       target="_blank" 
       rel="noopener noreferrer"
       className="block  bg-gray-800 text-white 
-      rounded-full hover:scale-110 hover:-translate-y-1 transition-all shadow-md"
+      rounded-full "
     >
       <Image 
         src={social.icon} 
