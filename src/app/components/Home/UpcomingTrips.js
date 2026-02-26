@@ -27,7 +27,7 @@ export default function UpcomingTrips({ trips = [] }) {
   }
 
   return (
-    <section className=" md:w-[1110px] mx-auto py-10 px-4 md:px-0 mt-10 overflow-hidden">
+    <section className=" max-w-7xl mx-auto py-10 px-4 md:px-0 mt-10 overflow-hidden">
       
       {/* HEADER (unchanged) */}
       <div className="flex flex-col md:flex-row justify-between  gap-4 mb-3">

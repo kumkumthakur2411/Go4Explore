@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function DomesticSection() {
   return (
-    <section className="w-full py-0 px-4 md:px-30 bg-white md:mt-10">
+    <section className="w-full py-0 px-4 md:px-15 lg:px-30 bg-white md:mt-10">
       
       {/* Same Outer Container as Domestic */}
       <div className="max-w-7xl mx-auto 

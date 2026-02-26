@@ -54,7 +54,7 @@ const quick_links = [
 export default function Footer() {
   return (
 <footer className="w-full bg-slate-50 py-12 px-6 mt-15">
-  <div className="md:w-[1140px] mx-auto flex flex-col items-center px-5">
+  <div className="max-w-7xl mx-auto flex flex-col items-center px-5">
     
     {/* ================= TOP GRID LINKS ================= */}
     <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">

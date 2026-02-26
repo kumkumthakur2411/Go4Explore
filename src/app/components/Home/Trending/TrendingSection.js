@@ -6,7 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 export default function TrendingSection() {
   return (
-    <section className="w-full flex justify-center py-2 px-4 md:px-30"> 
+    <section className="w-full flex justify-center py-2 px-4 md:px-15 lg:px-30"> 
       {/* 1. Added mx-auto and max-w-7xl to fix zoom-out issues 
          2. Removed fixed vh height to prevent content cutoff on zoom-in
       */}

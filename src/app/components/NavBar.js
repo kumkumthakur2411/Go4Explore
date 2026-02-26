@@ -74,11 +74,11 @@ export default function NavBar() {
 
   {/* ===== TOP NAV ===== */}
   <div className="h-23 md:h-[74px] ">
-    <div className="md:w-[1200px]  mx-auto h-full  flex items-center justify-between px-5 
+    <div className="max-w-screen-2xl  mx-auto h-full  flex items-center justify-between px-5 
     ">
 
       {/* Logo */}
-      <div className="hidden md:block flex items-center gap-6">
+      <div className="hidden lg::block flex items-center gap-6">
         <Link href="/">
           <Image
             src="https://go4explore.com/assets/img/logo.webp"
@@ -132,7 +132,7 @@ export default function NavBar() {
       </div>
       </nav>
       {/* Mobile Controls */}
-      <div className="flex w-full  md:hidden items-center justify-between">
+      <div className="flex w-full  lg:hidden items-center justify-between">
 
   {/* Mobile Logo */} 
   <Link href="/">
@@ -155,7 +155,7 @@ alt="Go4Explore" width={45} height={45} priority />
   </div>
 
   {/* ===== BOTTOM NAV (Desktop Only) ===== */}
-<div className="hidden md:block bg-[#2755B0] text-white">
+<div className="hidden lg:block bg-[#2755B0] text-white">
   <div className="max-w-7xl mx-auto px-30">
     <div className="flex items-center justify-between py-3 text-sm md:text-[14px] font-semibold">
 
