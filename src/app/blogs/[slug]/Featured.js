@@ -7,7 +7,7 @@ const Featured = () => {
             title: "Spiti Valley Circuit Trip Explained for First Timers",
             date: "Feb 20, 2026",
             image: "https://d2qa7a8q0vuocm.cloudfront.net/images/1771584900614-1771584900437_5efmsr_blog-cover.webp",
-            href: "/blog/spiti-valley-circuit-trip-for-first-timers",
+            href: "/blogs/spiti-valley-circuit-trip-for-first-timers",
             type: "main"
         },
         {
@@ -15,7 +15,7 @@ const Featured = () => {
             title: "Spiti Valley Trip from Delhi Complete Travel Guide",
             date: "Feb 19, 2026",
             image: "https://d2qa7a8q0vuocm.cloudfront.net/images/1771486994376-1771486994227_0qc0zt_blog-cover.webp",
-            href: "/blog/spiti-valley-trip-from-delhi-guide",
+            href: "/blogs/spiti-valley-trip-from-delhi-guide",
             type: "side"
         },
         {
@@ -23,7 +23,7 @@ const Featured = () => {
             title: "Best Time to Visit Spiti Valley for Road Trip",
             date: "Feb 18, 2026",
             image: "https://d2qa7a8q0vuocm.cloudfront.net/images/1771393181461-1771393181098_iax8i9_blog-cover.webp",
-            href: "/blog/best-time-to-visit-spiti-valley-road-trip",
+            href: "/blogs/best-time-to-visit-spiti-valley-road-trip",
             type: "side"
         },
         {
@@ -31,7 +31,7 @@ const Featured = () => {
             title: "Spiti Valley Trip Planning Guide for Beginners",
             date: "Feb 17, 2026",
             image: "https://d2qa7a8q0vuocm.cloudfront.net/images/1771311489579-1771311488983_i1mwq9_blog-cover.webp",
-            href: "/blog/spiti-valley-trip-planning-guide-for-beginners",
+            href: "/blogs/spiti-valley-trip-planning-guide-for-beginners",
             type: "bottom"
         },
         {
@@ -39,7 +39,7 @@ const Featured = () => {
             title: "Leh Ladakh Bike Trip Guide for Beginners",
             date: "Feb 16, 2026",
             image: "https://d2qa7a8q0vuocm.cloudfront.net/images/1771223702926-1771223702572_kc0bv5_blog-cover.webp",
-            href: "/blog/leh-ladakh-bike-trip-for-beginners",
+            href: "/blogs/leh-ladakh-bike-trip-for-beginners",
             type: "bottom"
         },
         {
@@ -47,13 +47,13 @@ const Featured = () => {
             title: "Srinagar to Leh Road Trip Which Route Is Better",
             date: "Feb 10, 2026",
             image: "https://d2qa7a8q0vuocm.cloudfront.net/images/1770726255660-1770726255324_qapur5_Srinagar-to-Leh-Road-Trip.webp",
-            href: "/blog/srinagar-leh-manali-road-trip-route",
+            href: "/blogs/srinagar-leh-manali-road-trip-route",
             type: "bottom"
         }
     ];
 
     return (
-        <section className="pb-6 md:py-4 md:pb-20 bg-white font-['Poppins']">
+        <section className="pb-6 md:py-4 md:pb-20 font-['Poppins']">
             <div className="container mx-auto px-4 max-w-[1320px]">
                 {/* Header Section */}
                 <div className="mb-0 md:mb-5">

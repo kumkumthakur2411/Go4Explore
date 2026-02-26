@@ -8,7 +8,7 @@ export default function Captains() {
             style={{ backgroundImage: "url('https://go4explore.com/assets/img/about/captionbg.webp')" }}
         >
             <div className="max-w-[1320px] mx-auto px-4 w-full">
-                <div className="flex flex-wrap items-center py-10 md:py-0">
+                <div className="flex flex-wrap items-center pt-10 pb-0 md:py-0">
 
                     {/* Column 1: Description Text */}
                     <div className="w-full lg:w-1/3 order-2 lg:order-1 text-center lg:text-left mb-6 lg:mb-0 px-4">
@@ -18,12 +18,12 @@ export default function Captains() {
                     </div>
 
                     {/* Column 2: Captain Image */}
-                    <div className="w-full lg:w-1/3 order-3 lg:order-2 flex justify-center items-end relative h-[300px] md:h-[450px]">
+                    <div className="w-full lg:w-1/3 order-3 lg:order-2 flex justify-center items-end relative h-[280px] lg:h-[450px] md:h-[450px]">
                         <div className="absolute bottom-0 w-full flex justify-center">
                             <img
                                 src="https://go4explore.com/assets/img/about/trip-captain.png"
                                 alt="Trip Captain"
-                                className="w-auto h-[270px] md:h-[450px] object-contain"
+                                className="w-auto h-[280px] lg:h-[450px] md:h-[450px] object-contain"
                             />
                         </div>
                     </div>
@@ -36,7 +36,7 @@ export default function Captains() {
                                 {/* Row 1: 50+ on-ground & */}
                                 <div className="flex items-baseline gap-2">
                                     <span className="text-[35px] md:text-[45px] font-bold text-[#fff500] leading-[1] md:leading-[55px]">50+</span>
-                                    <span className="text-[20px] md:text-[27px] font-semibold text-white leading-[1] md:leading-[37px]">on-ground &</span>
+                                    <span className="text-[20px] md:text-[27px] font-semibold text-white leading-[2] md:leading-[37px]">on-ground &</span>
                                 </div>
 
                                 {/* Row 2: coolest Trip Captains */}

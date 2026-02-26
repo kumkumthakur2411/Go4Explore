@@ -2,9 +2,8 @@ import Featured from "./[slug]/Featured";
 
 export default function BlogsPage() {
     return (
-        <div>
+        <div className="container mx-auto px-4 max-w-[1320px]">
             <Featured />
-            {/* You can add more sections here like category filters or all blogs list */}
         </div>
     );
 }
