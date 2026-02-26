@@ -10,10 +10,10 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const topMenu = [
   { name: "About Us", href: "/aboutus" },
-  { name: "Blogs", href: "#" },
-  { name: "Careers", href: "#" },
-  { name: "Payments", href: "#" },
-  { name: "Contact Us", href: "#" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Careers", href: "/careers" },
+  { name: "Payments", href: "/payments" },
+  { name: "Contact Us", href: "/contactus" },
 ];
 const bottomMenu = [
   {
@@ -82,14 +82,12 @@ export default function NavBar() {
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-white ">
 
-<<<<<<< HEAD
         {/* ===== TOP NAV ===== */}
-        <div className="h-23 md:h-[74px] ">
-          <div className="md:w-[1200px]  mx-auto h-full  flex items-center justify-between px-5 
-    ">
+        <div className="h-[74px]">
+          <div className="max-w-[1200px] mx-auto h-full flex items-center justify-between px-5">
 
             {/* Logo */}
-            <div className="hidden md:block flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-6">
               <Link href="/">
                 <Image
                   src="https://go4explore.com/assets/img/logo.webp"
@@ -99,24 +97,6 @@ export default function NavBar() {
                   priority
                 />
               </Link>
-=======
-  {/* ===== TOP NAV ===== */}
-  <div className="h-23 md:h-[74px] ">
-    <div className="max-w-screen-2xl  mx-auto h-full  flex items-center justify-between px-5 
-    ">
-
-      {/* Logo */}
-      <div className="hidden lg::block flex items-center gap-6">
-        <Link href="/">
-          <Image
-            src="https://go4explore.com/assets/img/logo.webp"
-            alt="Go4Explore"
-            width={150}
-            height={50}
-            priority
-          />
-        </Link>
->>>>>>> c2edefd07cda21bfdcfc74ed938dae4e1b834aa4
 
             </div>
 
@@ -155,14 +135,13 @@ export default function NavBar() {
 
                 <div className="w-[2px] h-7 bg-gray-700 "></div>
 
-<<<<<<< HEAD
                 <div className="w-9 h-9 flex items-center justify-center rounded-full bg-[#2755B0] text-white cursor-pointer hover:bg-blue-800 transition">
                   <IoPersonOutline size={20} />
                 </div>
               </div>
             </nav>
             {/* Mobile Controls */}
-            <div className="flex w-full  md:hidden items-center justify-between">
+            <div className="flex w-full md:hidden items-center justify-between">
 
               {/* Mobile Logo */}
               <Link href="/">
@@ -179,55 +158,6 @@ export default function NavBar() {
               <button onClick={() => setIsOpen(true)} className="text-gray-800">
                 <HiOutlineMenuAlt3 size={28} />
               </button>
-=======
-        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-[#2755B0] text-white cursor-pointer hover:bg-blue-800 transition">
-          <IoPersonOutline size={20} />
-        </div>
-      </div>
-      </nav>
-      {/* Mobile Controls */}
-      <div className="flex w-full  lg:hidden items-center justify-between">
-
-  {/* Mobile Logo */} 
-  <Link href="/">
-   <Image src="https://go4explore.com/assets/img/footer-logo.webp" 
-alt="Go4Explore" width={45} height={45} priority /> 
-</Link> 
-{/* Mobile WhatsApp Button (Icon + Number) */} 
-<a href="tel:+919266710039"
- className="flex items-center gap-1 border border-[#2755B0] px-3 py-1.5 rounded-full text-[#2755B0]"> 
-  <RiWhatsappLine size={18} /> 
-  <span className="text-xs font-semibold">+91 9266710039</span>
-   </a>
-   {/* Mobile Menu Button */}
-    <button onClick={() => setIsOpen(true)} className="text-gray-800"> 
-      <HiOutlineMenuAlt3 size={28} /> 
-      </button>
-      </div>
-
-    </div>
-  </div>
-
-  {/* ===== BOTTOM NAV (Desktop Only) ===== */}
-<div className="hidden lg:block bg-[#2755B0] text-white">
-  <div className="max-w-7xl mx-auto px-30">
-    <div className="flex items-center justify-between py-3 text-sm md:text-[14px] font-semibold">
-
-      {bottomMenu.map((item, index) => (
-        <div key={index} className="relative group">
-
-          {/* Main Menu Item */}
-          <Link href={item.href}>
-            <div className="flex items-center gap-2 cursor-pointer
-             whitespace-nowrap hover:text-yellow-300 transition">
-              <Image
-                src={item.icon}
-                alt={item.name}
-                width={14}
-                height={14}
-              />
-              {item.name}
->>>>>>> c2edefd07cda21bfdcfc74ed938dae4e1b834aa4
             </div>
 
           </div>
@@ -235,11 +165,11 @@ alt="Go4Explore" width={45} height={45} priority />
 
         {/* ===== BOTTOM NAV (Desktop Only) ===== */}
         <div className="hidden md:block bg-[#2755B0] text-white">
-          <div className="max-w-7xl mx-auto px-30">
-            <div className="flex items-center justify-between py-3 text-sm md:text-[14px] font-semibold">
+          <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
+            <div className="flex items-center justify-between py-3 text-sm md:text-[14px] font-semibold min-w-max md:min-w-0 gap-4">
 
               {bottomMenu.map((item, index) => (
-                <div key={index} className="relative group">
+                <div key={index} className="relative group py-2">
 
                   {/* Main Menu Item */}
                   <Link href={item.href}>
@@ -258,20 +188,19 @@ alt="Go4Explore" width={45} height={45} priority />
                   {/* Dropdown */}
                   {item.submenu && (
                     <div className="
-              absolute left-0 -top-[px] mt-1
+              absolute left-0 top-[100%]
               bg-white text-gray-800
-              rounded-xl shadow-xl
-              min-w-[200px]
-              opacity-0 invisible
-              group-hover:opacity-100 group-hover:visible
-              transition-all duration-300
-              z-99
+              rounded-xl shadow-2xl
+              min-w-[220px]
+              hidden group-hover:block
+              z-[999]
+              border border-gray-100
             ">
-                      <div className="py-3">
+                      <div className="py-2">
                         {item.submenu.map((subItem, subIndex) => (
                           <Link key={subIndex} href={subItem.href}>
-                            <div className="px-5 py-3 hover:bg-gray-100 
-                     transition cursor-pointer text-base font-medium ">
+                            <div className="px-5 py-3 hover:bg-blue-50 hover:text-[#2755B0]
+                     transition cursor-pointer text-sm font-semibold border-b border-gray-50 last:border-0">
                               {subItem.name}
                             </div>
                           </Link>

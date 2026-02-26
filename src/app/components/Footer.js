@@ -53,33 +53,8 @@ const quick_links = [
 
 export default function Footer() {
   return (
-<<<<<<< HEAD
     <footer className="w-full bg-slate-50 py-12 px-6 mt-15">
       <div className="md:w-[1140px] mx-auto flex flex-col items-center px-5">
-=======
-<footer className="w-full bg-slate-50 py-12 px-6 mt-15">
-  <div className="max-w-7xl mx-auto flex flex-col items-center px-5">
-    
-    {/* ================= TOP GRID LINKS ================= */}
-    <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
-      
-      {/* Company */}
-      <div className="flex flex-col">
-        <h3 className="text-[#2755B0] font-semibold text-base md:text-2xl mb-5  tracking-wide">Company</h3>
-        <ul className="space-y-1">
-          {Company_items.map((item, index) => (
-            <li key={index}>
-              <Link
-  href={item.href}
-  className="text-sm text-gray-700 font-normal transition-all duration-300 hover:text-blue-600 hover:translate-x-2 inline-block"
->
-  {item.text}
-</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
->>>>>>> c2edefd07cda21bfdcfc74ed938dae4e1b834aa4
 
         {/* ================= TOP GRID LINKS ================= */}
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
