@@ -1,8 +1,8 @@
 
-import { Hero_Image } from "./Hero_Image";
-import Hand_Pick_by_Expert from "./Hand_Pick_by_Expert";
+import {HeroImage}  from "./HeroImage";
+import HandPickByExpert from "./HandPickByExpert";
 import LeadForm from "./LeadForm";
-import Package_Swiper_div from "./Package_swiper_div";
+import PackageSwiperDiv from "./PackageSwiperDiv";
 
 const handpickedData = [
   {
@@ -58,13 +58,13 @@ export default async function Home() {
     return (
     <>
       {/* Normal Sections with Padding */}
-      <Hero_Image  />
+      <HeroImage/>
       <div className="w-full   flex flex-col gap-10 items-start">
         {/* <Hand_Pick_by_Expert handpicked={landingData.handpickedData}/> */}
         {/* <Hand_Pick_by_Expert handpicked={handpickedData} /> */}
-        <Hand_Pick_by_Expert handpicked={handpickedData} />
+        <HandPickByExpert handpicked={handpickedData} />
         <LeadForm/>
-        <Package_Swiper_div/>        
+        <PackageSwiperDiv/>        
       </div>
       
     </>

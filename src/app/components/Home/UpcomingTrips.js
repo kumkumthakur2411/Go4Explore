@@ -27,7 +27,7 @@ export default function UpcomingTrips({ trips = [] }) {
   }
 
   return (
-    <section className=" max-w-7xl mx-auto py-10 px-4 md:px-0 mt-10 overflow-hidden">
+    <section className=" max-w-7xl mx-auto py-10 px-4 md:px-10 lg:px-0 mt-10 overflow-hidden">
       
       {/* HEADER (unchanged) */}
       <div className="flex flex-col md:flex-row justify-between  gap-4 mb-3">
@@ -63,7 +63,7 @@ export default function UpcomingTrips({ trips = [] }) {
 
       {/* ================= DESKTOP ================= */}
       {/* ✅ FORCE 4 columns → auto creates 2 rows for 8 cards */}
-      <div className="hidden md:grid grid-cols-4 gap-6">
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4  gap-6">
         {visibleTrips.map((trip, index) => (
           <div key={index}>
             <TripCard trip={trip} />

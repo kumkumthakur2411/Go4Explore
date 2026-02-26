@@ -39,7 +39,7 @@ function VideoSlide({ video, index, activeIndex, setActiveIndex }) {
   return (
     <div
       className="relative w-full
-      h-[320px] md:h-[420px] rounded-2xl overflow-hidden "
+      h-[350px] lg:h-[420px] rounded-2xl overflow-hidden "
     >
       <div>
       <video
@@ -81,7 +81,8 @@ export default function VideoSwiper({ videos = [], prevEl, nextEl }) {
       }}
       breakpoints={{
         0: { slidesPerView: 1.5 ,spaceBetween: 10},
-        768: { slidesPerView: 3, spaceBetween: 10 },
+        480: { slidesPerView: 2, spaceBetween: 10 },
+        1080: { slidesPerView: 3, spaceBetween: 10 },
       }}
       className="w-full"
     >

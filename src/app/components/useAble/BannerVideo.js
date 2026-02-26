@@ -18,7 +18,7 @@ export default function BannerVideo({ videos }) {
   }, []);
 
   return (
-<section className="w-full py-10    bg-white">
+<section className="w-full py-10  md:px-10 lg:px-0 bg-white">
   <div className="max-w-7xl mx-auto">
 
     {/* VIDEO CONTAINER */}
@@ -68,7 +68,7 @@ export default function BannerVideo({ videos }) {
       <div className="custom-pagination md:hidden flex items-center justify-center " />
 
       {/* Navigation (desktop only) */}
-      <div className="hidden lg:flex gap-3 ">
+      <div className="hidden md:flex gap-3 ">
         <button
           ref={prevRef}
           className="bg-[#2556B0] w-8 h-8 rounded-full

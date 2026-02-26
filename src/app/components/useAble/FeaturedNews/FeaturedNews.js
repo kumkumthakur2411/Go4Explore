@@ -10,7 +10,7 @@ const FeaturedNewsSwiper = dynamic(
 
 export default function FeaturedNews() {
   return (
- <section className="w-full py-2 md:py-0 px-0 md:px-4 md:px-30  bg-white">
+ <section className="w-full py-2 md:py-0 px-0 md:px-4 md:px-10 lg:px-30  bg-white">
       
       {/* Same Outer Container as Domestic */}
       <div className="max-w-7xl mx-auto 

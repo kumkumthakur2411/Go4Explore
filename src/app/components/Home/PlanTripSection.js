@@ -42,10 +42,10 @@ export default function PlanTripSection() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-<div className="grid lg:grid-cols-2 gap-12 items-center">
+<div className="grid md:grid-cols-2 gap-12 items-center">
 
   {/* LEFT IMAGE */}
-  <div className="relative w-full h-[500px] lg:h-[730px] order-2 lg:order-1">
+  <div className="relative w-full h-[500px] lg:h-[730px] order-2 md:order-1">
     <Image
       src="https://go4explore.com/assets/img/plan-trip.webp"
       alt="Planning Trip"
@@ -55,7 +55,7 @@ export default function PlanTripSection() {
   </div>
 
   {/* RIGHT CONTENT */}
-  <div className="py-10 md:space-y-15 md:mt-20 order-1 lg:order-2">
+  <div className="py-10 md:space-y-15 md:mt-20 order-1 md:order-2">
 <h2 className="text-xl   md:text-2xl lg:text-3xl font-extrabold text-white text-center lg:text-left">
   Planning Stress-Free Trips!
 </h2>

@@ -4,7 +4,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function InternationalSection() {
   return (
-    <section className="w-full py-8 md:py-0 px-4 md:px-30 bg-white md:mt-10">
+    <section className="w-full py-8 md:py-0 px-4 md:px-10 lg:px-30 bg-white md:mt-10">
       
       {/* Same Outer Container as Domestic */}
       <div className="max-w-7xl mx-auto 
@@ -41,10 +41,10 @@ export default function InternationalSection() {
         </div>
 
         {/* Content Area (Same Structure as Domestic) */}
-        <div className="flex flex-col lg:flex-row px-2 py-5 md:p-6 md:p-10 gap-6 lg:gap-8 items-stretch">
+        <div className="flex flex-col md:flex-row px-2 py-5 md:p-5  lg:p-10 md:gap-3 lg:gap-6 lg:gap-8 items-stretch">
 
           {/* Side Image */}
-          <div className="hidden lg:block lg:w-1/4 relative min-h-[350px] rounded-2xl overflow-hidden">
+          <div className="hidden md:block md:w-1/4 relative min-h-[350px] rounded-2xl overflow-hidden">
             <Image
               src="https://go4explore.com/assets/img/international/bg.webp"
               alt="International Getaways"

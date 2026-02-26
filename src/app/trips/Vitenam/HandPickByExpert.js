@@ -4,7 +4,7 @@ import TripCard from "@/app/components/useable/TripCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-export default function Hand_Pick_by_Expert({ handpicked = [] }) {
+export default function HandPickByExpert({ handpicked = [] }) {
   if (!handpicked.length) return null;
 
   return (

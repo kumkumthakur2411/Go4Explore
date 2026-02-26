@@ -59,7 +59,7 @@ export function AboutUs() {
 
   return (
     // Changed to max-width and added responsive padding for zoom stability
-    <section className="w-full max-w-7xl mx-auto px-4 md:px-0 pt-5">
+    <section className="w-full max-w-7xl mx-auto px-4 md:px-10 lg:px-0 pt-5">
       <Card className="w-full bg-white shadow-[0_2px_8px_0_rgba(99,99,99,0.2)]
        rounded-xl border-none bg-white overflow-hidden pb-1">
         

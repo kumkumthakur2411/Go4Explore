@@ -29,12 +29,12 @@ export default function ExploreCategories() {
   ];
 
   return (
-    <section className="w-full py-2 px-14 md:px-30  mt-6 bg-white">
+    <section className="w-full py-2 px-14 md:px-15 lg:px-30  mt-6 bg-white">
       {/* Container capped at 1280px (max-w-7xl) for zoom stability */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-center md:items-start">
         
         {/* Left Content - Takes up 25% on desktop */}
-        <div className="w-full lg:w-[24%] text-center md:text-left">
+        <div className="w-full md:w-[24%] text-center md:text-start  lg:text-left pt-5">
           <h2 className="text-xl md:text-3xl font-[900] text-[#2556B0] lg:w-[80%] 
           font-extrabold  mb-3 leading-tight">
             Explore Categories
@@ -44,8 +44,8 @@ export default function ExploreCategories() {
           </p>
         </div>
 
-        {/* Right Cards Grid - Optimized scaling */}
-        <div className="w-full lg:w-[75%] grid grid-cols-3 sm:grid-cols-3  lg:grid-cols-6 gap-2">
+        {/* Right Cards Grid - Opntimized scaling */}
+        <div className="w-full md:w-[75%] grid grid-cols-3 sm:grid-cols-3  lg:grid-cols-6 gap-2">
           {categories.map((item, index) => (
             <div
               key={index}

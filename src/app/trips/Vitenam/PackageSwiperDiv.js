@@ -162,7 +162,7 @@ const tripCategories = [
     ],
   },
 ];
-export default function Package_Swiper_div() {
+export default function PackageSwiperDiv() {
   return (
 <section className="py-10 px-4 md:px-10 w-full bg-white">
   <div className="w-full md:w-[1120px] mx-auto">

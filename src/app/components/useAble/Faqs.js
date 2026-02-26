@@ -8,7 +8,7 @@ import {
 export function FaqsSection({ faqArray }) {
   return (
     // 1. Changed md:w-[90%] to max-w-5xl for better centering and zoom resilience
-    <section className="w-full max-w-7xl mx-auto px-2 md:px-0 py-5 ">
+    <section className="w-full max-w-7xl mx-auto px-2 md:px-10 lg:px-0 py-5 ">
       
       {/* 2. Headline with responsive scaling and logical margin */}
       <h2 className="text-xl md:text-2xl font-[800] text-[#2755B0] text-center mb-10 tracking-tight">

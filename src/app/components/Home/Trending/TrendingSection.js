@@ -14,7 +14,7 @@ export default function TrendingSection() {
         rounded-2xl py-8 px-4 md:p-10">
         
         <div className="w-full flex justify-center 
-        lg:justify-between items-center mb-10 px-2">        
+        md:justify-between items-center mb-10 px-2">        
           <h1 className="text-xl md:text-3xl font-[800] text-[#2556B0] flex items-center gap-2">
             Trending Destinations
             <Image 
