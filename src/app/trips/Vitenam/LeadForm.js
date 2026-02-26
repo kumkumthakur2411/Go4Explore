@@ -9,7 +9,7 @@ export default function LeadForm() {
   ];
 
   return (
-<div className="max-w-6xl mx-auto mt-10 px-4 relative z-20">
+<div className="w-full md:w-[1120px] mx-auto mt-10 px-4 md:px-0 relative z-20">
   <div className="bg-white shadow-2xl rounded-[2.5rem] p-6 md:p-10 border border-gray-50">
 
     {/* Desktop Layout Wrapper */}

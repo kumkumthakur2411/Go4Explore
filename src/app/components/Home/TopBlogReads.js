@@ -32,7 +32,7 @@ const blogs = [
 export default function TopBlogReads() {
   return (
 <section className="w-[90%] mt-8">
-  <div className="md:w-[1110px] mx-auto ">
+  <div className="max-w-7xl mx-auto ">
 
     {/* Header */}
 <div className="flex items-center justify-between mb-10 md:mb-18">

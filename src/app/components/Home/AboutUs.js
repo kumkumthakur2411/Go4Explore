@@ -59,7 +59,7 @@ export function AboutUs() {
 
   return (
     // Changed to max-width and added responsive padding for zoom stability
-    <section className="w-full md:w-[1110px] mx-auto px-4 md:px-0 pt-5">
+    <section className="w-full max-w-7xl mx-auto px-4 md:px-0 pt-5">
       <Card className="w-full bg-white shadow-[0_2px_8px_0_rgba(99,99,99,0.2)]
        rounded-xl border-none bg-white overflow-hidden pb-1">
         
@@ -93,7 +93,7 @@ export function AboutUs() {
                 {!open && (
                   <button
                     onClick={() => setOpen(true)}
-                    className="font-bold text-gray-700 px-6 
+                    className="font-medium text-gray-900 px-6 
                       text-sm flex items-center gap-2 transition-all active:scale-95"
                   >
                     View More

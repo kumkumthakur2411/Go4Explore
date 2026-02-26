@@ -56,7 +56,7 @@ const features = [
 export default function WhyChoose() {
   return (
 <section className="w-full bg-white  p-6 ">
-  <div className="w-full md:w-[1140px] mx-auto md:px-4">
+  <div className="w-full max-w-7xl mx-auto md:px-4">
     
     {/* Title - Added mb-16 for better separation from the grid */}
     <h2 className="text-center text-lg md:text-3xl font-extrabold text-[#2755B0] mb-3 md:mb-16">

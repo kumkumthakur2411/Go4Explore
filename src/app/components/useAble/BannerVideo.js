@@ -19,7 +19,7 @@ export default function BannerVideo({ videos }) {
 
   return (
 <section className="w-full py-10    bg-white">
-  <div className="md:w-[1110px] mx-auto">
+  <div className="max-w-7xl mx-auto">
 
     {/* VIDEO CONTAINER */}
     <div className="relative

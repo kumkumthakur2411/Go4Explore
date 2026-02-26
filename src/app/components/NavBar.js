@@ -82,6 +82,7 @@ export default function NavBar() {
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-white ">
 
+<<<<<<< HEAD
         {/* ===== TOP NAV ===== */}
         <div className="h-23 md:h-[74px] ">
           <div className="md:w-[1200px]  mx-auto h-full  flex items-center justify-between px-5 
@@ -98,6 +99,24 @@ export default function NavBar() {
                   priority
                 />
               </Link>
+=======
+  {/* ===== TOP NAV ===== */}
+  <div className="h-23 md:h-[74px] ">
+    <div className="max-w-screen-2xl  mx-auto h-full  flex items-center justify-between px-5 
+    ">
+
+      {/* Logo */}
+      <div className="hidden lg::block flex items-center gap-6">
+        <Link href="/">
+          <Image
+            src="https://go4explore.com/assets/img/logo.webp"
+            alt="Go4Explore"
+            width={150}
+            height={50}
+            priority
+          />
+        </Link>
+>>>>>>> c2edefd07cda21bfdcfc74ed938dae4e1b834aa4
 
             </div>
 
@@ -136,6 +155,7 @@ export default function NavBar() {
 
                 <div className="w-[2px] h-7 bg-gray-700 "></div>
 
+<<<<<<< HEAD
                 <div className="w-9 h-9 flex items-center justify-center rounded-full bg-[#2755B0] text-white cursor-pointer hover:bg-blue-800 transition">
                   <IoPersonOutline size={20} />
                 </div>
@@ -159,6 +179,55 @@ export default function NavBar() {
               <button onClick={() => setIsOpen(true)} className="text-gray-800">
                 <HiOutlineMenuAlt3 size={28} />
               </button>
+=======
+        <div className="w-9 h-9 flex items-center justify-center rounded-full bg-[#2755B0] text-white cursor-pointer hover:bg-blue-800 transition">
+          <IoPersonOutline size={20} />
+        </div>
+      </div>
+      </nav>
+      {/* Mobile Controls */}
+      <div className="flex w-full  lg:hidden items-center justify-between">
+
+  {/* Mobile Logo */} 
+  <Link href="/">
+   <Image src="https://go4explore.com/assets/img/footer-logo.webp" 
+alt="Go4Explore" width={45} height={45} priority /> 
+</Link> 
+{/* Mobile WhatsApp Button (Icon + Number) */} 
+<a href="tel:+919266710039"
+ className="flex items-center gap-1 border border-[#2755B0] px-3 py-1.5 rounded-full text-[#2755B0]"> 
+  <RiWhatsappLine size={18} /> 
+  <span className="text-xs font-semibold">+91 9266710039</span>
+   </a>
+   {/* Mobile Menu Button */}
+    <button onClick={() => setIsOpen(true)} className="text-gray-800"> 
+      <HiOutlineMenuAlt3 size={28} /> 
+      </button>
+      </div>
+
+    </div>
+  </div>
+
+  {/* ===== BOTTOM NAV (Desktop Only) ===== */}
+<div className="hidden lg:block bg-[#2755B0] text-white">
+  <div className="max-w-7xl mx-auto px-30">
+    <div className="flex items-center justify-between py-3 text-sm md:text-[14px] font-semibold">
+
+      {bottomMenu.map((item, index) => (
+        <div key={index} className="relative group">
+
+          {/* Main Menu Item */}
+          <Link href={item.href}>
+            <div className="flex items-center gap-2 cursor-pointer
+             whitespace-nowrap hover:text-yellow-300 transition">
+              <Image
+                src={item.icon}
+                alt={item.name}
+                width={14}
+                height={14}
+              />
+              {item.name}
+>>>>>>> c2edefd07cda21bfdcfc74ed938dae4e1b834aa4
             </div>
 
           </div>

@@ -165,7 +165,7 @@ const tripCategories = [
 export default function Package_Swiper_div() {
   return (
 <section className="py-10 px-4 md:px-10 w-full bg-white">
-  <div className="max-w-7xl mx-auto">
+  <div className="w-full md:w-[1120px] mx-auto">
     {tripCategories.map((section, idx) => (
       <div key={idx} className="mb-12 last:mb-0">
         
